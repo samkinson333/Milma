@@ -1,18 +1,19 @@
+
 import { useState } from 'react';
 import styles from './Admin.module.css';
 import {
-    Users, Plus, Edit, Shield, CheckCircle,
-    XCircle, Lock, Key, MoreVertical, X,
-    Save, Search
+    Users, Plus, Edit, Shield,
+    Lock, Key, X,
+    Search, Save
 } from 'lucide-react';
 
 interface User {
     id: number;
     username: string;
-    role: 'Administrator' | 'Editor' | 'Viewer';
     email: string;
-    lastLogin: string;
+    role: 'Administrator' | 'Editor' | 'Viewer';
     status: 'active' | 'inactive' | 'suspended';
+    lastLogin: string;
     mfaEnabled: boolean;
     permissions: string[];
 }
@@ -23,7 +24,8 @@ const AdminUsers = () => {
     const [searchQuery, setSearchQuery] = useState('');
 
     // Mock Data
-    const [users, setUsers] = useState<User[]>([
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [users] = useState<User[]>([
         {
             id: 1,
             username: 'admin',
@@ -74,11 +76,11 @@ const AdminUsers = () => {
     const getStatusBadgeClass = (status: string) => {
         switch (status) {
             case 'active':
-                return `${styles.govBadgeFixed} ${styles.govBadgeActive}`;
+                return `${styles.govBadgeFixed} ${styles.govBadgeActive} `;
             case 'inactive':
-                return `${styles.govBadgeFixed} ${styles.govBadgeDraft}`;
+                return `${styles.govBadgeFixed} ${styles.govBadgeDraft} `;
             case 'suspended':
-                return `${styles.govBadgeFixed} ${styles.govBadgeClosed}`;
+                return `${styles.govBadgeFixed} ${styles.govBadgeClosed} `;
             default:
                 return styles.govBadgeFixed;
         }

@@ -11,10 +11,9 @@ import {
     Image as ImageIcon,
     MessageSquare,
     Phone,
-    Mail,
+
     Users,
     Shield,
-    Settings,
     LogOut
 } from 'lucide-react';
 

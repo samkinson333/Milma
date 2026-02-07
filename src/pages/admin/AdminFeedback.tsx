@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styles from './Admin.module.css';
 import {
-    Search, Filter, Eye, MessageSquare,
-    CheckCircle, Clock, AlertCircle, ArrowLeft,
+    Search, Eye, MessageSquare,
+    Clock, AlertCircle, ArrowLeft,
     Send, User
 } from 'lucide-react';
 

@@ -1,0 +1,7 @@
+export const dairyImages = {
+  tvm: '/images/contact/tvm_dairy_plant.png',
+  kollam: '/images/contact/kollam_dairy_unit.png',
+  pathanamthitta: '/images/contact/pathanamthitta_dairy_center.png',
+  alappuzha: '/images/contact/alappuzha_dairy_plant.png',
+  mannar: '/images/contact/mannar_pi_unit.png'
+};

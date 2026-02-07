@@ -1,9 +1,10 @@
+
 import { useState } from 'react';
 import styles from './Admin.module.css';
 import {
     Plus, Image as ImageIcon, Video, Trash2,
     Upload, X, Link as LinkIcon, MoreVertical,
-    FolderPlus, ArrowLeft, PlayCircle
+    FolderPlus, ArrowLeft
 } from 'lucide-react';
 
 interface MediaItem {
@@ -28,11 +29,15 @@ const AdminGallery = () => {
     const [viewMode, setViewMode] = useState<'albums' | 'detail'>('albums');
     const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
     const [showCreateModal, setShowCreateModal] = useState(false);
-    const [showUploadPanel, setShowUploadPanel] = useState(false);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [, setShowUploadPanel] = useState(false);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [dragActive, setDragActive] = useState(false);
 
     // Mock Data
-    const [albums, setAlbums] = useState<Album[]>([
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [albums] = useState<Album[]>([
         {
             id: 1,
             title: 'Dairy Plant Inauguration',
@@ -238,7 +243,7 @@ const AdminGallery = () => {
                                             <button style={{ background: 'rgba(255,255,255,0.9)', border: 'none', borderRadius: '4px', padding: '4px', cursor: 'pointer' }}>
                                                 <MoreVertical size={14} />
                                             </button>
-                                        </div>
+                                        </div >
                                     </div>
                                 ))}
                             </div>
@@ -298,36 +303,38 @@ const AdminGallery = () => {
             </div>
 
             {/* Create Album Modal */}
-            {showCreateModal && (
-                <div className={styles.modalOverlay} onClick={() => setShowCreateModal(false)}>
-                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-                        <div className={styles.modalHeader}>
-                            <h3 className={styles.modalTitle}>Create New Album</h3>
-                            <button className={styles.modalCloseButton} onClick={() => setShowCreateModal(false)}>
-                                <X size={20} />
-                            </button>
-                        </div>
-                        <div className={styles.modalBody}>
-                            <div className={styles.formGroup}>
-                                <label className={styles.formLabel}>Album Title</label>
-                                <input type="text" className={styles.formInput} placeholder="e.g. Annual General Meeting 2026" />
+            {
+                showCreateModal && (
+                    <div className={styles.modalOverlay} onClick={() => setShowCreateModal(false)}>
+                        <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                            <div className={styles.modalHeader}>
+                                <h3 className={styles.modalTitle}>Create New Album</h3>
+                                <button className={styles.modalCloseButton} onClick={() => setShowCreateModal(false)}>
+                                    <X size={20} />
+                                </button>
                             </div>
-                            <div className={styles.formGroup}>
-                                <label className={styles.formLabel}>Description</label>
-                                <textarea className={styles.formTextarea} placeholder="Brief description of the event..." />
+                            <div className={styles.modalBody}>
+                                <div className={styles.formGroup}>
+                                    <label className={styles.formLabel}>Album Title</label>
+                                    <input type="text" className={styles.formInput} placeholder="e.g. Annual General Meeting 2026" />
+                                </div>
+                                <div className={styles.formGroup}>
+                                    <label className={styles.formLabel}>Description</label>
+                                    <textarea className={styles.formTextarea} placeholder="Brief description of the event..." />
+                                </div>
+                                <div className={styles.formGroup}>
+                                    <label className={styles.formLabel}>Date</label>
+                                    <input type="date" className={styles.formInput} />
+                                </div>
                             </div>
-                            <div className={styles.formGroup}>
-                                <label className={styles.formLabel}>Date</label>
-                                <input type="date" className={styles.formInput} />
+                            <div className={styles.modalFooter}>
+                                <button className={styles.buttonSecondary} onClick={() => setShowCreateModal(false)}>Cancel</button>
+                                <button className={styles.buttonPrimary}>Create Album</button>
                             </div>
-                        </div>
-                        <div className={styles.modalFooter}>
-                            <button className={styles.buttonSecondary} onClick={() => setShowCreateModal(false)}>Cancel</button>
-                            <button className={styles.buttonPrimary}>Create Album</button>
                         </div>
                     </div>
-                </div>
-            )}
+                )
+            }
         </div>
     );
 };

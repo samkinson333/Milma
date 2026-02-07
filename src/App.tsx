@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import Products from './pages/Products';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
 import AdminLayout from './components/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminProducts from './pages/admin/AdminProducts';

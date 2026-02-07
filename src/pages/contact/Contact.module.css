@@ -1,0 +1,688 @@
+.pageContainer {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #fcfcfc;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #8B3A3A 0%, #5E1B1B 100%);
+    color: white;
+    padding: 6rem 10% 12rem;
+    /* Extra padding bottom for overlap */
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center 30%;
+    background-blend-mode: multiply;
+    /* Blends the red gradient with the image */
+}
+
+.heroContent {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Overlapping Contact Cards */
+.contactCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 10%;
+    margin-top: -8rem;
+    /* Pull up to overlap hero */
+    position: relative;
+    z-index: 20;
+    margin-bottom: 6rem;
+}
+
+.contactCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.contactCard:hover {
+    transform: translateY(-5px);
+}
+
+.iconCircle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fef2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #991b1b;
+}
+
+.contactCard h3 {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.contactCard p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    min-height: 3rem;
+}
+
+.contactLink {
+    color: #991b1b;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.95rem;
+}
+
+.contactLink:hover {
+    text-decoration: underline;
+}
+
+/* Message Form Section */
+.formSection {
+    padding: 4rem 10% 6rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Left Info Side */
+.formInfo h2 {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.formInfo>p {
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.infoBlock {
+    margin-bottom: 2.5rem;
+}
+
+.infoBlock h4 {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.infoItem {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Right Form Side */
+.formContainer {
+    background: #ffffff;
+    padding: 3.5rem;
+}
+
+.formContainer h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: #374151;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.formInput,
+.formTextarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background: #f9fafb;
+    color: #1a1a1a;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+    outline: none;
+    border-color: #991b1b;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(153, 27, 27, 0.05);
+}
+
+.formTextarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.submitBtn {
+    background: #991b1b;
+    color: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.submitBtn:hover {
+    background: #7f1d1d;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(153, 27, 27, 0.15);
+}
+
+@media (max-width: 968px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .formContainer {
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f0f0f0;
+        border-radius: 16px;
+    }
+}
+
+/* Dairy Units Section */
+.sectionContainer {
+    padding: 4rem 10%;
+    margin-bottom: 4rem;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+
+.sectionHeader h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #991b1b;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.sectionHeader p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dairyGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1000px) {
+    .dairyGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dairyCard:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .dairyCard:first-child .dairyImage {
+        width: 45%;
+    }
+
+    .dairyCard:first-child .dairyContent {
+        width: 55%;
+    }
+}
+
+.dairyCard {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    border: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.dairyCard:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dairyImage {
+    width: 40%;
+    background-color: #e5e7eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.dairyImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dairyCard:hover .dairyImage img {
+    transform: scale(1.05);
+}
+
+.dairyContent {
+    width: 60%;
+    padding: 2rem;
+    position: relative;
+}
+
+.mainPlantBadge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.dairyContent h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    padding-right: 40px;
+    /* Make space for badge */
+}
+
+.dairyAddress {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.dairyContactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #444;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.viewDetailsBtn {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #555;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.viewDetailsBtn:hover {
+    background: #f9fafb;
+    border-color: #ccc;
+    color: #1a1a1a;
+}
+
+/* === ENHANCED STALL LOCATIONS === */
+
+.stallLocationsSection {
+    background: linear-gradient(to bottom, #fffafa, #fff0f0);
+    padding: 6rem 10%;
+    position: relative;
+    overflow: hidden;
+    /* decorative bg circle */
+}
+
+.stallLocationsSection::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: rgba(153, 27, 27, 0.03);
+    border-radius: 50%;
+}
+
+.stallLocationsSection::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: rgba(153, 27, 27, 0.03);
+    border-radius: 50%;
+}
+
+.searchContainer {
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 5;
+    border: 1px solid #eee;
+}
+
+.searchInputWrapper {
+    flex: 1;
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #991b1b;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    outline: none;
+    background: transparent;
+}
+
+.findBtn {
+    background: linear-gradient(135deg, #991b1b, #7f1d1d);
+    color: white;
+    border: none;
+    padding: 0 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(153, 27, 27, 0.3);
+}
+
+.findBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(153, 27, 27, 0.4);
+}
+
+/* New Grid Layout */
+.locationsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 5;
+}
+
+.locationCard {
+    background: white;
+    border-radius: 16px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* Bouncy effect */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.locationCard:hover {
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #fca5a5;
+}
+
+.locationIconBox {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #fff1f2, #ffe4e6);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #be123c;
+    flex-shrink: 0;
+}
+
+.locationInfo {
+    flex: 1;
+}
+
+.locationInfo h4 {
+    margin: 0 0 0.25rem;
+    color: #1f2937;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.locationStatus {
+    font-size: 0.75rem;
+    color: #666;
+    background: #f3f4f6;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    margin-top: 6px;
+    transition: all 0.3s ease;
+}
+
+.locationCard:hover .locationStatus {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.arrowIcon {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: #991b1b;
+}
+
+.locationCard:hover .arrowIcon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.seeAllContainer {
+    text-align: center;
+}
+
+.seeAllBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #991b1b;
+    border: 2px solid #991b1b;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.seeAllBtn:hover {
+    background: #991b1b;
+    color: white;
+}
+
+/* Floating Action Button for Support (from design) */
+.supportFab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: #991b1b;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(153, 27, 27, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.supportFab:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stallLocationsSection {
+        padding: 4rem 5%;
+    }
+
+    .hero {
+        padding: 4rem 5% 10rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contactCardsContainer {
+        padding: 0 5%;
+        margin-top: -6rem;
+        grid-template-columns: 1fr;
+    }
+
+    .dairyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .dairyCard {
+        flex-direction: column;
+    }
+
+    .dairyImage {
+        width: 100%;
+        height: 200px;
+    }
+
+    .dairyContent {
+        width: 100%;
+    }
+
+    .searchContainer {
+        flex-direction: column;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        gap: 1rem;
+        border-radius: 0;
+    }
+
+    .searchInput {
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .findBtn {
+        justify-content: center;
+        padding: 1rem;
+    }
+}

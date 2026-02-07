@@ -1,0 +1,730 @@
+.pageContainer {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(rgba(0, 50, 40, 0.7), rgba(0, 50, 40, 0.8)), url('/images/milma_banner.jpg');
+    /* Deep Green Overlay */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    color: white;
+}
+
+.badgeContainer {
+    margin-bottom: 1rem;
+}
+
+.legacyBadge {
+    background-color: #991b1b;
+    color: white;
+    padding: 6px 14px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    opacity: 0.95;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Navigation Bar */
+.navBarContainer {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navBar {
+    padding: 0 10%;
+    display: flex;
+    gap: 2.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.navBar::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.5rem 0;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.navItem:hover {
+    color: #991b1b;
+}
+
+.navItemActive {
+    color: #991b1b;
+    border-bottom-color: #991b1b;
+}
+
+/* Content Section */
+.contentSection {
+    padding: 5rem 10%;
+    background-color: #fafbfc;
+    min-height: 500px;
+}
+
+.profileGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.profileContent h2 {
+    font-size: 2.25rem;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    font-weight: 800;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: #991b1b;
+    margin-bottom: 2.5rem;
+    border-radius: 2px;
+}
+
+.profileContent p {
+    font-size: 1.05rem;
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.downloadBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #991b1b;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.downloadBtn:hover {
+    background-color: #7f1d1d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(153, 27, 27, 0.3);
+}
+
+.profileImage {
+    background-color: #fdf6f0;
+    /* Light beige matching image */
+    border-radius: 20px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.logoImage {
+    max-width: 50%;
+    opacity: 0.15;
+    /* Subtle watermark effect */
+    filter: grayscale(100%) sepia(50%) hue-rotate(350deg);
+}
+
+.excellenceBadge {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    background: linear-gradient(135deg, #d4a355, #b8860b);
+    color: white;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(184, 134, 11, 0.3);
+    border: 6px solid white;
+    text-align: center;
+    z-index: 10;
+}
+
+.badgeIcon {
+    margin-bottom: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.excellenceBadge span:first-child {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-top: 5px;
+}
+
+.excellenceBadge span:last-child {
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Stats Section */
+.statsSection {
+    background-color: #8B1A1A;
+    /* Deep red matching image layout */
+    padding: 5rem 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.statItem h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.statItem p {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+/* Units Section */
+.unitGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.unitCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.unitCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #991b1b;
+}
+
+.unitCard h3 {
+    color: #991b1b;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.unitStats {
+    list-style: none;
+    padding: 0;
+}
+
+.unitStats li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Functional Areas */
+.functionalGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.functionalCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 5px solid #991b1b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.functionalCard:hover {
+    transform: translateX(5px);
+}
+
+.functionalCard h3 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.functionalCard p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Board of Directors */
+.boardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.boardCard {
+    background: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boardCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #fecaca;
+}
+
+.chairmanCard {
+    grid-column: 1 / -1;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    border: 2px solid #991b1b;
+    background: linear-gradient(to bottom, #fff, #fffafa);
+}
+
+.boardMemberImage {
+    width: 120px;
+    height: 120px;
+    background-color: #fcece0;
+    border-radius: 50%;
+    margin: 0 auto 1.2rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chairmanCard .boardMemberImage {
+    width: 150px;
+    height: 150px;
+    border-color: #991b1b;
+}
+
+.boardCard h3 {
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.chairmanCard h3 {
+    font-size: 1.5rem;
+    color: #991b1b;
+}
+
+.designation {
+    color: #666;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.chairmanCard .designation {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Past Performance Table */
+.statsTableContainer {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+.statsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.statsTable th,
+.statsTable td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.statsTable th {
+    background-color: #f8f9fa;
+    color: #991b1b;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.statsTable tr:hover {
+    background-color: #fff9f9;
+}
+
+.statsTable td {
+    color: #444;
+    font-weight: 500;
+}
+
+/* Vision & Mission Enhanced */
+.visionMissionSection {
+    background: linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)),
+        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 3rem;
+    border-radius: 24px;
+    margin-top: -2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.visionMissionHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.visionMissionHeader h2 {
+    font-size: 2.75rem;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    font-weight: 800;
+}
+
+.headerUnderline {
+    width: 60px;
+    height: 4px;
+    background-color: #991b1b;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.visionMissionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.vmCard {
+    background: white;
+    border-radius: 28px;
+    padding: 3.5rem;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.vmCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+}
+
+.missionCard {
+    background: #fffafa;
+    /* Very light red tint */
+    border: 1px solid #fee2e2;
+}
+
+.visionCard {
+    background: white;
+    border: 1px solid #f1f5f9;
+}
+
+.vmIconBox {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.missionIconBox {
+    background: #991b1b;
+    color: white;
+}
+
+.visionIconBox {
+    background: #0ea5e9;
+    color: white;
+}
+
+.vmHeaderRow {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.vmTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.missionTitle {
+    color: #991b1b;
+}
+
+.visionTitle {
+    color: #0ea5e9;
+}
+
+.vmContent {
+    flex-grow: 1;
+    position: relative;
+}
+
+.vmQuote {
+    position: absolute;
+    top: -20px;
+    left: -25px;
+    font-size: 5rem;
+    color: #f1f5f9;
+    font-family: 'Georgia', serif;
+    opacity: 0.8;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.vmText {
+    font-size: 1.25rem !important;
+    line-height: 1.9 !important;
+    color: #334155 !important;
+    font-style: italic !important;
+    position: relative;
+    z-index: 1;
+    margin: 0 !important;
+    font-family: 'Inter', sans-serif;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.vmFooter {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 2rem;
+}
+
+.footerLabel {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+.badgeGoal {
+    background: #0ea5e9;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.badgeGoal:hover {
+    transform: scale(1.05);
+}
+
+.badgeGoal .badgeValue {
+    font-weight: 800;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.badgeGoal .badgeLabel {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Vision Mission */
+@media (max-width: 1200px) {
+    .visionMissionGrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .vmCard {
+        min-height: auto;
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .visionMissionSection {
+        padding: 2rem 1.5rem;
+    }
+
+    .vmHeaderRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .vmTitle {
+        font-size: 1.75rem;
+    }
+
+    .vmText {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Generic missionText/visionText cleanup */
+.missionText,
+.visionText {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contentSection {
+        padding: 4rem 5%;
+    }
+
+    .profileGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .navBar {
+        padding: 0 5%;
+    }
+
+    .hero {
+        padding-left: 5%;
+    }
+
+    .statsSection {
+        padding: 4rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .statsSection {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .hero {
+        height: 350px;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .excellenceBadge {
+        width: 120px;
+        height: 120px;
+        right: 10px;
+        bottom: -20px;
+    }
+
+    .excellenceBadge span:first-child {
+        font-size: 1.4rem;
+    }
+
+    .profileImage {
+        height: 300px;
+    }
+
+    .boardGrid {
+        grid-template-columns: 1fr;
+    }
+}

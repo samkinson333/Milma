@@ -25,7 +25,8 @@ const AdminSecurity = () => {
     });
 
     // Mock logs
-    const [logs, setLogs] = useState<AccessLog[]>([
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [logs] = useState<AccessLog[]>([
         { id: 1, user: 'admin', ip: '192.168.1.10', action: 'Login Attempt', status: 'success', timestamp: '2026-02-07 10:45:12' },
         { id: 2, user: 'editor_kerala', ip: '203.0.113.45', action: 'Update Page: /about', status: 'success', timestamp: '2026-02-07 09:30:00' },
         { id: 3, user: 'unknown', ip: '198.51.100.23', action: 'Failed Login', status: 'failed', timestamp: '2026-02-06 23:15:45' },
