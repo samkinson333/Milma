@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import Products from './pages/Products';
+
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Insights from './pages/insights/Insights';
@@ -25,6 +26,13 @@ import AdminContacts from './pages/admin/AdminContacts';
 import AdminUsers from './pages/admin/AdminUsers';
 import AdminSecurity from './pages/admin/AdminSecurity';
 import AdminSettings from './pages/admin/AdminSettings';
+
+import Services from './pages/Services';
+import FarmersAndCoops from './pages/services/FarmersAndCoops';
+import SocietyLevel from './pages/services/SocietyLevel';
+import DealersLevel from './pages/services/DealersLevel';
+import ConsumerLevel from './pages/services/ConsumerLevel';
+
 import { CartProvider } from './context/CartContext';
 import CartDrawer from './components/specific/CartDrawer';
 import Toast from './components/common/Toast';
@@ -49,6 +57,13 @@ function App() {
                         <Route path="/career" element={<Career />} />
                         <Route path="/recruitment" element={<Recruitment />} />
                         <Route path="/contact" element={<Contact />} />
+
+                        {/* Services Routes */}
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/services/farmers-coops" element={<FarmersAndCoops />} />
+                        <Route path="/services/society-level" element={<SocietyLevel />} />
+                        <Route path="/services/dealers-level" element={<DealersLevel />} />
+                        <Route path="/services/consumer-level" element={<ConsumerLevel />} />
                     </Route>
 
                     {/* Admin Routes with Admin Layout */}
@@ -72,8 +87,8 @@ function App() {
                         <Route path="settings" element={<AdminSettings />} />
                     </Route>
                 </Routes>
-            </CartProvider>
-        </Router>
+            </CartProvider >
+        </Router >
     )
 }
 

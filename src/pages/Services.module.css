@@ -1,0 +1,862 @@
+.pageContainer {
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    /* Back to original height */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/services/servicesh.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    /* Back to original size */
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    letter-spacing: -1px;
+}
+
+.breadcrumb {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Timeline Section (Route Map) */
+.timelineSection {
+    position: relative;
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    /* Increased to allow 1000px cards */
+    margin: 0 auto;
+    overflow: visible;
+    /* Changed to visible to prevent doodle clipping */
+}
+
+/* Timeline Elements (Line & Dots) */
+/* Timeline Elements (Line & Dots) */
+.timelineLine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: auto;
+    /* Changed from 100% to auto */
+    background: #e0e0e0;
+    top: 6rem;
+    /* Start below top padding */
+    bottom: 6rem;
+    /* End above bottom padding */
+    z-index: 0;
+    border-radius: 2px;
+}
+
+/* Scroll Progress Fill Line */
+.timelineLineFill {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    /* Slightly thicker than base line */
+    background: #008f3d;
+    /* Green fill */
+    top: 0;
+    z-index: 1;
+    /* Above base line, below dots */
+    /* Removed transition to match scroll speed 1:1 */
+    max-height: 100%;
+}
+
+/* Side Doodles */
+/* Side Doodles */
+/* Side Doodles */
+/* Side Doodles */
+/* Side Doodles */
+/* Side Doodles */
+/* Side Doodles */
+/* Side Doodles */
+.doodleContainer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    display: block;
+    opacity: 0.8;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Specific Doodle Styles - Positioned to the side of text */
+/* Item 0 is on Right Side -> Doodle to the Right */
+.doodleDairy {
+    width: 500px;
+    right: -65%;
+    transform: translateY(-75%) rotate(5deg);
+}
+
+/* Item 1 is on Left Side -> Doodle to the Left */
+.doodleFarmer {
+    width: 450px;
+    left: -65%;
+    transform: translateY(-70%) rotate(-8deg);
+}
+
+/* Item 2 is on Right Side -> Doodle to the Right */
+.doodleCattle {
+    width: 450px;
+    right: -55%;
+    transform: translateY(-70%) rotate(8deg);
+}
+
+/* Item 3 is on Left Side -> Doodle to the Left */
+.doodleFarm {
+    width: 400px;
+    left: -80%;
+    transform: translateY(-80%) rotate(-5deg);
+}
+
+.doodleImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0;
+    filter: grayscale(100%) contrast(1.2);
+}
+
+/* Removed .doodleTitle styles */
+
+.timelineContainer {
+    position: relative;
+    z-index: 1;
+}
+
+.timelineItem {
+    display: flex;
+    justify-content: space-between;
+    /* Ensure separation */
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+    width: 100%;
+    max-width: 2200px;
+    /* Increased to allow massive 1000px width */
+    /* Constrain row width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timelineContentWrapper {
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Timeline Sides */
+.timelineSide {
+    width: 48%;
+    /* Increased to maximize space for 1000px card */
+    /* Clear split */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* Side Specific Alignment */
+.leftSide {
+    justify-content: flex-end;
+    padding-right: 3rem;
+    text-align: right;
+}
+
+.rightSide {
+    justify-content: flex-start;
+    padding-left: 1rem;
+    /* Reduce padding slightly */
+    text-align: left;
+}
+
+/* Card Styles - Compact Design */
+.serviceCard {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    max-width: 600px;
+    /* Increased from 500px */
+    width: 100%;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+}
+
+.imageContainer {
+    height: 250px;
+    /* Increased from 180px */
+    width: 100%;
+    position: relative;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Icon Box */
+.iconBox {
+    position: absolute;
+    bottom: -20px;
+    right: 15px;
+    width: 40px;
+    /* Smaller icon box */
+    height: 40px;
+    background-color: #008f3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+    z-index: 10;
+}
+
+.iconBox svg {
+    width: 20px;
+    height: 20px;
+}
+
+.cardContent {
+    padding: 2rem 1.5rem 1.5rem;
+    /* Tight padding */
+    text-align: left;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    /* Smaller title */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #333;
+    line-height: 1.2;
+}
+
+.cardDesc {
+    font-size: 0.9rem;
+    /* Smaller text */
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.learnMore {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #008f3d;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: auto;
+    /* Push to bottom if flex column */
+}
+
+.learnMore svg {
+    transition: transform 0.3s ease;
+}
+
+.serviceCard:hover .learnMore svg {
+    transform: translateX(5px);
+}
+
+/* Sticky Navigation */
+.stickyNav {
+    background: rgba(255, 255, 255, 0.9);
+    /* Glassy background */
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.navContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    /* More space */
+}
+
+.navButton {
+    background: transparent;
+    border: none;
+    /* Removed border */
+    color: #555;
+    /* Softer text color */
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    /* Full rounded pill */
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+/* Hover Effect - Subtle background */
+.navButton:hover {
+    background: rgba(0, 143, 61, 0.1);
+    color: #008f3d;
+}
+
+/* Active State - Solid Brand Color */
+.activeNavBtn {
+    background: #008f3d !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(0, 143, 61, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Intro Section */
+.intro {
+    background: white;
+    padding: 6rem 2rem;
+    color: #333;
+    text-align: left;
+}
+
+.introContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    gap: 4rem;
+}
+
+.introImageWrapper {
+    flex: 0 0 50%;
+    /* Image takes 50% width */
+}
+
+.introImage {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.introTextWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.introTextWrapper h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #008f3d;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.introTextWrapper h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #222;
+    line-height: 1.2;
+}
+
+.introTextWrapper p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Intro */
+@media (max-width: 992px) {
+    .introContent {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .introImageWrapper {
+        width: 100%;
+    }
+
+    .introTextWrapper {
+        width: 100%;
+    }
+}
+
+/* Timeline Elements (Line & Dots) */
+.timelineLine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #e0e0e0;
+    top: 0;
+    z-index: 0;
+}
+
+.timelineContainer {
+    position: relative;
+    z-index: 1;
+}
+
+.timelineDot {
+    width: 24px;
+    height: 24px;
+    background: #008f3d;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 4px rgba(0, 143, 61, 0.3);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.activeDot {
+    background: #dcb315;
+    /* Gold center for active */
+    transform: translateX(-50%) scale(1.8);
+    /* Much larger pop effect */
+    box-shadow: 0 0 20px rgba(220, 179, 21, 0.8);
+    /* Stronger glow */
+    border-color: white;
+    z-index: 3;
+    /* Ensure it pops above everything */
+}
+
+.contentWrapper {
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Card Styles Container */
+.serviceCard {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Softer shadow */
+    transition: transform 0.3s ease;
+}
+
+.serviceCard:hover {
+    transform: translateY(-8px);
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Inline Stats */
+/* Inline Stats */
+/* Inline Stats */
+.statWrapper {
+    display: flex;
+    flex-direction: column;
+    /* Back to column for centering */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.statText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    /* Ensure text is above doodle */
+}
+
+/* Remove separate flex-direction overrides since we are using absolute positioning */
+/* Context-Based Direction */
+.leftSide .statWrapper {
+    flex-direction: row;
+    margin-right: -5.5rem;
+    /* Pull closer to center */
+}
+
+.rightSide .statWrapper {
+    flex-direction: row-reverse;
+    margin-left: -5.5rem;
+    /* Pull closer to center */
+}
+
+.statNumber {
+    font-size: 3rem;
+    /* Small stat number - Reverted */
+    font-weight: 900;
+    color: #dcb315;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    position: relative;
+    /* Clean text, no shadow */
+}
+
+.statLabel {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    /* Clean text, no shadow */
+}
+
+/* Mobile Doodle - Hidden on desktop, shown on mobile */
+.mobileDoodle {
+    display: none;
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .timelineSection {
+        padding: 4rem 1.5rem;
+    }
+
+    .timelineItem {
+        width: 100%;
+    }
+
+    .timelineSide {
+        width: 45%;
+    }
+
+    .statNumber {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Show timeline line and dots on mobile, positioned left */
+    .doodleContainer {
+        display: flex;
+        /* Show doodle on mobile too */
+        width: 100%;
+        opacity: 0.4;
+    }
+
+    .doodleImage {
+        width: 250px;
+        /* Smaller for mobile */
+        max-width: 80vw;
+    }
+
+    .timelineLine {
+        display: block;
+        left: 20px;
+        width: 4px;
+        /* Ensure 4px width */
+        transform: translateX(-50%);
+        /* Center on 20px */
+        /* Ensure it spans the full height of the section, not just the item */
+        height: 100%;
+        top: 0;
+        bottom: 0;
+    }
+
+    .timelineDot {
+        display: block;
+        left: 11px;
+        /* Center on line (20px line - 12px half dot + 3px adjustment) */
+        transform: translateX(0);
+        z-index: 5;
+    }
+
+    /* Force content wrapper to align children (card) to right */
+    .contentWrapper {
+        display: block;
+        /* maintain block structure */
+        width: 100%;
+    }
+
+    /* Stronger yellow glow for active dot on mobile */
+    .activeDot {
+        background: #dcb315;
+        transform: translateX(-50%) scale(1.6);
+        box-shadow: 0 0 35px rgba(220, 179, 21, 1), 0 0 60px rgba(220, 179, 21, 0.8);
+        border-color: white;
+        z-index: 6;
+        left: 20px;
+        /* Align active dot too */
+    }
+
+    /* Fill line also needs to be left aligned */
+    .timelineLineFill {
+        display: block;
+        left: 20px;
+        transform: translateX(0);
+        width: 4px;
+        /* Ensure expected width */
+    }
+
+    /* Container for Card + Stat */
+    .timelineItem {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align left */
+        gap: 3rem;
+        margin-bottom: 0;
+        /* Remove margin to connect lines */
+        padding-bottom: 4rem;
+        /* Use padding instead */
+        width: 100%;
+        padding-left: 50px;
+        /* Space for timeline */
+        position: static;
+        /* Remove relative to let line span through */
+    }
+
+    .timelineSide {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+        /* Natural flow */
+    }
+
+    .leftSide,
+    .rightSide {
+        width: 100% !important;
+        padding: 0 !important;
+        display: block !important;
+        /* Natural flow */
+        text-align: left !important;
+    }
+
+    /* Side with card comes first */
+    .leftSide:has(.serviceCard),
+    .rightSide:has(.serviceCard) {
+        order: 1;
+    }
+
+    /* Side with stat comes second */
+    .leftSide:has(.statWrapper),
+    .rightSide:has(.statWrapper) {
+        order: 2;
+        margin-top: 0;
+    }
+
+    /* Center Card in available space */
+    .serviceCard {
+        max-width: 100% !important;
+        /* Full width */
+        width: 100% !important;
+        margin: 0 !important;
+        /* No margin shifts */
+    }
+
+    .imageContainer {
+        height: 220px;
+    }
+
+    /* Center Stat Wrapper in available space */
+    .statWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 100% !important;
+        /* Full width */
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .statNumber {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .statLabel {
+        font-size: 1.1rem;
+    }
+
+    /* Show mobile doodles */
+    .mobileDoodle {
+        display: block;
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+
+    /* Force timeline alignment */
+    .timelineLine,
+    .timelineLineFill,
+    .timelineDot {
+        left: 20px !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .activeDot {
+        left: 20px !important;
+        /* Ensure active dot is also aligned explicitly if selector specificity issues arise */
+        transform: translateX(-50%) scale(1.6) !important;
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        min-height: 300px;
+    }
+
+    .heroOverlay h1 {
+        font-size: 2rem;
+    }
+
+    .heroOverlay p {
+        font-size: 1rem;
+    }
+
+    /* Nav adjustments */
+    .navItem {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Show mobile doodles */
+    .doodleContainer {
+        display: block !important;
+        position: relative !important;
+        width: 200px !important;
+        height: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        margin-bottom: 1rem;
+        top: auto !important;
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
+    }
+
+    .doodleImage {
+        width: 100%;
+        filter: none;
+        /* Optional: remove grayscale if desired, or keep */
+    }
+
+    /* Reset specific doodle styles for mobile so they don't fly off */
+    .doodleDairy,
+    .doodleFarmer,
+    .doodleCattle,
+    .doodleFarm {
+        width: 200px !important;
+        /* Fixed width for mobile icon */
+        right: auto !important;
+        left: auto !important;
+        transform: none !important;
+        /* Remove rotation/translation */
+    }
+}
+
+@media (max-width: 480px) {
+    .timelineSection {
+        padding: 2rem 1rem;
+    }
+
+    .timelineLine {
+        left: 15px;
+    }
+
+    .timelineDot {
+        left: 15px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timelineSide {
+        padding-left: 0;
+    }
+
+    .leftSide,
+    .rightSide {
+        padding-left: 0;
+    }
+
+    .serviceCard {
+        border-radius: 6px;
+    }
+
+    .imageContainer {
+        height: 160px;
+    }
+
+    .cardContent {
+        padding: 1rem;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+    }
+
+    .cardDescription {
+        font-size: 0.85rem;
+    }
+
+    .statNumber {
+        font-size: 2rem;
+    }
+
+    .statLabel {
+        font-size: 0.8rem;
+    }
+
+    .navItem {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        min-height: 250px;
+    }
+
+    .heroOverlay h1 {
+        font-size: 1.5rem;
+    }
+}

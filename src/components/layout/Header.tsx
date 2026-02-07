@@ -13,28 +13,22 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             if (location.pathname === '/') {
-                // Home page logic: Blur only after the 3D Hero/Scroll section
                 const heroThreshold = window.innerHeight * 7.8;
                 setIsScrolled(window.scrollY > heroThreshold);
             } else {
-                // Other pages: Always blurred/scrolled style for visibility
                 setIsScrolled(true);
             }
         };
 
         window.addEventListener('scroll', handleScroll);
-        // Run immediately to set initial state based on current page/scroll
         handleScroll();
-
         return () => window.removeEventListener('scroll', handleScroll);
     }, [location.pathname]);
 
-    // Close mobile menu when route changes
     useEffect(() => {
         setIsMobileMenuOpen(false);
     }, [location.pathname]);
 
-    // Prevent body scroll when mobile menu is open
     useEffect(() => {
         if (isMobileMenuOpen) {
             document.body.style.overflow = 'hidden';
@@ -59,10 +53,12 @@ const Header = () => {
                     </Link>
                 </div>
 
+                {/* Combined Navigation - Choose the links you actually need below */}
                 <nav className={classes.nav}>
                     <Link to="/" className={classes.navLink}>Home</Link>
                     <Link to="/products" className={classes.navLink}>Products</Link>
                     <Link to="/about" className={classes.navLink}>About us</Link>
+                    <Link to="/services" className={classes.navLink}>Services</Link>
                     <Link to="/insights" className={classes.navLink}>Insights</Link>
                     <Link to="/career" className={classes.navLink}>Career</Link>
                     <Link to="/recruitment" className={classes.navLink}>Recruitment</Link>
@@ -91,6 +87,7 @@ const Header = () => {
                     <Link to="/" className={classes.mobileNavLink}>Home</Link>
                     <Link to="/products" className={classes.mobileNavLink}>Products</Link>
                     <Link to="/about" className={classes.mobileNavLink}>About us</Link>
+                    <Link to="/services" className={classes.mobileNavLink}>Services</Link>
                     <Link to="/insights" className={classes.mobileNavLink}>Insights</Link>
                     <Link to="/career" className={classes.mobileNavLink}>Career</Link>
                     <Link to="/recruitment" className={classes.mobileNavLink}>Recruitment</Link>
