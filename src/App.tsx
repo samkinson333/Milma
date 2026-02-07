@@ -4,6 +4,13 @@ import HomePage from './pages/HomePage';
 import Products from './pages/Products';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
+import Insights from './pages/insights/Insights';
+import Tenders from './pages/insights/Tenders';
+import Downloads from './pages/insights/Downloads';
+import OngoingProjects from './pages/insights/OngoingProjects';
+import UpcomingProjects from './pages/insights/UpcomingProjects';
+import Career from './pages/career/Career';
+import Recruitment from './pages/recruitment/Recruitment';
 import AdminLayout from './components/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminProducts from './pages/admin/AdminProducts';
@@ -34,6 +41,13 @@ function App() {
                         <Route path="/" element={<HomePage />} />
                         <Route path="/products" element={<Products />} />
                         <Route path="/about" element={<About />} />
+                        <Route path="/insights" element={<Insights />} />
+                        <Route path="/insights/tenders" element={<Tenders />} />
+                        <Route path="/insights/downloads" element={<Downloads />} />
+                        <Route path="/insights/ongoing-projects" element={<OngoingProjects />} />
+                        <Route path="/insights/upcoming-projects" element={<UpcomingProjects />} />
+                        <Route path="/career" element={<Career />} />
+                        <Route path="/recruitment" element={<Recruitment />} />
                         <Route path="/contact" element={<Contact />} />
                     </Route>
 

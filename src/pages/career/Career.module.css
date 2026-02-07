@@ -1,0 +1,558 @@
+.careerPage {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fef5f5 100%);
+}
+
+.hero {
+    background: linear-gradient(135deg, #8b0000 0%, #a52a2a 50%, #c41e3a 100%);
+    padding: 120px 2rem 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/insights/farm.png') center/cover;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #ffd700;
+    position: relative;
+    text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.heroUnderline {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd700, #ffed4e);
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.whySection {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.whySection h2 {
+    font-size: 2.5rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+}
+
+.whySection>p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefitCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(139, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    border-top: 3px solid #ffd700;
+}
+
+.benefitCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(139, 0, 0, 0.2);
+    border-top-color: #8b0000;
+}
+
+.benefitIcon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #8b0000, #c41e3a);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+}
+
+.benefitCard h3 {
+    font-size: 1.25rem;
+    color: #8b0000;
+    margin-bottom: 0.75rem;
+}
+
+.benefitCard p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.openingsSection {
+    margin-bottom: 4rem;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+    font-size: 2.5rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #8b0000, #ffd700);
+    margin: 0 auto 1.5rem;
+    border-radius: 2px;
+}
+
+.sectionHeader p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.jobsList {
+    display: grid;
+    gap: 2rem;
+}
+
+.jobCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(139, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #8b0000;
+}
+
+.jobCard:hover {
+    box-shadow: 0 8px 30px rgba(139, 0, 0, 0.15);
+    transform: translateX(4px);
+}
+
+.jobHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.jobHeader h3 {
+    font-size: 1.5rem;
+    color: #8b0000;
+    margin-bottom: 0.5rem;
+}
+
+.jobId {
+    font-size: 0.875rem;
+    color: #888;
+    font-family: 'Courier New', monospace;
+}
+
+.jobType {
+    background: linear-gradient(135deg, #8b0000, #c41e3a);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(139, 0, 0, 0.2);
+}
+
+.jobDesc {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.jobMeta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.metaItem svg {
+    color: #8b0000;
+}
+
+.applyBtn {
+    background: linear-gradient(135deg, #8b0000, #c41e3a);
+    color: white;
+    border: none;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.applyBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+    background: linear-gradient(135deg, #a52a2a, #8b0000);
+}
+
+.ctaSection {
+    background: linear-gradient(135deg, #8b0000 0%, #a52a2a 50%, #c41e3a 100%);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+    margin-top: 4rem;
+    box-shadow: 0 10px 40px rgba(139, 0, 0, 0.2);
+}
+
+.ctaContent {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ctaContent svg {
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
+}
+
+.ctaContent h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ctaContent p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.7;
+}
+
+.talentBtn {
+    background: white;
+    color: #8b0000;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.talentBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+    background: #ffd700;
+    color: #8b0000;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .jobMeta {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .jobHeader {
+        flex-direction: column;
+    }
+
+    .ctaContent h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 2rem 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modalContent {
+    background: white;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    min-height: min-content;
+}
+
+/* Custom scrollbar for modal overlay */
+.modalOverlay::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modalOverlay::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.modalOverlay::-webkit-scrollbar-thumb {
+    background: #8b0000;
+    border-radius: 10px;
+}
+
+.modalOverlay::-webkit-scrollbar-thumb:hover {
+    background: #a52a2a;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.closeBtn:hover {
+    background: #f5f5f5;
+    color: #8b0000;
+    transform: rotate(90deg);
+}
+
+.modalContent h2 {
+    font-size: 1.75rem;
+    color: #8b0000;
+    margin-bottom: 0.5rem;
+    padding-right: 2rem;
+}
+
+.modalDesc {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.formGroup input,
+.formGroup select {
+    padding: 0.875rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+    outline: none;
+    border-color: #8b0000;
+    box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+}
+
+.formGroup select {
+    cursor: pointer;
+    background: white;
+}
+
+.fileUpload {
+    position: relative;
+}
+
+.fileUpload input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.fileLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    border: 2px dashed #ddd;
+    border-radius: 12px;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    gap: 0.75rem;
+}
+
+.fileLabel:hover {
+    border-color: #8b0000;
+    background: #fff5f5;
+}
+
+.fileLabel svg {
+    color: #8b0000;
+}
+
+.fileLabel span {
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.fileLabel small {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.submitBtn {
+    background: linear-gradient(135deg, #8b0000, #c41e3a);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+    background: linear-gradient(135deg, #a52a2a, #8b0000);
+}
+
+@media (max-width: 768px) {
+    .modalOverlay {
+        padding: 1rem;
+    }
+
+    .modalContent {
+        padding: 2rem 1.5rem;
+    }
+
+    .modalContent h2 {
+        font-size: 1.5rem;
+    }
+}

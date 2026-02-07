@@ -1,0 +1,164 @@
+.insightsPage {
+    padding-top: 80px;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero {
+    padding: 6rem 10% 4rem;
+    text-align: left;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1543362906-acfc16c623a2?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb span {
+    color: #991b1b;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 2rem;
+    letter-spacing: -2px;
+}
+
+.highlight {
+    color: #991b1b;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #475569;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.heroUnderline {
+    width: 80px;
+    height: 5px;
+    background-color: #991b1b;
+}
+
+.container {
+    padding: 4rem 10% 8rem;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.mainCard {
+    height: 400px;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+    text-decoration: none;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mainCard:hover {
+    transform: translateY(-10px);
+}
+
+.cardBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+.mainCard:hover .cardBg {
+    transform: scale(1.1);
+}
+
+.cardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+}
+
+.cardContent {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.cardTag {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #991b1b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.cardTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.cardDesc {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .mainGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 5% 3rem;
+    }
+
+    .container {
+        padding: 3rem 5% 5rem;
+    }
+
+    .mainCard {
+        height: 350px;
+        padding: 2rem;
+    }
+
+    .cardTitle {
+        font-size: 2rem;
+    }
+}
