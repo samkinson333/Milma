@@ -62,7 +62,7 @@ const Header = () => {
                 <nav className={classes.nav}>
                     <Link to="/" className={classes.navLink}>Home</Link>
                     <Link to="/products" className={classes.navLink}>Products</Link>
-                    <Link to="/about" className={classes.navLink}>Our Story</Link>
+                    <Link to="/about" className={classes.navLink}>About us</Link>
                     <Link to="/insights" className={classes.navLink}>Insights</Link>
                     <Link to="/career" className={classes.navLink}>Career</Link>
                     <Link to="/recruitment" className={classes.navLink}>Recruitment</Link>
@@ -90,7 +90,7 @@ const Header = () => {
                 <nav className={classes.mobileNav}>
                     <Link to="/" className={classes.mobileNavLink}>Home</Link>
                     <Link to="/products" className={classes.mobileNavLink}>Products</Link>
-                    <Link to="/about" className={classes.mobileNavLink}>Our Story</Link>
+                    <Link to="/about" className={classes.mobileNavLink}>About us</Link>
                     <Link to="/insights" className={classes.mobileNavLink}>Insights</Link>
                     <Link to="/career" className={classes.mobileNavLink}>Career</Link>
                     <Link to="/recruitment" className={classes.mobileNavLink}>Recruitment</Link>
