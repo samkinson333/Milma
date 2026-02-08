@@ -1,6 +1,9 @@
 import classes from './AboutSnippet.module.css';
+import { useTranslation } from 'react-i18next';
 
 const AboutSnippet = () => {
+    const { t } = useTranslation();
+
     return (
         <section className={classes.section}>
             <div className={classes.container}>
@@ -12,14 +15,12 @@ const AboutSnippet = () => {
                     />
                 </div>
                 <div className={classes.textContent}>
-                    <h3 className={classes.subtitle}>WHO WE ARE</h3>
-                    <h2 className={classes.title}>Nurturing Kerala Since 1980</h2>
+                    <h3 className={classes.subtitle}>{t('aboutSnippet.whoWeAre')}</h3>
+                    <h2 className={classes.title}>{t('aboutSnippet.title')}</h2>
                     <p className={classes.description}>
-                        The Kerala Co-operative Milk Marketing Federation (KCMMF), typically known as Milma,
-                        was established in April 1980. Our goal is to channelize marketable surplus milk
-                        from the rural areas to urban consuming centers to ensure fairness to both producers and consumers.
+                        {t('aboutSnippet.description')}
                     </p>
-                    <button className={classes.btn}>Read Our Story</button>
+                    <button className={classes.btn}>{t('aboutSnippet.readMore')}</button>
                 </div>
             </div>
         </section>

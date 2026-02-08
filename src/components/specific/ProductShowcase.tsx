@@ -1,39 +1,42 @@
 import ProductCard from '../common/ProductCard';
 import classes from './ProductShowcase.module.css';
 import { motion } from 'framer-motion';
-
-const featuredProducts = [
-    {
-        id: 1,
-        name: 'Full Cream Milk',
-        price: '₹32',
-        category: 'Milk',
-        image: 'https://milma.com/storage/products//August2023//Ytl05gnqwPEvDN5NTHL9.png'
-    },
-    {
-        id: 2,
-        name: 'Homogenized Pure Milk',
-        price: '₹28',
-        category: 'Milk',
-        image: 'https://milma.com/storage/products//July2022//aMnIotru8hY92PbrqWuH.jpg'
-    },
-    {
-        id: 3,
-        name: 'Toned Fresh Milk',
-        price: '₹26',
-        category: 'Milk',
-        image: 'https://milma.com/storage/products//April2023//qEiwh4qbyuA1jjahbxQ3.png'
-    },
-    {
-        id: 4,
-        name: 'Organic Farm Milk',
-        price: '₹45',
-        category: 'Milk',
-        image: 'https://milma.com/storage/products//May2023//5eRXgX6uiHQOLxOrmn2T.png'
-    },
-];
+import { useTranslation } from 'react-i18next';
 
 const ProductShowcase = () => {
+    const { t } = useTranslation();
+
+    const featuredProducts = [
+        {
+            id: 1,
+            name: t('products.items.fullCream'),
+            price: '₹32',
+            category: t('footer.shop.milk'),
+            image: 'https://milma.com/storage/products//August2023//Ytl05gnqwPEvDN5NTHL9.png'
+        },
+        {
+            id: 2,
+            name: t('products.items.homogenized'),
+            price: '₹28',
+            category: t('footer.shop.milk'),
+            image: 'https://milma.com/storage/products//July2022//aMnIotru8hY92PbrqWuH.jpg'
+        },
+        {
+            id: 3,
+            name: t('products.items.toned'),
+            price: '₹26',
+            category: t('footer.shop.milk'),
+            image: 'https://milma.com/storage/products//April2023//qEiwh4qbyuA1jjahbxQ3.png'
+        },
+        {
+            id: 4,
+            name: t('products.items.organic'),
+            price: '₹45',
+            category: t('footer.shop.milk'),
+            image: 'https://milma.com/storage/products//May2023//5eRXgX6uiHQOLxOrmn2T.png'
+        },
+    ];
+
     return (
         <section className={classes.section}>
             <div className={classes.container}>
@@ -43,10 +46,10 @@ const ProductShowcase = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className={classes.preTitle}>Featured</span>
-                        <h2 className={classes.title}>Best Sellers</h2>
+                        <span className={classes.preTitle}>{t('products.preTitle')}</span>
+                        <h2 className={classes.title}>{t('products.title')}</h2>
                     </motion.div>
-                    <a href="/products" className={classes.viewAll}>View All Selection</a>
+                    <a href="/products" className={classes.viewAll}>{t('common.viewAll')}</a>
                 </div>
 
                 <div className={classes.grid}>

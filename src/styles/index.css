@@ -32,6 +32,15 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
+  min-height: 100vh;
+  /* Better Malayalam rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure Malayalam text doesn't cause vertical overflow issues */
+:lang(ml) {
+  line-height: 1.8;
 }
 
 a {

@@ -42,7 +42,7 @@
 }
 
 .logoText {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: -0.02em;
@@ -52,17 +52,19 @@
 
 .nav {
     display: none;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .navLink {
-    margin: 0 1.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     font-weight: 700;
     transition: color 0.3s;
     position: relative;
     color: var(--color-text-primary);
+    white-space: nowrap;
 }
 
 .navLink::after {
@@ -82,7 +84,9 @@
 
 .actions {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
 }
 
 .iconBtn {
@@ -152,7 +156,7 @@
 
 .mobileNavLink {
     padding: 1.25rem 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 700;
@@ -170,7 +174,7 @@
     transform: translateX(8px);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .nav {
         display: flex;
     }

@@ -1,18 +1,21 @@
-import { ShoppingCart } from 'lucide-react';
+// import { ShoppingCart } from 'lucide-react';
+// import { useCart } from '../../context/CartContext';
+// import { useTranslation } from 'react-i18next';
 import classes from './ProductCard.module.css';
-import { useCart } from '../../context/CartContext';
 
 interface ProductCardProps {
-    id: number;
+    id?: number;
     name: string;
-    price: string;
+    price?: string;
     image: string;
     category: string;
 }
 
-const ProductCard = ({ id, name, price, image, category }: ProductCardProps) => {
-    const { addToCart, toggleCart } = useCart();
+const ProductCard = ({ name, image, category }: ProductCardProps) => {
+    // const { addToCart, toggleCart } = useCart(); // Cart disabled
+    // const { t } = useTranslation();
 
+    /*
     const handleAddToCart = (e: React.MouseEvent) => {
         e.stopPropagation();
         e.preventDefault();
@@ -25,27 +28,32 @@ const ProductCard = ({ id, name, price, image, category }: ProductCardProps) => 
         addToCart({ id, name, price, image, category });
         toggleCart(); // Open cart drawer immediately
     };
+    */
 
     return (
         <div className={classes.card}>
             <div className={classes.imageWrapper}>
                 <img src={image} alt={name} className={classes.image} />
                 <span className={classes.category}>{category}</span>
-                <button className={classes.quickAdd} onClick={handleAddToCart} title="Add to Cart">
+                {/* 
+                <button className={classes.quickAdd} onClick={handleAddToCart} title={t('common.addToCart')}>
                     <ShoppingCart size={20} />
                 </button>
+                 */}
             </div>
             <div className={classes.info}>
                 <h3 className={classes.name}>{name}</h3>
-                <p className={classes.price}>{price}</p>
+                {/* <p className={classes.price}>{price}</p> */}
+                {/* 
                 <div className={classes.actions}>
                     <button className={classes.addBtn} onClick={handleAddToCart}>
-                        Add to Cart
+                        {t('common.addToCart')}
                     </button>
                     <button className={classes.buyBtn} onClick={handleBuyNow}>
-                        Buy Now
+                        {t('common.buyNow')}
                     </button>
                 </div>
+                 */}
             </div>
         </div>
     );
