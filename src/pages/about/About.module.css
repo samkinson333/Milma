@@ -119,61 +119,60 @@
 }
 
 .underline {
-    width: 60px;
+    width: 45px;
     height: 4px;
-    background-color: var(--color-primary);
+    background-color: var(--color-cyan);
     margin-bottom: 2.5rem;
     border-radius: 2px;
 }
 
 .profileContent p {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: var(--color-text-medium);
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    max-width: 90%;
 }
 
 .downloadBtn {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-cyan);
     color: var(--color-text-light);
-    padding: 14px 28px;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: 6px;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     transition: all 0.3s;
     margin-top: 1.5rem;
-    box-shadow: 0 4px 12px var(--color-primary-20);
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.2);
     border: none;
     cursor: pointer;
 }
 
 .downloadBtn:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-cyan-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px var(--color-primary-30);
+    box-shadow: 0 6px 16px rgba(0, 188, 212, 0.3);
 }
 
-.profileImage {
-    background-color: var(--color-bg-beige);
-    /* Light beige matching image */
-    border-radius: 20px;
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.profileImageContainer {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    /* overflow: hidden removed to allow badge visibility */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.logoImage {
-    max-width: 50%;
-    opacity: 0.15;
-    /* Subtle watermark effect */
-    filter: grayscale(100%) sepia(50%) hue-rotate(350deg);
+.organizationImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 24px;
 }
 
 .excellenceBadge {

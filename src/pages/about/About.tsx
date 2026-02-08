@@ -154,8 +154,8 @@ const About = () => {
                             </button>
                         </div>
 
-                        <div className={classes.profileImage}>
-                            <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} />
+                        <div className={classes.profileImageContainer}>
+                            <img src="/images/about/Screenshot 2026-02-08 111308.png" alt="Milma Products" className={classes.organizationImage} />
 
                             <div className={classes.excellenceBadge}>
                                 <ArrowUp size={24} className={classes.badgeIcon} />
