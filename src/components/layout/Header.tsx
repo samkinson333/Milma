@@ -66,6 +66,7 @@ const Header = () => {
                     <Link to="/services" className={classes.navLink}>{t('nav.services')}</Link>
                     <Link to="/insights" className={classes.navLink}>{t('nav.insights')}</Link>
                     <Link to="/career" className={classes.navLink}>{t('nav.career')}</Link>
+                    <Link to="/notices" className={classes.navLink}>{t('nav.notices')}</Link>
                     <Link to="/recruitment" className={classes.navLink}>{t('nav.recruitment')}</Link>
                     <Link to="/contact" className={classes.navLink}>{t('nav.contact')}</Link>
                 </nav>
@@ -98,6 +99,7 @@ const Header = () => {
                     <Link to="/services" className={classes.mobileNavLink}>{t('nav.services')}</Link>
                     <Link to="/insights" className={classes.mobileNavLink}>{t('nav.insights')}</Link>
                     <Link to="/career" className={classes.mobileNavLink}>{t('nav.career')}</Link>
+                    <Link to="/notices" className={classes.mobileNavLink}>{t('nav.notices')}</Link>
                     <Link to="/recruitment" className={classes.mobileNavLink}>{t('nav.recruitment')}</Link>
                     <Link to="/contact" className={classes.mobileNavLink}>{t('nav.contact')}</Link>
                     <Link to="/admin" className={classes.mobileNavLink}>{t('nav.admin')}</Link>

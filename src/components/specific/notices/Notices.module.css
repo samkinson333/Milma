@@ -1,0 +1,294 @@
+.noticeList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Notice Card Styling */
+.noticeCard {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-slate);
+    border-radius: 4px;
+    /* Minimal rounding for official look */
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.noticeCard:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.pinnedCard {
+    background-color: var(--color-bg-slate-light);
+    border-top: 3px solid var(--color-primary);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cardIconContainer {
+    width: 36px;
+    height: 36px;
+    background: var(--color-bg-slate-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.cardDocIcon {
+    color: var(--color-primary);
+}
+
+.fileBadge {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.badgePdf {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.badgeDoc {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.badgeImage {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badgeDefault {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.pinnedBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.cardBody {
+    flex-grow: 1;
+    margin-bottom: 1.25rem;
+}
+
+.cardTitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text-darker);
+    text-decoration: none;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 0.75rem;
+    transition: color 0.2s;
+}
+
+.cardTitle:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.cardDescription {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cardMetadata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border-slate);
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--color-slate);
+    font-weight: 600;
+}
+
+.categoryLabel {
+    background: var(--color-bg-slate-light);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    color: var(--color-text-darker);
+    font-size: 0.75rem;
+}
+
+.cardFooter {
+    display: flex;
+    gap: 1rem;
+}
+
+.previewButton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    background: transparent;
+    border: 1px solid var(--color-border-slate);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-text-darker);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.previewButton:hover {
+    background: var(--color-bg-slate-light);
+}
+
+.cardDownloadButton {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.cardDownloadButton:hover {
+    background: var(--color-primary-dark);
+}
+
+/* Tabs Styling */
+.tabsContainer {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--color-border-slate);
+    padding-bottom: 0.5rem;
+}
+
+.tabButton {
+    background: none;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-slate);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.tabButton:hover {
+    background: var(--color-bg-slate-light);
+    color: var(--color-text-darker);
+}
+
+.activeTab {
+    background: var(--color-primary) !important;
+    color: white !important;
+}
+
+/* Filter Bar Styling */
+.filterBar {
+    margin-bottom: 1rem;
+}
+
+.searchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1rem;
+    color: var(--color-slate);
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 3rem;
+    border: 1px solid var(--color-border-slate);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--color-bg);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+    border-color: var(--color-primary);
+}
+
+/* Empty State */
+.emptyState {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--color-bg-slate-light);
+    border-radius: 12px;
+    border: 2px dashed var(--color-border-slate);
+}
+
+.emptyState p {
+    color: var(--color-slate);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+    .noticeList {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .noticeList {
+        grid-template-columns: 1fr;
+    }
+
+    .cardFooter {
+        flex-direction: column;
+    }
+}

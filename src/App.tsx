@@ -37,6 +37,9 @@ import { CartProvider } from './context/CartContext';
 import { ThemeProvider } from './context/ThemeContext';
 import CartDrawer from './components/specific/CartDrawer';
 import Toast from './components/common/Toast';
+import React, { Suspense } from 'react';
+
+const NoticeBoardPage = React.lazy(() => import('./pages/notices/NoticeBoardPage'));
 
 function App() {
     return (
@@ -59,6 +62,14 @@ function App() {
                             <Route path="/career" element={<Career />} />
                             <Route path="/recruitment" element={<Recruitment />} />
                             <Route path="/contact" element={<Contact />} />
+                            <Route
+                                path="/notices"
+                                element={
+                                    <Suspense fallback={<div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Loading...</div>}>
+                                        <NoticeBoardPage />
+                                    </Suspense>
+                                }
+                            />
 
                             {/* Services Routes */}
                             <Route path="/services" element={<Services />} />

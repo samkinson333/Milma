@@ -8,7 +8,8 @@
         "career": "Career",
         "recruitment": "Recruitment",
         "contact": "Contact",
-        "admin": "Admin"
+        "admin": "Admin",
+        "notices": "Notice Board"
     },
     "common": {
         "search": "Search",
@@ -379,6 +380,29 @@
                 "selectDept": "Select Department",
                 "upload": "Click to upload your resume"
             }
+        }
+    },
+    "notices": {
+        "title": "Notice Board",
+        "subtitle": "Stay informed with the latest announcements, tenders, and official documents from Milma.",
+        "download": "Download Notice",
+        "preview": "Preview",
+        "publishedOn": "Published on",
+        "searchPlaceholder": "Search notices, tenders, or documents...",
+        "noResults": "No notices found matching your criteria.",
+        "pinned": "Pinned",
+        "all": "All Notices",
+        "categories": {
+            "all": "All",
+            "organisation": "Organisation",
+            "public": "Public",
+            "tender": "Tenders",
+            "announcement": "Announcements"
+        },
+        "fileTypes": {
+            "pdf": "PDF",
+            "doc": "DOC",
+            "image": "IMAGE"
         }
     }
 }

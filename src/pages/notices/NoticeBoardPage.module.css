@@ -1,0 +1,123 @@
+.pageContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 20px 60px;
+    /* Top padding for fixed header */
+}
+
+.breadcrumbs {
+    margin-bottom: 2rem;
+}
+
+.breadcrumbList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumbLink {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-slate);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumbLink:hover {
+    color: var(--color-primary);
+}
+
+.breadcrumbSeparator {
+    color: var(--color-slate-light);
+}
+
+.breadcrumbActive {
+    color: var(--color-text-darker);
+    font-weight: 600;
+}
+
+.contentWrapper {
+    background: white;
+    border: 1px solid var(--color-border-slate);
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.pageHeader {
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 1.5rem;
+}
+
+.pageTitle {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+}
+
+.pageSubtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.interactiveSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--color-bg-slate-light);
+    border-bottom-color: var(--color-primary);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .contentWrapper {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .pageTitle {
+        font-size: 1.75rem;
+    }
+
+    .contentWrapper {
+        padding: 1.5rem;
+    }
+}
