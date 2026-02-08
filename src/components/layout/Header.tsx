@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import classes from './Header.module.css';
-import { ShoppingBag, Search, Menu, X } from 'lucide-react';
+import { ShoppingBag, Search, Menu, X, Shield } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 
 const Header = () => {
@@ -66,11 +66,16 @@ const Header = () => {
                 </nav>
 
                 <div className={classes.actions}>
-                    <button aria-label="Search" className={classes.iconBtn}><Search size={20} /></button>
-                    <button aria-label="Cart" className={classes.iconBtn} onClick={toggleCart}>
+                    <button aria-label="Search" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip="Search">
+                        <Search size={20} />
+                    </button>
+                    <button aria-label="Cart" className={`${classes.iconBtn} ${classes.tooltip}`} onClick={toggleCart} data-tooltip="Cart">
                         <ShoppingBag size={20} />
                         {itemsCount > 0 && <span className={classes.cartCount}>{itemsCount}</span>}
                     </button>
+                    <Link to="/admin" aria-label="Admin" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip="Admin Panel">
+                        <Shield size={20} />
+                    </Link>
                     <button
                         aria-label="Menu"
                         className={classes.menuBtn}
@@ -92,6 +97,7 @@ const Header = () => {
                     <Link to="/career" className={classes.mobileNavLink}>Career</Link>
                     <Link to="/recruitment" className={classes.mobileNavLink}>Recruitment</Link>
                     <Link to="/contact" className={classes.mobileNavLink}>Contact</Link>
+                    <Link to="/admin" className={classes.mobileNavLink}>Admin</Link>
                 </nav>
             </div>
         </>
