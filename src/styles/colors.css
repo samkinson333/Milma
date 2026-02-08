@@ -5,6 +5,7 @@
 :root {
     /* ===== PRIMARY BRAND COLORS ===== */
     --color-primary: #991b1b;
+    --color-primary-rgb: 153, 27, 27;
     --color-primary-dark: #7f1d1d;
     --color-primary-darker: #8b0000;
     --color-primary-brown: #a52a2a;

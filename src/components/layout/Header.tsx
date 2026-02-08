@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import classes from './Header.module.css';
-import { ShoppingBag, Search, Menu, X, Shield } from 'lucide-react';
-import { useCart } from '../../context/CartContext';
+// { itemsCount, toggleCart } removed because cart is disabled
+import { Search, Menu, X, Shield } from 'lucide-react';
+// import { useCart } from '../../hooks/useCart'; // or context path removed
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../common/LanguageSelector';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const location = useLocation();
-    const { toggleCart, itemsCount } = useCart();
+
+    const { t } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
             if (location.pathname === '/') {
-                const heroThreshold = window.innerHeight * 7.8;
+                const heroThreshold = window.innerHeight * 1.3;
                 setIsScrolled(window.scrollY > heroThreshold);
             } else {
                 setIsScrolled(true);
@@ -56,27 +60,25 @@ const Header = () => {
 
                 {/* Combined Navigation - Choose the links you actually need below */}
                 <nav className={classes.nav}>
-                    <Link to="/" className={classes.navLink}>Home</Link>
-                    <Link to="/products" className={classes.navLink}>Products</Link>
-                    <Link to="/about" className={classes.navLink}>About us</Link>
-                    <Link to="/services" className={classes.navLink}>Services</Link>
-                    <Link to="/insights" className={classes.navLink}>Insights</Link>
-                    <Link to="/career" className={classes.navLink}>Career</Link>
-                    <Link to="/recruitment" className={classes.navLink}>Recruitment</Link>
-                    <Link to="/contact" className={classes.navLink}>Contact</Link>
+                    <Link to="/" className={classes.navLink}>{t('nav.home')}</Link>
+                    <Link to="/products" className={classes.navLink}>{t('nav.products')}</Link>
+                    <Link to="/about" className={classes.navLink}>{t('nav.about')}</Link>
+                    <Link to="/services" className={classes.navLink}>{t('nav.services')}</Link>
+                    <Link to="/insights" className={classes.navLink}>{t('nav.insights')}</Link>
+                    <Link to="/career" className={classes.navLink}>{t('nav.career')}</Link>
+                    <Link to="/recruitment" className={classes.navLink}>{t('nav.recruitment')}</Link>
+                    <Link to="/contact" className={classes.navLink}>{t('nav.contact')}</Link>
                 </nav>
 
                 <div className={classes.actions}>
-                    <button aria-label="Search" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip="Search">
+                    <button aria-label="Search" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip={t('common.search')}>
                         <Search size={20} />
                     </button>
-                    <button aria-label="Cart" className={`${classes.iconBtn} ${classes.tooltip}`} onClick={toggleCart} data-tooltip="Cart">
-                        <ShoppingBag size={20} />
-                        {itemsCount > 0 && <span className={classes.cartCount}>{itemsCount}</span>}
-                    </button>
-                    <Link to="/admin" aria-label="Admin" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip="Admin Panel">
+
+                    <Link to="/admin" aria-label="Admin" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip={t('nav.admin')}>
                         <Shield size={20} />
                     </Link>
+                    <LanguageSelector />
                     <button
                         aria-label="Menu"
                         className={classes.menuBtn}
@@ -90,15 +92,18 @@ const Header = () => {
             {/* Mobile Menu Overlay */}
             <div className={`${classes.mobileMenu} ${isMobileMenuOpen ? classes.mobileMenuOpen : ''}`}>
                 <nav className={classes.mobileNav}>
-                    <Link to="/" className={classes.mobileNavLink}>Home</Link>
-                    <Link to="/products" className={classes.mobileNavLink}>Products</Link>
-                    <Link to="/about" className={classes.mobileNavLink}>About us</Link>
-                    <Link to="/services" className={classes.mobileNavLink}>Services</Link>
-                    <Link to="/insights" className={classes.mobileNavLink}>Insights</Link>
-                    <Link to="/career" className={classes.mobileNavLink}>Career</Link>
-                    <Link to="/recruitment" className={classes.mobileNavLink}>Recruitment</Link>
-                    <Link to="/contact" className={classes.mobileNavLink}>Contact</Link>
-                    <Link to="/admin" className={classes.mobileNavLink}>Admin</Link>
+                    <Link to="/" className={classes.mobileNavLink}>{t('nav.home')}</Link>
+                    <Link to="/products" className={classes.mobileNavLink}>{t('nav.products')}</Link>
+                    <Link to="/about" className={classes.mobileNavLink}>{t('nav.about')}</Link>
+                    <Link to="/services" className={classes.mobileNavLink}>{t('nav.services')}</Link>
+                    <Link to="/insights" className={classes.mobileNavLink}>{t('nav.insights')}</Link>
+                    <Link to="/career" className={classes.mobileNavLink}>{t('nav.career')}</Link>
+                    <Link to="/recruitment" className={classes.mobileNavLink}>{t('nav.recruitment')}</Link>
+                    <Link to="/contact" className={classes.mobileNavLink}>{t('nav.contact')}</Link>
+                    <Link to="/admin" className={classes.mobileNavLink}>{t('nav.admin')}</Link>
+                    <div style={{ padding: '1rem 1.5rem' }}>
+                        <LanguageSelector />
+                    </div>
                 </nav>
             </div>
         </>

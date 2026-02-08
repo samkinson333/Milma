@@ -2,6 +2,7 @@ import { useRef, useEffect, useState, useCallback } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from 'framer-motion';
 import classes from './HeroSection.module.css';
 import { ArrowDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const totalFrames = 80;
 const framePaths = Array.from({ length: totalFrames }, (_, i) => {
@@ -15,6 +16,7 @@ const HeroSection = () => {
     const [images, setImages] = useState<HTMLImageElement[]>([]);
     const [isLoaded, setIsLoaded] = useState(false);
     const [loadProgress, setLoadProgress] = useState(0);
+    const { t } = useTranslation();
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -23,8 +25,8 @@ const HeroSection = () => {
 
     // Buttery smooth frame transitions using useSpring
     const smoothProgress = useSpring(scrollYProgress, {
-        stiffness: 80,   // Responsive yet smooth
-        damping: 40,     // Perfectly damped for a cinematic feel
+        stiffness: 120, // Faster catch-up
+        damping: 35,    // Enough damping to prevent overshoot but feel controlled
         restDelta: 0.001
     });
 
@@ -119,7 +121,7 @@ const HeroSection = () => {
                 {!isLoaded && (
                     <div className={classes.loader}>
                         <div className={classes.spinner}></div>
-                        <p>Loading {loadProgress}%</p>
+                        <p>{t('common.loading')} {loadProgress}%</p>
                     </div>
                 )}
 
@@ -127,14 +129,14 @@ const HeroSection = () => {
                     <motion.div
                         className={classes.content}
                         style={{
-                            opacity: useTransform(scrollYProgress, [0, 0.1], [1, 0]),
-                            y: useTransform(scrollYProgress, [0, 0.1], [0, -50])
+                            opacity: useTransform(scrollYProgress, [0, 0.2], [1, 0]),
+                            y: useTransform(scrollYProgress, [0, 0.2], [0, -50])
                         }}
                     >
-                        <h1 className={classes.title}>MILMA</h1>
-                        <p className={classes.subtitle}>Freshness in every drop.</p>
+                        <h1 className={classes.title}>{t('hero.title')}</h1>
+                        <p className={classes.subtitle}>{t('hero.subtitle')}</p>
                         <div className={classes.scrollHint}>
-                            <span>Scroll to explore</span>
+                            <span>{t('hero.scroll')}</span>
                             <ArrowDown size={20} className={classes.bounce} />
                         </div>
                     </motion.div>
@@ -142,12 +144,12 @@ const HeroSection = () => {
                     <motion.div
                         className={classes.finalContent}
                         style={{
-                            opacity: useTransform(scrollYProgress, [0.9, 1], [0, 1]),
-                            y: useTransform(scrollYProgress, [0.9, 1], [50, 0])
+                            opacity: useTransform(scrollYProgress, [0.8, 1], [0, 1]),
+                            y: useTransform(scrollYProgress, [0.8, 1], [50, 0])
                         }}
                     >
-                        <h2>Pure. Natural. Trusted.</h2>
-                        <p>The spirit of Kerala co-operation.</p>
+                        <h2>{t('hero.finalTitle')}</h2>
+                        <p>{t('hero.finalSubtitle')}</p>
                     </motion.div>
                 </div>
             </div>

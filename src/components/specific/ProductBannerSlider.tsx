@@ -1,40 +1,42 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import classes from './ProductBannerSlider.module.css';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-const bannerData = [
-    {
-        id: 1,
-        image: '/ice_cream_banner.png',
-        title: 'New Arrival: Milma Ice Cream',
-        subtitle: 'Indulge in the creamy richness of our latest vanilla gold.',
-        cta: 'Try Now',
-        link: '#',
-        align: 'left'
-    },
-    {
-        id: 2,
-        image: 'https://media.licdn.com/dms/image/v2/C561BAQEkwJh6zN-3Ew/company-background_10000/company-background_10000/0/1632191301164/milma_cover?e=2147483647&v=beta&t=JSRmhQxSHrcG72mudMvrYt7BUZKrPV-_bYWwT5H9KR4',
-        title: 'Farm Fresh Goodness',
-        subtitle: 'Direct from Kerala\'s lush pastures to your doorstep.',
-        cta: 'Learn More',
-        link: '/about',
-        align: 'center'
-    },
-    {
-        id: 3,
-        image: 'https://milma.com/storage/product-categories/July2022/tMCA1TUDhpfnaEpWGHgb.jpg',
-        title: 'Rich & Creamy Paneer',
-        subtitle: 'Make your curries special with Milma Malai Paneer.',
-        cta: 'Buy Now',
-        link: '#',
-        align: 'right'
-    }
-];
+import { useTranslation } from 'react-i18next';
 
 const ProductBannerSlider = () => {
+    const { t } = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const bannerData = useMemo(() => [
+        {
+            id: 1,
+            image: '/ice_cream_banner.png',
+            title: t('banner.arrival.title'),
+            subtitle: t('banner.arrival.subtitle'),
+            cta: t('banner.arrival.cta'),
+            link: '#',
+            align: 'left'
+        },
+        {
+            id: 2,
+            image: 'https://media.licdn.com/dms/image/v2/C561BAQEkwJh6zN-3Ew/company-background_10000/company-background_10000/0/1632191301164/milma_cover?e=2147483647&v=beta&t=JSRmhQxSHrcG72mudMvrYt7BUZKrPV-_bYWwT5H9KR4',
+            title: t('banner.farm.title'),
+            subtitle: t('banner.farm.subtitle'),
+            cta: t('banner.farm.cta'),
+            link: '/about',
+            align: 'center'
+        },
+        {
+            id: 3,
+            image: 'https://milma.com/storage/product-categories/July2022/tMCA1TUDhpfnaEpWGHgb.jpg',
+            title: t('banner.paneer.title'),
+            subtitle: t('banner.paneer.subtitle'),
+            cta: t('banner.paneer.cta'),
+            link: '#',
+            align: 'right'
+        }
+    ], [t]);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -84,6 +86,7 @@ const ProductBannerSlider = () => {
                         >
                             {bannerData[currentIndex].subtitle}
                         </motion.p>
+                        {/* 
                         <motion.button
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
@@ -92,6 +95,7 @@ const ProductBannerSlider = () => {
                         >
                             {bannerData[currentIndex].cta}
                         </motion.button>
+*/}
                     </div>
                 </motion.div>
             </AnimatePresence>

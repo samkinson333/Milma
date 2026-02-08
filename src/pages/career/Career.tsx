@@ -1,8 +1,10 @@
 import { Briefcase, MapPin, Clock, Users, Heart, TrendingUp, Award, Coffee, X, Upload } from 'lucide-react';
 import { useState } from 'react';
 import classes from './Career.module.css';
+import { useTranslation } from 'react-i18next';
 
 const Career = () => {
+    const { t } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [formData, setFormData] = useState({
         fullName: '',
@@ -15,47 +17,47 @@ const Career = () => {
     const openings = [
         {
             id: 'MILMA/HR/2026/001',
-            title: 'Senior Quality Control Analyst',
+            title: t('career.openings.roles.qc.title'),
             department: 'Quality Assurance',
             location: 'Thiruvananthapuram',
             type: 'Full-Time',
             experience: '3-5 years',
-            description: 'Lead quality testing and compliance for dairy products. NABL certification experience preferred.'
+            description: t('career.openings.roles.qc.desc')
         },
         {
             id: 'MILMA/HR/2026/002',
-            title: 'Regional Marketing Manager',
+            title: t('career.openings.roles.marketing.title'),
             department: 'Marketing & Sales',
             location: 'Ernakulam',
             type: 'Full-Time',
             experience: '5-7 years',
-            description: 'Drive brand strategy and market expansion across Kerala. Experience in FMCG sector required.'
+            description: t('career.openings.roles.marketing.desc')
         },
         {
             id: 'MILMA/HR/2026/003',
-            title: 'Dairy Technology Engineer',
+            title: t('career.openings.roles.production.title'),
             department: 'Production',
             location: 'Kozhikode',
             type: 'Full-Time',
             experience: '2-4 years',
-            description: 'Manage automated processing equipment and optimize production workflows.'
+            description: t('career.openings.roles.production.desc')
         },
         {
             id: 'MILMA/HR/2026/004',
-            title: 'Supply Chain Coordinator',
+            title: t('career.openings.roles.logistics.title'),
             department: 'Logistics',
             location: 'Wayanad',
             type: 'Full-Time',
             experience: '1-3 years',
-            description: 'Coordinate cold chain logistics and ensure timely distribution across the region.'
+            description: t('career.openings.roles.logistics.desc')
         }
     ];
 
     const benefits = [
-        { icon: <Heart size={24} />, title: 'Health Insurance', desc: 'Comprehensive medical coverage for you and your family' },
-        { icon: <TrendingUp size={24} />, title: 'Career Growth', desc: 'Continuous learning and advancement opportunities' },
-        { icon: <Award size={24} />, title: 'Performance Bonus', desc: 'Annual incentives based on individual and team performance' },
-        { icon: <Coffee size={24} />, title: 'Work-Life Balance', desc: 'Flexible schedules and supportive work environment' }
+        { icon: <Heart size={24} />, title: t('career.benefits.health.title'), desc: t('career.benefits.health.desc') },
+        { icon: <TrendingUp size={24} />, title: t('career.benefits.growth.title'), desc: t('career.benefits.growth.desc') },
+        { icon: <Award size={24} />, title: t('career.benefits.bonus.title'), desc: t('career.benefits.bonus.desc') },
+        { icon: <Coffee size={24} />, title: t('career.benefits.balance.title'), desc: t('career.benefits.balance.desc') }
     ];
 
     const departments = [
@@ -93,16 +95,16 @@ const Career = () => {
         <div className={classes.careerPage}>
             <div className={classes.hero}>
                 <div className={classes.heroContent}>
-                    <h1>Build Your Future with <span className={classes.highlight}>Milma</span></h1>
-                    <p>Join Kerala's most trusted dairy cooperative and make a meaningful impact on millions of lives. We're looking for passionate professionals to help us deliver excellence.</p>
+                    <h1>{t('career.hero.title')} <span className={classes.highlight}>{t('career.hero.milma')}</span></h1>
+                    <p>{t('career.hero.description')}</p>
                     <div className={classes.heroUnderline}></div>
                 </div>
             </div>
 
             <div className={classes.container}>
                 <div className={classes.whySection}>
-                    <h2>Why Join Us?</h2>
-                    <p>At Milma, we believe that exceptional products come from exceptional people. We're committed to creating a workplace where innovation, integrity, and collaboration thrive.</p>
+                    <h2>{t('career.whyJoin.title')}</h2>
+                    <p>{t('career.whyJoin.description')}</p>
 
                     <div className={classes.benefitsGrid}>
                         {benefits.map((benefit, index) => (
@@ -117,9 +119,9 @@ const Career = () => {
 
                 <div className={classes.openingsSection}>
                     <div className={classes.sectionHeader}>
-                        <h2>Current Openings</h2>
+                        <h2>{t('career.openings.title')}</h2>
                         <div className={classes.underline}></div>
-                        <p>Explore opportunities across various departments and locations. Find the perfect role that matches your skills and aspirations.</p>
+                        <p>{t('career.openings.description')}</p>
                     </div>
 
                     <div className={classes.jobsList}>
@@ -150,7 +152,7 @@ const Career = () => {
                                     </div>
                                 </div>
 
-                                <button className={classes.applyBtn}>View Details</button>
+                                <button className={classes.applyBtn}>{t('career.openings.viewDetails')}</button>
                             </div>
                         ))}
                     </div>
@@ -159,10 +161,10 @@ const Career = () => {
                 <div className={classes.ctaSection}>
                     <div className={classes.ctaContent}>
                         <Users size={32} />
-                        <h3>Don't see a fit? Join our Talent Pool</h3>
-                        <p>We're always looking for talented individuals. Submit your resume and we'll reach out when a suitable position opens up.</p>
+                        <h3>{t('career.cta.title')}</h3>
+                        <p>{t('career.cta.description')}</p>
                         <button className={classes.talentBtn} onClick={() => setIsModalOpen(true)}>
-                            Submit Your Resume
+                            {t('career.cta.button')}
                         </button>
                     </div>
                 </div>
@@ -176,51 +178,51 @@ const Career = () => {
                             <X size={24} />
                         </button>
 
-                        <h2>Join Our Talent Pool</h2>
-                        <p className={classes.modalDesc}>Fill in your details and upload your resume. We'll contact you when a suitable position becomes available.</p>
+                        <h2>{t('career.form.title')}</h2>
+                        <p className={classes.modalDesc}>{t('career.form.description')}</p>
 
                         <form onSubmit={handleSubmit} className={classes.form}>
                             <div className={classes.formGroup}>
-                                <label htmlFor="fullName">FULL NAME</label>
+                                <label htmlFor="fullName">{t('career.form.fullName')}</label>
                                 <input
                                     type="text"
                                     id="fullName"
                                     name="fullName"
                                     value={formData.fullName}
                                     onChange={handleInputChange}
-                                    placeholder="John Doe"
+                                    placeholder={t('career.form.placeholders.name')}
                                     required
                                 />
                             </div>
 
                             <div className={classes.formGroup}>
-                                <label htmlFor="email">EMAIL ADDRESS</label>
+                                <label htmlFor="email">{t('career.form.email')}</label>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleInputChange}
-                                    placeholder="john@example.com"
+                                    placeholder={t('career.form.placeholders.email')}
                                     required
                                 />
                             </div>
 
                             <div className={classes.formGroup}>
-                                <label htmlFor="phone">PHONE NUMBER</label>
+                                <label htmlFor="phone">{t('career.form.phone')}</label>
                                 <input
                                     type="tel"
                                     id="phone"
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleInputChange}
-                                    placeholder="+91 98765 43210"
+                                    placeholder={t('career.form.placeholders.phone')}
                                     required
                                 />
                             </div>
 
                             <div className={classes.formGroup}>
-                                <label htmlFor="department">AREA OF INTEREST</label>
+                                <label htmlFor="department">{t('career.form.department')}</label>
                                 <select
                                     id="department"
                                     name="department"
@@ -228,7 +230,7 @@ const Career = () => {
                                     onChange={handleInputChange}
                                     required
                                 >
-                                    <option value="">Select Department</option>
+                                    <option value="">{t('career.form.placeholders.selectDept')}</option>
                                     {departments.map((dept, idx) => (
                                         <option key={idx} value={dept}>{dept}</option>
                                     ))}
@@ -236,7 +238,7 @@ const Career = () => {
                             </div>
 
                             <div className={classes.formGroup}>
-                                <label>UPLOAD RESUME</label>
+                                <label>{t('career.form.resume')}</label>
                                 <div className={classes.fileUpload}>
                                     <input
                                         type="file"
@@ -249,7 +251,7 @@ const Career = () => {
                                     <label htmlFor="resume" className={classes.fileLabel}>
                                         <Upload size={24} />
                                         <span>
-                                            {formData.resume ? formData.resume.name : 'Click to upload your resume'}
+                                            {formData.resume ? formData.resume.name : t('career.form.placeholders.upload')}
                                         </span>
                                         <small>PDF, DOC (Max 5MB)</small>
                                     </label>
@@ -257,7 +259,7 @@ const Career = () => {
                             </div>
 
                             <button type="submit" className={classes.submitBtn}>
-                                SUBMIT APPLICATION
+                                {t('career.form.submit')}
                             </button>
                         </form>
                     </div>

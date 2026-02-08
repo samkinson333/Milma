@@ -14,29 +14,31 @@ import {
     Send
 } from 'lucide-react';
 import classes from './Contact.module.css';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+    const { t } = useTranslation();
 
     // Updated with real data from https://milmatrcmpu.com/contact
     const contactCards = [
         {
             icon: <ShoppingCart size={24} />,
-            title: 'Sales & Marketing',
-            description: 'For bulk orders, dealer enquiries, and product information.',
+            title: t('contact.cards.sales.title'),
+            description: t('contact.cards.sales.description'),
             action: 'trcmpu@gmail.com',
             isLink: true
         },
         {
             icon: <Headset size={24} />,
-            title: 'General Support',
-            description: 'Reach out to our Head Office for general queries and assistance.',
+            title: t('contact.cards.support.title'),
+            description: t('contact.cards.support.description'),
             action: '0471-2447109',
             isLink: false
         },
         {
             icon: <Building2 size={24} />,
-            title: 'Head Office',
-            description: 'TRCMPU Ltd, Ksheera Bhavan Pattom.P.O, Thiruvananthapuram - 04',
+            title: t('contact.cards.office.title'),
+            description: t('contact.cards.office.description'),
             action: 'View on Map',
             isLink: false
         }
@@ -104,8 +106,8 @@ const Contact = () => {
             {/* Hero Section */}
             <div className={classes.hero}>
                 <div className={classes.heroContent}>
-                    <h1>Get in Touch</h1>
-                    <p>We're here to help and answer any questions you might have. We look forward to hearing from you.</p>
+                    <h1>{t('contact.hero.title')}</h1>
+                    <p>{t('contact.hero.description')}</p>
                 </div>
             </div>
 
@@ -136,14 +138,14 @@ const Contact = () => {
                 <div className={classes.formGrid}>
                     {/* Left Side Info */}
                     <div className={classes.formInfo}>
-                        <h2>Let's Start a Conversation</h2>
-                        <p>Whether you have a question about our products, pricing, or just want to say hello, our team is ready to answer all your questions.</p>
+                        <h2>{t('contact.form.title')}</h2>
+                        <p>{t('contact.form.subtitle')}</p>
 
                         <div className={classes.infoBlock}>
                             <h4>Head Office</h4>
                             <div className={classes.infoItem}>
                                 <Building2 size={20} color="#991b1b" style={{ marginTop: '4px' }} />
-                                <span>TRCMPU Ltd, Ksheera Bhavan Pattom.P.O,<br />Thiruvananthapuram - 04</span>
+                                <span style={{ whiteSpace: 'pre-line' }}>{t('contact.cards.office.description')}</span>
                             </div>
                         </div>
 
@@ -166,30 +168,30 @@ const Contact = () => {
 
                     {/* Right Side Form */}
                     <div className={classes.formContainer}>
-                        <h3>Leave a message</h3>
+                        <h3>{t('contact.form.leaveMessage')}</h3>
                         <form onSubmit={(e) => e.preventDefault()}>
                             <div className={classes.inputGroup}>
-                                <label>Name*</label>
-                                <input type="text" className={classes.formInput} placeholder="Enter your name" required />
+                                <label>{t('contact.form.name')}</label>
+                                <input type="text" className={classes.formInput} placeholder={t('contact.form.placeholderName')} required />
                             </div>
 
                             <div className={classes.inputGroup}>
-                                <label>Email*</label>
-                                <input type="email" className={classes.formInput} placeholder="Enter your email address" required />
+                                <label>{t('contact.form.email')}</label>
+                                <input type="email" className={classes.formInput} placeholder={t('contact.form.placeholderEmail')} required />
                             </div>
 
                             <div className={classes.inputGroup}>
-                                <label>Phone*</label>
-                                <input type="tel" className={classes.formInput} placeholder="Enter your phone number" required />
+                                <label>{t('contact.form.phone')}</label>
+                                <input type="tel" className={classes.formInput} placeholder={t('contact.form.placeholderPhone')} required />
                             </div>
 
                             <div className={classes.inputGroup}>
-                                <label>Message*</label>
-                                <textarea className={classes.formTextarea} placeholder="Please describe what you need" required></textarea>
+                                <label>{t('contact.form.message')}</label>
+                                <textarea className={classes.formTextarea} placeholder={t('contact.form.placeholderMessage')} required></textarea>
                             </div>
 
                             <button type="submit" className={classes.submitBtn}>
-                                Send Now <Send size={18} />
+                                {t('contact.form.send')} <Send size={18} />
                             </button>
                         </form>
                     </div>
@@ -199,8 +201,8 @@ const Contact = () => {
             {/* Dairy Units */}
             <div className={classes.sectionContainer}>
                 <div className={classes.sectionHeader}>
-                    <h2>Our Dairy Units</h2>
-                    <p>State-of-the-art processing plants ensuring the highest quality dairy reaches your home every day.</p>
+                    <h2>{t('contact.dairyUnits.title')}</h2>
+                    <p>{t('contact.dairyUnits.subtitle')}</p>
                 </div>
 
                 <div className={classes.dairyGrid}>
@@ -210,7 +212,7 @@ const Contact = () => {
                                 <img src={dairy.image} alt={dairy.name} />
                             </div>
                             <div className={classes.dairyContent}>
-                                {dairy.isMain && <span className={classes.mainPlantBadge}>Main Plant</span>}
+                                {dairy.isMain && <span className={classes.mainPlantBadge}>{t('contact.dairyUnits.mainPlant')}</span>}
                                 <h3>{dairy.name}</h3>
                                 <p className={classes.dairyAddress}>{dairy.address}</p>
 
@@ -225,7 +227,7 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                <button className={classes.viewDetailsBtn}>View Plant Details</button>
+                                <button className={classes.viewDetailsBtn}>{t('contact.dairyUnits.viewDetails')}</button>
                             </div>
                         </div>
                     ))}

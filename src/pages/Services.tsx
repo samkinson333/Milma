@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Services.module.css';
 import { Truck, Users, Store, ShoppingBasket, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 // Local assets
 const IMAGES = {
@@ -61,46 +62,48 @@ const CountUp = ({ end, duration = 2000 }: { end: number, duration?: number }) =
 }
 
 const Services = () => {
+    const { t } = useTranslation();
+
     const services = [
         {
             id: "farmers",
-            title: "Services to farmers and Primary Dairy Co operatives",
+            title: t('servicesPage.items.farmers.title'),
             path: "/services/farmers-coops",
-            description: "The Union is committed to provide technical and financial assistances for the welfare and development of primary Dairy co operatives and Dairy farmers...",
+            description: t('servicesPage.items.farmers.description'),
             icon: <Truck size={32} />,
             image: IMAGES.farmers
         },
         {
             id: "society",
-            title: "Society Level",
+            title: t('servicesPage.items.society.title'),
             path: "/services/society-level",
-            description: "Union Conduct various socio economic development programs for milk producers and the Dairy Co-operative Societies including artificial insemination pr...",
+            description: t('servicesPage.items.society.description'),
             icon: <Users size={32} />,
             image: IMAGES.society
         },
         {
             id: "dealers",
-            title: "Dealers Level",
+            title: t('servicesPage.items.dealers.title'),
             path: "/services/dealers-level",
-            description: "Ready to collaborate with Milma as a Franchisee? Set up your own Milma Franchise and be a part of the fastest growing and most profitable dairy brand...",
+            description: t('servicesPage.items.dealers.description'),
             icon: <Store size={32} />,
             image: IMAGES.dealers
         },
         {
             id: "consumers",
-            title: "Consumer Level",
+            title: t('servicesPage.items.consumers.title'),
             path: "/services/consumer-level",
-            description: "Union has more than 5000 agents for milk. The Dairies offer round the clock customer care support for its agents and consumers. Union supply milk dail...",
+            description: t('servicesPage.items.consumers.description'),
             icon: <ShoppingBasket size={32} />,
             image: IMAGES.consumers
         }
     ];
 
     const stats = [
-        { number: 687, label: "Dairy Products", doodle: "/assets/services/DAIRY.png" },
-        { number: 655, label: "Expert Farmers", doodle: "/assets/services/Gemini_Generated_Image_dco798dco798dco7-removebg-preview.png" },
-        { number: 450, label: "Units Of Cattle", doodle: "/assets/services/Gemini_Generated_Image_m3046am3046am304-removebg-preview.png" },
-        { number: 1200, label: "Hectares Of Farm", doodle: "/assets/services/FARM.png" }
+        { number: 687, label: t('servicesPage.stats.products'), doodle: "/assets/services/DAIRY.png" },
+        { number: 655, label: t('servicesPage.stats.farmers'), doodle: "/assets/services/Gemini_Generated_Image_dco798dco798dco7-removebg-preview.png" },
+        { number: 450, label: t('servicesPage.stats.cattle'), doodle: "/assets/services/Gemini_Generated_Image_m3046am3046am304-removebg-preview.png" },
+        { number: 1200, label: t('servicesPage.stats.farm'), doodle: "/assets/services/FARM.png" }
     ];
 
     const scrollToSection = (id: string) => {
@@ -168,10 +171,10 @@ const Services = () => {
                         <img src="/assets/services/servicesh.jpg" alt="Services Overview" className={classes.introImage} />
                     </div>
                     <div className={classes.introTextWrapper}>
-                        <h3>WHAT WE DO</h3>
-                        <h2>Services We Provide</h2>
+                        <h3>{t('servicesPage.subtitle')}</h3>
+                        <h2>{t('servicesPage.title')}</h2>
                         <p>
-                            To carryout activities for promoting Production, Procurement, Processing and Marketing of milk and milk products for economic development of the farming community. To provide assured year round market and stable price to the dairy farmers for their produce.
+                            {t('servicesPage.description')}
                         </p>
                     </div>
                 </div>
@@ -224,7 +227,7 @@ const Services = () => {
                                                     <h3 className={classes.cardTitle}>{service.title}</h3>
                                                     <p className={classes.cardDesc}>{service.description}</p>
                                                     <div className={classes.learnMore}>
-                                                        <span>Know More</span>
+                                                        <span>{t('servicesPage.knowMore')}</span>
                                                         <ArrowRight size={16} />
                                                     </div>
                                                 </div>
@@ -265,7 +268,7 @@ const Services = () => {
                                                     <h3 className={classes.cardTitle}>{service.title}</h3>
                                                     <p className={classes.cardDesc}>{service.description}</p>
                                                     <div className={classes.learnMore}>
-                                                        <span>Know More</span>
+                                                        <span>{t('servicesPage.knowMore')}</span>
                                                         <ArrowRight size={16} />
                                                     </div>
                                                 </div>

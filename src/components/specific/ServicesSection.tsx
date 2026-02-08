@@ -1,31 +1,34 @@
 import { motion } from 'framer-motion';
 import { Users, Truck, Award, Heart } from 'lucide-react';
 import classes from './ServicesSection.module.css';
-
-const services = [
-    {
-        icon: Users,
-        title: 'Services to Farmers',
-        description: 'Supporting primary dairy cooperatives and providing assured year-round market with stable prices to dairy farmers.'
-    },
-    {
-        icon: Truck,
-        title: 'Dealers Level',
-        description: 'Comprehensive support and distribution network ensuring fresh products reach every corner of Kerala.'
-    },
-    {
-        icon: Award,
-        title: 'Quality Assurance',
-        description: 'Rigorous quality testing and processing to maintain the highest standards in dairy products.'
-    },
-    {
-        icon: Heart,
-        title: 'Consumer Level',
-        description: 'Dedicated to providing pure, healthy, and affordable dairy products to every household.'
-    }
-];
+import { useTranslation } from 'react-i18next';
 
 const ServicesSection = () => {
+    const { t } = useTranslation();
+
+    const services = [
+        {
+            icon: Users,
+            title: t('services.list.farmers.title'),
+            description: t('services.list.farmers.description')
+        },
+        {
+            icon: Truck,
+            title: t('services.list.dealers.title'),
+            description: t('services.list.dealers.description')
+        },
+        {
+            icon: Award,
+            title: t('services.list.quality.title'),
+            description: t('services.list.quality.description')
+        },
+        {
+            icon: Heart,
+            title: t('services.list.consumers.title'),
+            description: t('services.list.consumers.description')
+        }
+    ];
+
     return (
         <section className={classes.section}>
             <div className={classes.container}>
@@ -36,11 +39,10 @@ const ServicesSection = () => {
                     viewport={{ once: true }}
                     className={classes.header}
                 >
-                    <span className={classes.preTitle}>What We Do</span>
-                    <h2 className={classes.title}>Services We Provide</h2>
+                    <span className={classes.preTitle}>{t('services.preTitle')}</span>
+                    <h2 className={classes.title}>{t('services.title')}</h2>
                     <p className={classes.subtitle}>
-                        To carry out activities for promoting Production, Procurement, Processing and
-                        Marketing of milk and milk products for economic development of the farming community.
+                        {t('services.subtitle')}
                     </p>
                 </motion.div>
 

@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../../context/CartContext';
 import { X, Plus, Minus, Trash2, ShoppingBag, ArrowRight } from 'lucide-react';
 import classes from './CartDrawer.module.css';
+import { useTranslation } from 'react-i18next';
 
 const CartDrawer = () => {
     const { isCartOpen, toggleCart, cart, itemsCount, cartTotal, removeFromCart, updateQuantity } = useCart();
     const drawerRef = useRef<HTMLDivElement>(null);
+    const { t } = useTranslation();
 
     // Close on click outside
     useEffect(() => {
@@ -53,7 +55,7 @@ const CartDrawer = () => {
                         <div className={classes.header}>
                             <div className={classes.title}>
                                 <ShoppingBag size={20} />
-                                <h2>Your Basket <span className={classes.count}>({itemsCount})</span></h2>
+                                <h2>{t('cart.title')} <span className={classes.count}>({itemsCount})</span></h2>
                             </div>
                             <button onClick={toggleCart} className={classes.closeBtn}>
                                 <X size={24} />
@@ -65,10 +67,10 @@ const CartDrawer = () => {
                                 <div className={classes.emptyIcon}>
                                     <ShoppingBag size={48} />
                                 </div>
-                                <h3>Your basket is empty</h3>
-                                <p>Looks like you haven't added any fresh goodness yet.</p>
+                                <h3>{t('cart.emptyTitle')}</h3>
+                                <p>{t('cart.emptySubtitle')}</p>
                                 <button onClick={toggleCart} className={classes.shopBtn}>
-                                    Start Shopping
+                                    {t('cart.shopButton')}
                                 </button>
                             </div>
                         ) : (
@@ -112,11 +114,11 @@ const CartDrawer = () => {
 
                                 <div className={classes.footer}>
                                     <div className={classes.totalRow}>
-                                        <span>Total Amount</span>
+                                        <span>{t('cart.totalAmount')}</span>
                                         <span className={classes.totalPrice}>₹{cartTotal.toFixed(2)}</span>
                                     </div>
                                     <button className={classes.checkoutBtn}>
-                                        Proceed to Checkout <ArrowRight size={18} />
+                                        {t('cart.checkoutButton')} <ArrowRight size={18} />
                                     </button>
                                 </div>
                             </>

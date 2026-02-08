@@ -1,0 +1,384 @@
+{
+    "nav": {
+        "home": "Home",
+        "products": "Products",
+        "about": "About Us",
+        "services": "Services",
+        "insights": "Insights",
+        "career": "Career",
+        "recruitment": "Recruitment",
+        "contact": "Contact",
+        "admin": "Admin"
+    },
+    "common": {
+        "search": "Search",
+        "cart": "Cart",
+        "viewAll": "View All Selection",
+        "readMore": "Read More",
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now",
+        "all": "All",
+        "download": "Download",
+        "explore": "Explore Now"
+    },
+    "hero": {
+        "title": "MILMA",
+        "subtitle": "Freshness Redefined",
+        "description": "Thiruvananthapuram Regional Co-operative Milk Producers Union Ltd. Bringing pure dairy goodness to your doorstep every single day.",
+        "scrollDown": "Scroll Down"
+    },
+    "aboutSnippet": {
+        "preTitle": "Our Legacy",
+        "title": "Nurturing Kerala Since 1980",
+        "description": "Milma (TRCMPU) has been the cornerstone of Kerala's dairy industry for over four decades. As a cooperative movement, we empower thousands of local farmers while delivering the purest milk and dairy products to every household.",
+        "learnMore": "Discover Our Story"
+    },
+    "features": {
+        "freshness": {
+            "title": "Farm to Table",
+            "subtitle": "Pure & Natural Origin"
+        },
+        "quality": {
+            "title": "Gold Standard",
+            "subtitle": "ISO Certified Quality"
+        },
+        "network": {
+            "title": "Local Network",
+            "subtitle": "Empowering 1100+ Co-ops"
+        }
+    },
+    "services": {
+        "preTitle": "What We Do",
+        "title": "Services We Provide",
+        "subtitle": "To carry out activities for promoting Production, Procurement, Processing and Marketing of milk and milk products for economic development of the farming community.",
+        "list": {
+            "farmers": {
+                "title": "Services to Farmers",
+                "description": "Supporting primary dairy cooperatives and providing assured year-round market with stable prices to dairy farmers."
+            },
+            "dealers": {
+                "title": "Dealers Level",
+                "description": "Comprehensive support and distribution network ensuring fresh products reach every corner of Kerala."
+            },
+            "quality": {
+                "title": "Quality Assurance",
+                "description": "Rigorous quality testing and processing to maintain the highest standards in dairy products."
+            },
+            "consumers": {
+                "title": "Consumer Level",
+                "description": "Dedicated to providing pure, healthy, and affordable dairy products to every household."
+            }
+        }
+    },
+    "news": {
+        "preTitle": "Stay Updated",
+        "title": "Latest News & Articles",
+        "articles": {
+            "article1": {
+                "title": "The Top 5 Benefits Of Cow Milk",
+                "excerpt": "Milk is a staple in almost every Indian household. As a matter of fact, Indians have always considered milk as a complete food..."
+            },
+            "article2": {
+                "title": "How Milk Helps Fight Common Cold & Influenza",
+                "excerpt": "Though beautiful, the monsoon has gone stranger in Kerala than ever, with more than half the population affected by common cold..."
+            },
+            "article3": {
+                "title": "MILMA PALADA PAYASAM RECIPE",
+                "excerpt": "Payasam or Pradhaman is malayali's favorite dessert. Payasam is normally consumed on almost all occasions in Kerala..."
+            }
+        }
+    },
+    "products": {
+        "preTitle": "Featured",
+        "title": "Best Sellers",
+        "items": {
+            "fullCream": "Premium Full Cream Milk",
+            "toned": "Toned Fresh Milk",
+            "homogenized": "Homogenized Pure Milk",
+            "organic": "Organic Farm Milk",
+            "ghee": "Pure Cow Ghee",
+            "flavoredMilk": "Cardamom Flavored Milk",
+            "buttermilk": "Spiced Buttermilk",
+            "paneer": "Fresh Malai Paneer",
+            "curd": "Thick Set Curd",
+            "butter": "Natural Table Butter",
+            "mix": "Chocolate Milk Mix",
+            "peda": "Milma Peda",
+            "icecream": "Vanilla Gold Ice Cream",
+            "instantPalada": "Milma Instant Palada"
+        },
+        "categories": {
+            "milk": "Milk",
+            "butterGhee": "Butter & Ghee",
+            "beverage": "Beverage",
+            "cheese": "Cheese",
+            "yogurt": "Yogurt",
+            "mix": "Mix",
+            "sweets": "Sweets",
+            "frozen": "Frozen"
+        }
+    },
+    "footer": {
+        "brandDescription": "Thiruvananthapuram Regional Co-operative Milk Producers Union Ltd.",
+        "shop": {
+            "title": "Shop",
+            "milk": "Milk",
+            "ghee": "Ghee",
+            "iceCream": "Ice Cream"
+        },
+        "company": {
+            "title": "Company",
+            "about": "About Us",
+            "leadership": "Leadership",
+            "careers": "Careers"
+        },
+        "support": {
+            "title": "Support",
+            "contact": "Contact",
+            "faq": "FAQ"
+        },
+        "copyright": "© 2026 Milma TRCMPU. All rights reserved."
+    },
+    "cart": {
+        "title": "Your Basket",
+        "emptyTitle": "Your basket is empty",
+        "emptySubtitle": "Looks like you haven't added any fresh goodness yet.",
+        "shopButton": "Start Shopping",
+        "totalAmount": "Total Amount",
+        "checkoutButton": "Proceed to Checkout"
+    },
+    "about": {
+        "hero": {
+            "legacy": "Our Legacy",
+            "title": "Nurturing Kerala Since 1980",
+            "description": "A cooperative movement dedicated to empowering farmers and delivering pure dairy goodness to every home."
+        },
+        "tabs": {
+            "profile": "Organization Profile",
+            "units": "Units of TRCMPU",
+            "board": "Board of Directors",
+            "performance": "Past Performance",
+            "vision": "Vision & Mission",
+            "functional": "Functional Areas"
+        },
+        "stats": {
+            "societies": "PRIMARY SOCIETIES",
+            "agents": "DISTRIBUTION AGENTS",
+            "sales": "LITERS SOLD DAILY",
+            "procurement": "LITERS PROCURED DAILY"
+        },
+        "profile": {
+            "title": "Organization Profile",
+            "p1": "Thiruvananthapuram Regional Co-operative Milk Producers' Union Ltd (TRCMPU) was registered in 1985 as a Regional Milk Union covering four southern districts of Kerala: Thiruvananthapuram, Kollam, Alappuzha, and Pathanamthitta.",
+            "p2": "TRCMPU has successfully completed over 25 years of operation. Starting from the old Thiruvananthapuram Dairy with 40,000 LPD capacity, we have expanded significantly. We commissioned plants at Kollam (1986), Alappuzha (1989), and a new 1 Lakh LPD plant at Thiruvananthapuram (1992).",
+            "p3": "Today, our procurement and sales utilize state-of-the-art technology, and we market a wide range of products under the 'Milma' brand, including Ghee, Butter, Ice-cream, Curd, Peda, and more.",
+            "download": "Download History PDF",
+            "excellence": "of Excellence",
+            "years": "40+ Years"
+        },
+        "units": {
+            "title": "Units of TRCMPU",
+            "subtitle": "TRCMPU operates through advanced dairies and extensive networks across southern Kerala.",
+            "employees": "Employees",
+            "societies": "Societies",
+            "agents": "Agents",
+            "procurement": "Procurement",
+            "sales": "Sales"
+        },
+        "board": {
+            "title": "Board of Directors",
+            "subtitle": "The visionary leadership guiding TRCMPU towards excellence."
+        },
+        "performance": {
+            "title": "Past Performance",
+            "description": "The union has experienced consistent growth, specifically noting a 'two-digit growth over the years' in both procurement and sales. Significant infrastructure improvements include the capacity expansion of the Kollam Dairy to 1 Lakh LPD and the Thiruvananthapuram Dairy to 2 Lakh LPD.",
+            "colYear": "Year",
+            "colProc": "Milk Procurement (LPD)",
+            "colSales": "Milk Sales (LPD)",
+            "footer": "* Selected historical data points showing long-term growth trend.",
+            "downloadFull": "Download Full Report"
+        },
+        "visionMission": {
+            "title": "Our Vision & Mission",
+            "mission": "Mission",
+            "missionText": "To become the leading organisation in the food and nutrition sector in the region, through the attainment of its marketing objectives and to become nucleus of an endeavour for an accelerated development of the rural economy of the region further it would aspire to function as professional, profitable and socially responsible organisation ensuring better returns to farmers, primary societies as well as its customers by providing good value for their money.",
+            "vision": "Vision",
+            "visionText": "To achieve the status of the best union in the country in turnover and profitability by achieving 10-15% growth per annum by accelerating the growth in milk production and sale of milk and milk products and diversifying into related areas in the food sector.",
+            "strategicGoal": "Strategic Goal",
+            "annualGrowth": "Annual Growth",
+            "commitment": "Core Commitment"
+        },
+        "functional": {
+            "title": "Key Functional Areas",
+            "subtitle": "The key departments driving our success and efficiency."
+        }
+    },
+    "categoryShowcase": {
+        "preTitle": "Explore Our Range",
+        "title": "Shop by Category",
+        "subtitle": "Discover our wide selection of fresh, pure dairy products",
+        "productCount": "Products",
+        "singleProduct": "Product"
+    },
+    "contact": {
+        "hero": {
+            "title": "Get in Touch",
+            "description": "We're here to help and answer any questions you might have. We look forward to hearing from you."
+        },
+        "cards": {
+            "sales": {
+                "title": "Sales & Marketing",
+                "description": "For bulk orders, dealer enquiries, and product information."
+            },
+            "support": {
+                "title": "General Support",
+                "description": "Reach out to our Head Office for general queries and assistance."
+            },
+            "office": {
+                "title": "Head Office",
+                "description": "TRCMPU Ltd, Ksheera Bhavan Pattom.P.O, Thiruvananthapuram - 04"
+            }
+        },
+        "form": {
+            "title": "Let's Start a Conversation",
+            "subtitle": "Whether you have a question about our products, pricing, or just want to say hello, our team is ready to answer all your questions.",
+            "leaveMessage": "Leave a message",
+            "name": "Name*",
+            "email": "Email*",
+            "phone": "Phone*",
+            "message": "Message*",
+            "placeholderName": "Enter your name",
+            "placeholderEmail": "Enter your email address",
+            "placeholderPhone": "Enter your phone number",
+            "placeholderMessage": "Please describe what you need",
+            "send": "Send Now"
+        },
+        "dairyUnits": {
+            "title": "Our Dairy Units",
+            "subtitle": "State-of-the-art processing plants ensuring the highest quality dairy reaches your home every day.",
+            "mainPlant": "Main Plant",
+            "viewDetails": "View Plant Details"
+        }
+    },
+    "banner": {
+        "arrival": {
+            "title": "New Arrival: Milma Ice Cream",
+            "subtitle": "Indulge in the creamy richness of our latest vanilla gold.",
+            "cta": "Try Now"
+        },
+        "farm": {
+            "title": "Farm Fresh Goodness",
+            "subtitle": "Direct from Kerala's lush pastures to your doorstep.",
+            "cta": "Learn More"
+        },
+        "paneer": {
+            "title": "Rich & Creamy Paneer",
+            "subtitle": "Make your curries special with Milma Malai Paneer.",
+            "cta": "Buy Now"
+        }
+    },
+    "servicesPage": {
+        "title": "Services We Provide",
+        "subtitle": "WHAT WE DO",
+        "description": "To carryout activities for promoting Production, Procurement, Processing and Marketing of milk and milk products for economic development of the farming community. To provide assured year round market and stable price to the dairy farmers for their produce.",
+        "items": {
+            "farmers": {
+                "title": "Services to farmers and Primary Dairy Co operatives",
+                "description": "The Union is committed to provide technical and financial assistances for the welfare and development of primary Dairy co operatives and Dairy farmers..."
+            },
+            "society": {
+                "title": "Society Level",
+                "description": "Union Conduct various socio economic development programs for milk producers and the Dairy Co-operative Societies including artificial insemination pr..."
+            },
+            "dealers": {
+                "title": "Dealers Level",
+                "description": "Ready to collaborate with Milma as a Franchisee? Set up your own Milma Franchise and be a part of the fastest growing and most profitable dairy brand..."
+            },
+            "consumers": {
+                "title": "Consumer Level",
+                "description": "Union has more than 5000 agents for milk. The Dairies offer round the clock customer care support for its agents and consumers. Union supply milk dail..."
+            }
+        },
+        "stats": {
+            "products": "Dairy Products",
+            "farmers": "Expert Farmers",
+            "cattle": "Units Of Cattle",
+            "farm": "Hectares Of Farm"
+        },
+        "knowMore": "Know More"
+    },
+    "career": {
+        "hero": {
+            "title": "Build Your Future with",
+            "milma": "Milma",
+            "description": "Join Kerala's most trusted dairy cooperative and make a meaningful impact on millions of lives. We're looking for passionate professionals to help us deliver excellence."
+        },
+        "whyJoin": {
+            "title": "Why Join Us?",
+            "description": "At Milma, we believe that exceptional products come from exceptional people. We're committed to creating a workplace where innovation, integrity, and collaboration thrive."
+        },
+        "benefits": {
+            "health": {
+                "title": "Health Insurance",
+                "desc": "Comprehensive medical coverage for you and your family"
+            },
+            "growth": {
+                "title": "Career Growth",
+                "desc": "Continuous learning and advancement opportunities"
+            },
+            "bonus": {
+                "title": "Performance Bonus",
+                "desc": "Annual incentives based on individual and team performance"
+            },
+            "balance": {
+                "title": "Work-Life Balance",
+                "desc": "Flexible schedules and supportive work environment"
+            }
+        },
+        "openings": {
+            "title": "Current Openings",
+            "description": "Explore opportunities across various departments and locations. Find the perfect role that matches your skills and aspirations.",
+            "viewDetails": "View Details",
+            "roles": {
+                "qc": {
+                    "title": "Senior Quality Control Analyst",
+                    "desc": "Lead quality testing and compliance for dairy products. NABL certification experience preferred."
+                },
+                "marketing": {
+                    "title": "Regional Marketing Manager",
+                    "desc": "Drive brand strategy and market expansion across Kerala. Experience in FMCG sector required."
+                },
+                "production": {
+                    "title": "Dairy Technology Engineer",
+                    "desc": "Manage automated processing equipment and optimize production workflows."
+                },
+                "logistics": {
+                    "title": "Supply Chain Coordinator",
+                    "desc": "Coordinate cold chain logistics and ensure timely distribution across the region."
+                }
+            }
+        },
+        "cta": {
+            "title": "Don't see a fit? Join our Talent Pool",
+            "description": "We're always looking for talented individuals. Submit your resume and we'll reach out when a suitable position opens up.",
+            "button": "Submit Your Resume"
+        },
+        "form": {
+            "title": "Join Our Talent Pool",
+            "description": "Fill in your details and upload your resume. We'll contact you when a suitable position becomes available.",
+            "fullName": "FULL NAME",
+            "email": "EMAIL ADDRESS",
+            "phone": "PHONE NUMBER",
+            "department": "AREA OF INTEREST",
+            "resume": "UPLOAD RESUME",
+            "submit": "SUBMIT APPLICATION",
+            "placeholders": {
+                "name": "John Doe",
+                "email": "john@example.com",
+                "phone": "+91 98765 43210",
+                "selectDept": "Select Department",
+                "upload": "Click to upload your resume"
+            }
+        }
+    }
+}

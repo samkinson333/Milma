@@ -13,25 +13,26 @@ import {
     TrendingUp
 } from 'lucide-react';
 import classes from './About.module.css';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
-    const [activeTab, setActiveTab] = useState('Organization Profile');
+    const { t } = useTranslation();
+    const [activeTab, setActiveTab] = useState(t('about.tabs.profile'));
 
     const tabs = [
-        { name: 'Organization Profile', icon: <Building2 size={18} /> },
-        { name: 'Units of TRCMPU', icon: <LayoutGrid size={18} /> },
-        { name: 'Board of Directors', icon: <Users size={18} /> },
-        { name: 'Past Performance', icon: <History size={18} /> },
-        { name: 'Vision & Mission', icon: <Target size={18} /> },
-        { name: 'Functional Areas', icon: <FileText size={18} /> },
+        { name: t('about.tabs.profile'), icon: <Building2 size={18} /> },
+        { name: t('about.tabs.units'), icon: <LayoutGrid size={18} /> },
+        { name: t('about.tabs.board'), icon: <Users size={18} /> },
+        { name: t('about.tabs.performance'), icon: <History size={18} /> },
+        { name: t('about.tabs.vision'), icon: <Target size={18} /> },
+        { name: t('about.tabs.functional'), icon: <FileText size={18} /> },
     ];
 
-    // Updated stats based on "Key Functional Area" text
     const stats = [
-        { value: '1100+', label: 'PRIMARY SOCIETIES' },
-        { value: '8000+', label: 'DISTRIBUTION AGENTS' },
-        { value: '5.75 Lakh', label: 'LITERS SOLD DAILY' },
-        { value: '3.90 Lakh', label: 'LITERS PROCURED DAILY' },
+        { value: '1100+', label: t('about.stats.societies') },
+        { value: '8000+', label: t('about.stats.agents') },
+        { value: '5.75 Lakh', label: t('about.stats.sales') },
+        { value: '3.90 Lakh', label: t('about.stats.procurement') },
     ];
 
     const units = [
@@ -71,37 +72,25 @@ const About = () => {
 
     const functionalAreas = [
         {
-            title: 'Procurement & Inputs',
-            description: 'The primary objective of the Union is to procure marketable surplus milk produced by the dairy farmers affiliated to the primary dairy co-operatives. The Union is procuring approximately 3.90 lakh litres per day from nearly 1100 primary societies. The milk collection is exclusively routed through 87 Bulk Milk Chilling Centres.'
+            title: t('services.list.farmers.title'),
+            description: t('services.list.farmers.description')
         },
         {
-            title: 'Marketing',
-            description: 'TRCMPU is selling approximately 5.75 lakh litres of fluid milk per day. The major variants are "TONED", "DOUBLE TONED" and "RICH". The Union has engaged more than 8000 agents and 45 wholesale dealers. 5 marketing hubs are in operation to ensure availability in every nook and corner.'
+            title: t('services.list.dealers.title'),
+            description: t('services.list.dealers.description')
         },
         {
-            title: 'Production',
-            description: 'Undertakes all research and development activities for unfolding new products in accordance with dynamic consumer taste. Controls the entire functions of the dairy plants strictly following food safety management system guidelines. Committed to bringing utmost quality products through cutting-edge technologies.'
+            title: t('services.list.quality.title'),
+            description: t('services.list.quality.description')
         },
         {
-            title: 'Projects',
-            description: 'Functions as the End Implementing Agency of various dairy development schemes funded by State and Central Government agencies. Responsible for formulation, implementation, and monitoring of these schemes and providing technical support to the three modern dairy plants.'
-        },
-        {
-            title: 'Finance',
-            description: 'Finance and Accounts Department is responsible for fund management, accounting, auditing, and ensuring value for money.'
-        },
-        {
-            title: 'Quality Assurance',
-            description: 'Plays a vital role in perpetuating industry-leading quality parameters for each product strictly in adherence with FSMS guidelines. All three dairy production units are accredited with ISO 22000:2018.'
-        },
-        {
-            title: 'HRD & Administration',
-            description: 'Ensures effective utilization of human resources. Committed to keeping manpower motivated, efficient, and skillful through continuous training and development programs.'
+            title: t('about.visionMission.commitment'),
+            description: t('about.visionMission.missionText')
         }
     ];
 
     const boardMembers = [
-        { name: 'Smt. Mani Viswanath', designation: 'Chairman', image: '/images/chairman.jpeg', isChairman: true },
+        { name: t('about.board.members.mani.name'), designation: t('about.board.members.mani.role'), image: '/images/chairman.jpeg', isChairman: true },
         { name: 'Smt. Romy Jacob', designation: 'NDDB Representative' },
         { name: 'Smt. Sinila Unnikrishnan', designation: 'Govt. Representative (Dept. of Dairy Development)' },
         { name: 'Shri. N K Premlal', designation: 'Govt. Representative (KCMMF)' },
@@ -109,14 +98,7 @@ const About = () => {
         { name: 'Smt. Beena P V', designation: 'Director' },
         { name: 'Shri. Mundappally Thomas', designation: 'Director' },
         { name: 'Shri. Ayaparambu Ramachandran', designation: 'Director' },
-        { name: 'Shri. T K Prathula Chandran', designation: 'Director' },
         { name: 'Smt. J. Mehar', designation: 'Director' },
-        { name: 'Shri. Vasudevan Unni P G', designation: 'Director' },
-        { name: 'Shri. K.R. Mohanan Pillai', designation: 'Director' },
-        { name: 'Shri. M. Krishnankutti', designation: 'Director' },
-        { name: 'Shri. K. Krishnan Potti', designation: 'Director' },
-        { name: 'Shri. T.K.Venugopal', designation: 'Director' },
-        { name: 'Shri. Ajithsingh. W.R', designation: 'Director' },
     ];
 
     const performanceStats = [
@@ -126,228 +108,200 @@ const About = () => {
     ];
 
     const renderContent = () => {
-        switch (activeTab) {
-            case 'Organization Profile':
-                return (
-                    <div className={classes.profileGrid}>
-                        <div className={classes.profileContent}>
-                            <h2>Organization Profile</h2>
-                            <div className={classes.underline}></div>
+        if (activeTab === t('about.tabs.profile')) {
+            return (
+                <div className={classes.profileGrid}>
+                    <div className={classes.profileContent}>
+                        <h2>{t('about.profile.title')}</h2>
+                        <div className={classes.underline}></div>
 
-                            <p>
-                                Thiruvananthapuram Regional Co-operative Milk Producers' Union Ltd (TRCMPU) was registered in 1985
-                                as a Regional Milk Union covering four southern districts of Kerala: Thiruvananthapuram, Kollam,
-                                Alappuzha, and Pathanamthitta.
-                            </p>
-                            <p>
-                                TRCMPU has successfully completed over 25 years of operation. Starting from the old Thiruvananthapuram
-                                Dairy with 40,000 LPD capacity, we have expanded significantly. We commissioned plants at Kollam (1986),
-                                Alappuzha (1989), and a new 1 Lakh LPD plant at Thiruvananthapuram (1992).
-                            </p>
-                            <p>
-                                Today, our procurement and sales utilize state-of-the-art technology, and we market a wide range of products
-                                under the "Milma" brand, including Ghee, Butter, Ice-cream, Curd, Peda, and more.
-                            </p>
+                        <p>{t('about.profile.p1')}</p>
+                        <p>{t('about.profile.p2')}</p>
+                        <p>{t('about.profile.p3')}</p>
 
-                            <button className={classes.downloadBtn}>
-                                Download History PDF <Download size={18} style={{ marginLeft: '8px' }} />
-                            </button>
+                        <button className={classes.downloadBtn}>
+                            {t('about.profile.download')} <Download size={18} style={{ marginLeft: '8px' }} />
+                        </button>
+                    </div>
+
+                    <div className={classes.profileImage}>
+                        <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} />
+
+                        <div className={classes.excellenceBadge}>
+                            <ArrowUp size={24} className={classes.badgeIcon} />
+                            <span>{t('about.profile.years')}</span>
+                            <span>{t('about.profile.excellence')}</span>
                         </div>
+                    </div>
+                </div>
+            );
+        }
 
-                        <div className={classes.profileImage}>
-                            <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} />
+        if (activeTab === t('about.tabs.units')) {
+            return (
+                <div className={classes.profileContent}>
+                    <h2>{t('about.units.title')}</h2>
+                    <div className={classes.underline}></div>
+                    <p style={{ marginBottom: '2rem' }}>{t('about.units.subtitle')}</p>
 
-                            <div className={classes.excellenceBadge}>
-                                <ArrowUp size={24} className={classes.badgeIcon} />
-                                <span>40+ Years</span>
-                                <span>of Excellence</span>
+                    <div className={classes.unitGrid}>
+                        {units.map((unit, index) => (
+                            <div key={index} className={classes.unitCard}>
+                                <h3>{unit.name}</h3>
+                                <ul className={classes.unitStats}>
+                                    {unit.employees !== 'N/A' && <li><span>{t('about.units.employees')}:</span> <strong>{unit.employees}</strong></li>}
+                                    <li><span>{t('about.units.societies')}:</span> <strong>{unit.societies}</strong></li>
+                                    <li><span>{t('about.units.agents')}:</span> <strong>{unit.agents}</strong></li>
+                                    <li><span>{t('about.units.procurement')}:</span> <strong>{unit.procurement}</strong></li>
+                                    <li><span>{t('about.units.sales')}:</span> <strong>{unit.sales}</strong></li>
+                                </ul>
                             </div>
-                        </div>
+                        ))}
                     </div>
-                );
-            case 'Units of TRCMPU':
-                return (
-                    <div className={classes.profileContent}>
-                        <h2>Units of TRCMPU</h2>
-                        <div className={classes.underline}></div>
-                        <p style={{ marginBottom: '2rem' }}>TRCMPU operates through advanced dairies and extensive networks across southern Kerala.</p>
+                </div>
+            );
+        }
 
-                        <div className={classes.unitGrid}>
-                            {units.map((unit, index) => (
-                                <div key={index} className={classes.unitCard}>
-                                    <h3>{unit.name}</h3>
-                                    <ul className={classes.unitStats}>
-                                        {unit.employees !== 'N/A' && <li><span>Employees:</span> <strong>{unit.employees}</strong></li>}
-                                        <li><span>Societies:</span> <strong>{unit.societies}</strong></li>
-                                        <li><span>Agents:</span> <strong>{unit.agents}</strong></li>
-                                        <li><span>Procurement:</span> <strong>{unit.procurement}</strong></li>
-                                        <li><span>Sales:</span> <strong>{unit.sales}</strong></li>
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                );
-            case 'Board of Directors':
-                return (
-                    <div className={classes.profileContent}>
-                        <h2>Board of Directors</h2>
-                        <div className={classes.underline}></div>
-                        <p style={{ marginBottom: '3rem' }}>The visionary leadership guiding TRCMPU towards excellence.</p>
+        if (activeTab === t('about.tabs.board')) {
+            return (
+                <div className={classes.profileContent}>
+                    <h2>{t('about.board.title')}</h2>
+                    <div className={classes.underline}></div>
+                    <p style={{ marginBottom: '3rem' }}>{t('about.board.subtitle')}</p>
 
-                        <div className={classes.boardGrid}>
-                            {boardMembers.map((member, index) => (
-                                <div key={index} className={`${classes.boardCard} ${member.isChairman ? classes.chairmanCard : ''}`}>
-                                    <div className={classes.boardMemberImage}>
-                                        {member.image ? (
-                                            <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                        ) : (
-                                            <User size={64} color="#991b1b" style={{ opacity: 0.5 }} />
-                                        )}
-                                    </div>
-                                    <h3>{member.name}</h3>
-                                    <p className={classes.designation}>{member.designation}</p>
-                                    {member.isChairman && (
-                                        <p style={{ marginTop: '1rem', fontStyle: 'italic', fontSize: '0.9rem' }}>
-                                            Thiruvananthapuram Regional Co-operative Milk Producers' Union Ltd
-                                        </p>
+                    <div className={classes.boardGrid}>
+                        {boardMembers.map((member, index) => (
+                            <div key={index} className={`${classes.boardCard} ${member.isChairman ? classes.chairmanCard : ''}`}>
+                                <div className={classes.boardMemberImage}>
+                                    {member.image ? (
+                                        <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    ) : (
+                                        <User size={64} color="#991b1b" style={{ opacity: 0.5 }} />
                                     )}
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-                );
-            case 'Past Performance':
-                return (
-                    <div className={classes.profileContent}>
-                        <h2>Past Performance</h2>
-                        <div className={classes.underline}></div>
-                        <div style={{ marginBottom: '2rem' }}>
-                            <p>
-                                The union has experienced consistent growth, specifically noting a "two-digit growth over the years"
-                                in both procurement and sales. Significant infrastructure improvements include the capacity expansion
-                                of the Kollam Dairy to 1 Lakh LPD and the Thiruvananthapuram Dairy to 2 Lakh LPD.
-                            </p>
-                        </div>
-
-                        <div className={classes.statsTableContainer}>
-                            <table className={classes.statsTable}>
-                                <thead>
-                                    <tr>
-                                        <th>Year</th>
-                                        <th>Milk Procurement (LPD)</th>
-                                        <th>Milk Sales (LPD)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {performanceStats.map((row, index) => (
-                                        <tr key={index}>
-                                            <td>{row.year}</td>
-                                            <td>{row.procurement}</td>
-                                            <td>{row.sales}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                            <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#666', fontStyle: 'italic' }}>
-                                * Selected historical data points showing long-term growth trend.
-                            </p>
-                        </div>
-
-                        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-                            <button className={classes.downloadBtn}>
-                                Download Full Report <Download size={18} style={{ marginLeft: '8px' }} />
-                            </button>
-                        </div>
-                    </div>
-                );
-            case 'Vision & Mission':
-                return (
-                    <div className={classes.visionMissionSection}>
-                        <div className={classes.visionMissionHeader}>
-                            <h2>Our Vision & Mission</h2>
-                            <div className={classes.headerUnderline}></div>
-                        </div>
-
-                        <div className={classes.visionMissionGrid}>
-                            {/* Mission Card */}
-                            <div className={`${classes.vmCard} ${classes.missionCard}`}>
-                                <div className={classes.vmHeaderRow}>
-                                    <div className={`${classes.vmIconBox} ${classes.missionIconBox}`}>
-                                        <Shield size={22} strokeWidth={2.5} />
-                                    </div>
-                                    <h3 className={`${classes.vmTitle} ${classes.missionTitle}`}>Mission</h3>
-                                </div>
-
-                                <div className={classes.vmContent}>
-                                    <span className={classes.vmQuote}>“</span>
-                                    <p className={classes.vmText}>
-                                        To become the leading organisation in the food and nutrition sector in the region,
-                                        through the attainment of its marketing objectives and to become nucleus of an
-                                        endeavour for an accelerated development of the rural economy of the region further
-                                        it would aspire to function as professional, profitable and socially responsible
-                                        organisation ensuring better returns to farmers, primary societies as well as its
-                                        customers by providing good value for their money.
-                                    </p>
-                                </div>
-
-                                <div className={classes.vmFooter} style={{ justifyContent: 'flex-end' }}>
-                                    <span className={classes.footerLabel}>Core Commitment</span>
-                                </div>
+                                <h3>{member.name}</h3>
+                                <p className={classes.designation}>{member.designation}</p>
                             </div>
-
-                            {/* Vision Card */}
-                            <div className={`${classes.vmCard} ${classes.visionCard}`}>
-                                <div className={classes.vmHeaderRow}>
-                                    <div className={`${classes.vmIconBox} ${classes.visionIconBox}`}>
-                                        <TrendingUp size={22} strokeWidth={2.5} />
-                                    </div>
-                                    <h3 className={`${classes.vmTitle} ${classes.visionTitle}`}>Vision</h3>
-                                </div>
-
-                                <div className={classes.vmContent}>
-                                    <span className={classes.vmQuote}>“</span>
-                                    <p className={classes.vmText}>
-                                        To achieve the status of the best union in the country in turnover and profitability
-                                        by achieving 10-15% growth per annum by accelerating the growth in milk production
-                                        and sale of milk and milk products and diversifying into related areas in the food sector.
-                                    </p>
-                                </div>
-
-                                <div className={classes.vmFooter}>
-                                    <div className={classes.badgeGoal}>
-                                        <ArrowUp size={16} strokeWidth={3} />
-                                        <div>
-                                            <div className={classes.badgeValue}>10-15%</div>
-                                            <div className={classes.badgeLabel}>Annual Growth</div>
-                                        </div>
-                                    </div>
-                                    <span className={classes.footerLabel}>Strategic Goal</span>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
-                );
-            case 'Functional Areas':
-                return (
-                    <div className={classes.profileContent}>
-                        <h2>Key Functional Areas</h2>
-                        <div className={classes.underline}></div>
-                        <p style={{ marginBottom: '3rem' }}>The key departments driving our success and efficiency.</p>
-
-                        <div className={classes.functionalGrid}>
-                            {functionalAreas.map((area, index) => (
-                                <div key={index} className={classes.functionalCard}>
-                                    <h3>{area.title}</h3>
-                                    <p>{area.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                );
-            default:
-                return null;
+                </div>
+            );
         }
+
+        if (activeTab === t('about.tabs.performance')) {
+            return (
+                <div className={classes.profileContent}>
+                    <h2>{t('about.performance.title')}</h2>
+                    <div className={classes.underline}></div>
+                    <div style={{ marginBottom: '2rem' }}>
+                        <p>{t('about.performance.description')}</p>
+                    </div>
+
+                    <div className={classes.statsTableContainer}>
+                        <table className={classes.statsTable}>
+                            <thead>
+                                <tr>
+                                    <th>{t('about.performance.colYear')}</th>
+                                    <th>{t('about.performance.colProc')}</th>
+                                    <th>{t('about.performance.colSales')}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {performanceStats.map((row, index) => (
+                                    <tr key={index}>
+                                        <td>{row.year}</td>
+                                        <td>{row.procurement}</td>
+                                        <td>{row.sales}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                        <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#666', fontStyle: 'italic' }}>
+                            {t('about.performance.footer')}
+                        </p>
+                    </div>
+
+                    <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+                        <button className={classes.downloadBtn}>
+                            {t('about.performance.downloadFull')} <Download size={18} style={{ marginLeft: '8px' }} />
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        if (activeTab === t('about.tabs.vision')) {
+            return (
+                <div className={classes.visionMissionSection}>
+                    <div className={classes.visionMissionHeader}>
+                        <h2>{t('about.visionMission.title')}</h2>
+                        <div className={classes.headerUnderline}></div>
+                    </div>
+
+                    <div className={classes.visionMissionGrid}>
+                        <div className={`${classes.vmCard} ${classes.missionCard}`}>
+                            <div className={classes.vmHeaderRow}>
+                                <div className={`${classes.vmIconBox} ${classes.missionIconBox}`}>
+                                    <Shield size={22} strokeWidth={2.5} />
+                                </div>
+                                <h3 className={`${classes.vmTitle} ${classes.missionTitle}`}>{t('about.visionMission.mission')}</h3>
+                            </div>
+                            <div className={classes.vmContent}>
+                                <span className={classes.vmQuote}>“</span>
+                                <p className={classes.vmText}>{t('about.visionMission.missionText')}</p>
+                            </div>
+                            <div className={classes.vmFooter} style={{ justifyContent: 'flex-end' }}>
+                                <span className={classes.footerLabel}>{t('about.visionMission.commitment')}</span>
+                            </div>
+                        </div>
+
+                        <div className={`${classes.vmCard} ${classes.visionCard}`}>
+                            <div className={classes.vmHeaderRow}>
+                                <div className={`${classes.vmIconBox} ${classes.visionIconBox}`}>
+                                    <TrendingUp size={22} strokeWidth={2.5} />
+                                </div>
+                                <h3 className={`${classes.vmTitle} ${classes.visionTitle}`}>{t('about.visionMission.vision')}</h3>
+                            </div>
+                            <div className={classes.vmContent}>
+                                <span className={classes.vmQuote}>“</span>
+                                <p className={classes.vmText}>{t('about.visionMission.visionText')}</p>
+                            </div>
+                            <div className={classes.vmFooter}>
+                                <div className={classes.badgeGoal}>
+                                    <ArrowUp size={16} strokeWidth={3} />
+                                    <div>
+                                        <div className={classes.badgeValue}>10-15%</div>
+                                        <div className={classes.badgeLabel}>{t('about.visionMission.annualGrowth')}</div>
+                                    </div>
+                                </div>
+                                <span className={classes.footerLabel}>{t('about.visionMission.strategicGoal')}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        if (activeTab === t('about.tabs.functional')) {
+            return (
+                <div className={classes.profileContent}>
+                    <h2>{t('about.functional.title')}</h2>
+                    <div className={classes.underline}></div>
+                    <p style={{ marginBottom: '3rem' }}>{t('about.functional.subtitle')}</p>
+
+                    <div className={classes.functionalGrid}>
+                        {functionalAreas.map((area, index) => (
+                            <div key={index} className={classes.functionalCard}>
+                                <h3>{area.title}</h3>
+                                <p>{area.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
+
+        return null;
     };
 
     return (
@@ -355,10 +309,10 @@ const About = () => {
             {/* Hero Section */}
             <div className={classes.hero}>
                 <div className={classes.badgeContainer}>
-                    <span className={classes.legacyBadge}>Our Legacy</span>
+                    <span className={classes.legacyBadge}>{t('about.hero.legacy')}</span>
                 </div>
-                <h1>Nurturing Kerala Since 1980</h1>
-                <p>A cooperative movement dedicated to empowering farmers and delivering pure dairy goodness to every home.</p>
+                <h1>{t('about.hero.title')}</h1>
+                <p>{t('about.hero.description')}</p>
             </div>
 
             {/* Navigation Bar */}
