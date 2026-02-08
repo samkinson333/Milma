@@ -137,12 +137,17 @@ const About = () => {
             );
         }
 
+
         if (activeTab === t('about.tabs.units')) {
             return (
                 <div className={classes.profileContent}>
                     <h2>{t('about.units.title')}</h2>
                     <div className={classes.underline}></div>
                     <p style={{ marginBottom: '2rem' }}>{t('about.units.subtitle')}</p>
+
+                    <div className={classes.profileImageContainer}>
+                        <img src="/images/about/Screenshot 2026-02-08 111308.png" alt="Milma Products" className={classes.organizationImage} />
+                    </div>
 
                     <div className={classes.unitGrid}>
                         {units.map((unit, index) => (

@@ -67,6 +67,7 @@ const Services = () => {
     const services = [
         {
             id: "farmers",
+            navTitle: "Farmers",
             title: t('servicesPage.items.farmers.title'),
             path: "/services/farmers-coops",
             description: t('servicesPage.items.farmers.description'),
@@ -75,6 +76,7 @@ const Services = () => {
         },
         {
             id: "society",
+            navTitle: "Society",
             title: t('servicesPage.items.society.title'),
             path: "/services/society-level",
             description: t('servicesPage.items.society.description'),
@@ -83,6 +85,7 @@ const Services = () => {
         },
         {
             id: "dealers",
+            navTitle: "Dealers",
             title: t('servicesPage.items.dealers.title'),
             path: "/services/dealers-level",
             description: t('servicesPage.items.dealers.description'),
@@ -91,6 +94,7 @@ const Services = () => {
         },
         {
             id: "consumers",
+            navTitle: "Consumers",
             title: t('servicesPage.items.consumers.title'),
             path: "/services/consumer-level",
             description: t('servicesPage.items.consumers.description'),
@@ -189,7 +193,7 @@ const Services = () => {
                             onClick={() => scrollToSection(service.id)}
                             className={`${classes.navButton} ${index === activeIndex ? classes.activeNavBtn : ''}`}
                         >
-                            {service.title.split(' ')[0]}
+                            {service.navTitle}
                         </button>
                     ))}
                 </div>

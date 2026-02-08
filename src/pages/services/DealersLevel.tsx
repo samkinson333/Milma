@@ -38,7 +38,7 @@ const DealersLevel = () => {
                 </ul>
             </div>
 
-            <Link to="/services" className={classes.backLink}>← Back to Services</Link>
+            <Link to="/services#dealers" className={classes.backLink}>← Back to Services</Link>
         </div>
     );
 };
