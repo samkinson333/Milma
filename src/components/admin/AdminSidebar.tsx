@@ -14,7 +14,8 @@ import {
 
     Users,
     Shield,
-    LogOut
+    LogOut,
+    Settings
 } from 'lucide-react';
 
 const AdminSidebar = () => {
@@ -55,7 +56,7 @@ const AdminSidebar = () => {
             items: [
                 { name: 'User Management', path: '/admin/users', icon: <Users className={styles.navIcon} /> },
                 { name: 'Security', path: '/admin/security', icon: <Shield className={styles.navIcon} /> },
-                // { name: 'Settings', path: '/admin/settings', icon: <Settings className={styles.navIcon} /> },
+                { name: 'Settings', path: '/admin/settings', icon: <Settings className={styles.navIcon} /> },
             ]
         }
     ];

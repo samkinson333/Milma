@@ -34,60 +34,63 @@ import DealersLevel from './pages/services/DealersLevel';
 import ConsumerLevel from './pages/services/ConsumerLevel';
 
 import { CartProvider } from './context/CartContext';
+import { ThemeProvider } from './context/ThemeContext';
 import CartDrawer from './components/specific/CartDrawer';
 import Toast from './components/common/Toast';
 
 function App() {
     return (
         <Router>
-            <CartProvider>
-                <CartDrawer />
-                <Toast />
-                <Routes>
-                    {/* Public Routes with Public Layout */}
-                    <Route element={<Layout><Outlet /></Layout>}>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/products" element={<Products />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/insights" element={<Insights />} />
-                        <Route path="/insights/tenders" element={<Tenders />} />
-                        <Route path="/insights/downloads" element={<Downloads />} />
-                        <Route path="/insights/ongoing-projects" element={<OngoingProjects />} />
-                        <Route path="/insights/upcoming-projects" element={<UpcomingProjects />} />
-                        <Route path="/career" element={<Career />} />
-                        <Route path="/recruitment" element={<Recruitment />} />
-                        <Route path="/contact" element={<Contact />} />
+            <ThemeProvider>
+                <CartProvider>
+                    <CartDrawer />
+                    <Toast />
+                    <Routes>
+                        {/* Public Routes with Public Layout */}
+                        <Route element={<Layout><Outlet /></Layout>}>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/products" element={<Products />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/insights" element={<Insights />} />
+                            <Route path="/insights/tenders" element={<Tenders />} />
+                            <Route path="/insights/downloads" element={<Downloads />} />
+                            <Route path="/insights/ongoing-projects" element={<OngoingProjects />} />
+                            <Route path="/insights/upcoming-projects" element={<UpcomingProjects />} />
+                            <Route path="/career" element={<Career />} />
+                            <Route path="/recruitment" element={<Recruitment />} />
+                            <Route path="/contact" element={<Contact />} />
 
-                        {/* Services Routes */}
-                        <Route path="/services" element={<Services />} />
-                        <Route path="/services/farmers-coops" element={<FarmersAndCoops />} />
-                        <Route path="/services/society-level" element={<SocietyLevel />} />
-                        <Route path="/services/dealers-level" element={<DealersLevel />} />
-                        <Route path="/services/consumer-level" element={<ConsumerLevel />} />
-                    </Route>
+                            {/* Services Routes */}
+                            <Route path="/services" element={<Services />} />
+                            <Route path="/services/farmers-coops" element={<FarmersAndCoops />} />
+                            <Route path="/services/society-level" element={<SocietyLevel />} />
+                            <Route path="/services/dealers-level" element={<DealersLevel />} />
+                            <Route path="/services/consumer-level" element={<ConsumerLevel />} />
+                        </Route>
 
-                    {/* Admin Routes with Admin Layout */}
-                    <Route path="/admin" element={
-                        <AdminLayout>
-                            <Outlet />
-                        </AdminLayout>
-                    }>
-                        <Route index element={<AdminDashboard />} />
-                        <Route path="home" element={<AdminHomePage />} />
-                        <Route path="about" element={<AdminAboutUs />} />
-                        <Route path="products" element={<AdminProducts />} />
-                        <Route path="services" element={<AdminServices />} />
-                        <Route path="news" element={<AdminNews />} />
-                        <Route path="tenders" element={<AdminTenders />} />
-                        <Route path="gallery" element={<AdminGallery />} />
-                        <Route path="feedback" element={<AdminFeedback />} />
-                        <Route path="contacts" element={<AdminContacts />} />
-                        <Route path="users" element={<AdminUsers />} />
-                        <Route path="security" element={<AdminSecurity />} />
-                        <Route path="settings" element={<AdminSettings />} />
-                    </Route>
-                </Routes>
-            </CartProvider >
+                        {/* Admin Routes with Admin Layout */}
+                        <Route path="/admin" element={
+                            <AdminLayout>
+                                <Outlet />
+                            </AdminLayout>
+                        }>
+                            <Route index element={<AdminDashboard />} />
+                            <Route path="home" element={<AdminHomePage />} />
+                            <Route path="about" element={<AdminAboutUs />} />
+                            <Route path="products" element={<AdminProducts />} />
+                            <Route path="services" element={<AdminServices />} />
+                            <Route path="news" element={<AdminNews />} />
+                            <Route path="tenders" element={<AdminTenders />} />
+                            <Route path="gallery" element={<AdminGallery />} />
+                            <Route path="feedback" element={<AdminFeedback />} />
+                            <Route path="contacts" element={<AdminContacts />} />
+                            <Route path="users" element={<AdminUsers />} />
+                            <Route path="security" element={<AdminSecurity />} />
+                            <Route path="settings" element={<AdminSettings />} />
+                        </Route>
+                    </Routes>
+                </CartProvider >
+            </ThemeProvider>
         </Router >
     )
 }

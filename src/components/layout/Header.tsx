@@ -49,7 +49,8 @@ const Header = () => {
             <header className={`${classes.header} ${isScrolled ? classes.scrolled : ''}`}>
                 <div className={classes.logoContainer}>
                     <Link to="/" className={classes.logo}>
-                        <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} />
+                        {/* <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} /> */}
+                        <span className={classes.logoText}>Milma</span>
                     </Link>
                 </div>
 

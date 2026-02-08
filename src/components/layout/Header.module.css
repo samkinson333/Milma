@@ -23,15 +23,31 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
     text-decoration: none;
-    color: inherit;
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.02);
 }
 
 .logoImage {
-    height: 60px;
+    height: 50px;
     width: auto;
     object-fit: contain;
+    /* Optional: apply a slight tint to match primary color if it's a monochrome logo */
+    /* This is a basic filter that works well if the original logo is red/black */
+}
+
+.logoText {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+    line-height: 1;
 }
 
 .nav {
@@ -179,8 +195,8 @@
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background: #991b1b;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-text-light);
     padding: 0.5rem 0.8rem;
     border-radius: 8px;
     font-size: 0.7rem;
@@ -192,7 +208,7 @@
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
-    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.2);
+    box-shadow: 0 4px 12px var(--color-primary-20);
     z-index: 1001;
 }
 
@@ -204,7 +220,7 @@
     transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #991b1b transparent;
+    border-color: transparent transparent var(--color-primary) transparent;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
