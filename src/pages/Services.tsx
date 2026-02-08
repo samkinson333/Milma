@@ -64,6 +64,7 @@ const Services = () => {
     const services = [
         {
             id: "farmers",
+            navTitle: "Farmers",
             title: "Services to farmers and Primary Dairy Co operatives",
             path: "/services/farmers-coops",
             description: "The Union is committed to provide technical and financial assistances for the welfare and development of primary Dairy co operatives and Dairy farmers...",
@@ -72,6 +73,7 @@ const Services = () => {
         },
         {
             id: "society",
+            navTitle: "Society",
             title: "Society Level",
             path: "/services/society-level",
             description: "Union Conduct various socio economic development programs for milk producers and the Dairy Co-operative Societies including artificial insemination pr...",
@@ -80,6 +82,7 @@ const Services = () => {
         },
         {
             id: "dealers",
+            navTitle: "Dealers",
             title: "Dealers Level",
             path: "/services/dealers-level",
             description: "Ready to collaborate with Milma as a Franchisee? Set up your own Milma Franchise and be a part of the fastest growing and most profitable dairy brand...",
@@ -88,6 +91,7 @@ const Services = () => {
         },
         {
             id: "consumers",
+            navTitle: "Consumers",
             title: "Consumer Level",
             path: "/services/consumer-level",
             description: "Union has more than 5000 agents for milk. The Dairies offer round the clock customer care support for its agents and consumers. Union supply milk dail...",
@@ -186,7 +190,7 @@ const Services = () => {
                             onClick={() => scrollToSection(service.id)}
                             className={`${classes.navButton} ${index === activeIndex ? classes.activeNavBtn : ''}`}
                         >
-                            {service.title.split(' ')[0]}
+                            {service.navTitle}
                         </button>
                     ))}
                 </div>
