@@ -6,13 +6,13 @@
 
 .title {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--color-primary);
     margin-bottom: 2rem;
     text-align: center;
 }
 
 .section {
-    background: white;
+    background: var(--color-bg);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -22,11 +22,11 @@
 .section h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--text-color);
+    color: var(--color-text-primary);
 }
 
 .section p {
-    color: #666;
+    color: var(--color-text-tertiary);
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -40,12 +40,12 @@
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
-    color: #555;
+    color: var(--color-text-secondary);
 }
 
 .list li::before {
     content: "•";
-    color: var(--primary-color);
+    color: var(--color-primary);
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -55,8 +55,8 @@
     display: inline-block;
     margin-top: 2rem;
     padding: 1rem 2rem;
-    background-color: #008f3d;
-    color: white;
+    background-color: var(--color-service-green);
+    color: var(--color-text-light);
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
@@ -66,7 +66,7 @@
 }
 
 .backLink:hover {
-    background-color: #006b2e;
+    background-color: var(--color-service-green-dark);
     transform: translateY(-2px);
 }
 
@@ -74,7 +74,7 @@
 .intro {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: var(--color-text-secondary);
     margin-bottom: 2rem;
 }
 
@@ -89,8 +89,8 @@
     align-items: flex-start;
     gap: 0.75rem;
     padding: 0.75rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #444;
+    border-bottom: 1px solid var(--color-border-light);
+    color: var(--color-text-medium);
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -100,7 +100,7 @@
 }
 
 .checkIcon {
-    color: #008f3d;
+    color: var(--color-service-green);
     flex-shrink: 0;
     margin-top: 2px;
 }
@@ -108,7 +108,7 @@
 .sectionTitle {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #333;
+    color: var(--color-text-primary);
     margin: 2rem 0 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;

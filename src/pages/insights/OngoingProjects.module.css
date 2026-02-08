@@ -1,19 +1,19 @@
 .page {
     padding-top: 80px;
     min-height: 100vh;
-    background-color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    font-family: var(--font-body);
 }
 
 .hero {
     height: 350px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=2000');
+    background-image: linear-gradient(var(--color-black-70), var(--color-black-70)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=2000');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--color-text-light);
     text-align: center;
 }
 
@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: white;
+    color: var(--color-text-light);
     text-decoration: none;
     font-size: 0.9rem;
     margin-bottom: 2rem;
@@ -56,20 +56,20 @@
 .sectionHeader h2 {
     font-size: 3rem;
     font-weight: 800;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
     margin-bottom: 1rem;
 }
 
 .underline {
     width: 80px;
     height: 4px;
-    background-color: #991b1b;
+    background-color: var(--color-primary);
     margin: 0 auto 2rem;
 }
 
 .sectionHeader p {
     font-size: 1.1rem;
-    color: #64748b;
+    color: var(--color-slate);
     max-width: 900px;
     margin: 0 auto;
     line-height: 1.7;
@@ -83,11 +83,11 @@
 }
 
 .card {
-    background: white;
+    background: var(--color-bg);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f1f5f9;
+    border: 1px solid var(--color-border-slate-light);
     display: flex;
     flex-direction: column;
 }
@@ -113,8 +113,8 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #991b1b;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
     padding: 6px 14px;
     border-radius: 50px;
     font-size: 0.75rem;
@@ -132,13 +132,13 @@
 .cardContent h3 {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #1e293b;
+    color: var(--color-slate-dark);
     margin-bottom: 1rem;
 }
 
 .cardContent p {
     font-size: 1rem;
-    color: #64748b;
+    color: var(--color-slate);
     line-height: 1.6;
     margin-bottom: 2rem;
 }
@@ -152,30 +152,30 @@
     justify-content: space-between;
     font-size: 0.85rem;
     font-weight: 800;
-    color: #1e293b;
+    color: var(--color-slate-dark);
     margin-bottom: 1rem;
 }
 
 .progressBar {
     height: 8px;
-    background-color: #f1f5f9;
+    background-color: var(--color-border-slate-light);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .progressFill {
     height: 100%;
-    background-color: #991b1b;
+    background-color: var(--color-primary);
     border-radius: 10px;
 }
 
 .readMoreBtn {
     width: 100%;
     padding: 1.25rem;
-    border: 1px solid #991b1b;
+    border: 1px solid var(--color-primary);
     border-radius: 12px;
     background: transparent;
-    color: #991b1b;
+    color: var(--color-primary);
     font-weight: 800;
     letter-spacing: 1px;
     cursor: pointer;
@@ -188,8 +188,8 @@
 }
 
 .readMoreBtn:hover {
-    background-color: #991b1b;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
 }
 
 .pagination {
@@ -203,9 +203,9 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: 1px solid #e2e8f0;
-    background: white;
-    color: #1e293b;
+    border: 1px solid var(--color-border-slate);
+    background: var(--color-bg);
+    color: var(--color-slate-dark);
     font-weight: 700;
     cursor: pointer;
     display: flex;
@@ -215,13 +215,13 @@
 }
 
 .pageBtnActive {
-    background: #991b1b !important;
-    color: white !important;
-    border-color: #991b1b !important;
+    background: var(--color-primary) !important;
+    color: var(--color-text-light) !important;
+    border-color: var(--color-primary) !important;
 }
 
 .pageNavBtn {
-    color: #94a3b8 !important;
+    color: var(--color-slate-light) !important;
 }
 
 @media (max-width: 768px) {

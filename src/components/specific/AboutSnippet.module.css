@@ -16,7 +16,7 @@
     flex: 1;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(153, 27, 27, 0.1);
+    box-shadow: 0 20px 40px var(--color-primary-10);
 }
 
 .img {
@@ -43,12 +43,12 @@
 .title {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: var(--color-text);
+    color: var(--color-text-dark);
     line-height: 1.2;
 }
 
 .description {
-    color: #666;
+    color: var(--color-text-tertiary);
     margin-bottom: 2rem;
     font-size: 1.1rem;
 }
@@ -65,7 +65,7 @@
 
 .btn:hover {
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-text-light);
 }
 
 @media (min-width: 768px) {

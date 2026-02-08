@@ -1,7 +1,7 @@
 .pageContainer {
-    font-family: 'Inter', sans-serif;
-    color: #333;
-    background-color: #fcfcfc;
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-light);
     min-height: 100vh;
 }
 
@@ -9,15 +9,13 @@
 .hero {
     position: relative;
     background: linear-gradient(135deg, #8B3A3A 0%, #5E1B1B 100%);
-    color: white;
+    color: var(--color-text-light);
     padding: 6rem 10% 12rem;
-    /* Extra padding bottom for overlap */
     text-align: center;
     background-image: url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
     background-position: center 30%;
     background-blend-mode: multiply;
-    /* Blends the red gradient with the image */
 }
 
 .heroContent {
@@ -48,19 +46,18 @@
     gap: 2rem;
     padding: 0 10%;
     margin-top: -8rem;
-    /* Pull up to overlap hero */
     position: relative;
     z-index: 20;
     margin-bottom: 6rem;
 }
 
 .contactCard {
-    background: white;
+    background: var(--color-bg);
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
-    border: 1px solid #f0f0f0;
+    border: 1px solid var(--color-border-light);
 }
 
 .contactCard:hover {
@@ -71,23 +68,23 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #fef2f2;
+    background-color: var(--color-accent-red);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    color: #991b1b;
+    color: var(--color-primary);
 }
 
 .contactCard h3 {
     font-size: 1.25rem;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
     margin-bottom: 0.75rem;
     font-weight: 700;
 }
 
 .contactCard p {
-    color: #666;
+    color: var(--color-text-tertiary);
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -95,7 +92,7 @@
 }
 
 .contactLink {
-    color: #991b1b;
+    color: var(--color-primary);
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -111,7 +108,7 @@
 /* Message Form Section */
 .formSection {
     padding: 4rem 10% 6rem;
-    background-color: #fff;
+    background-color: var(--color-bg);
     position: relative;
 }
 
@@ -127,14 +124,14 @@
 /* Left Info Side */
 .formInfo h2 {
     font-size: 2.8rem;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
     margin-bottom: 1.5rem;
     font-weight: 800;
     line-height: 1.2;
 }
 
 .formInfo>p {
-    color: #666;
+    color: var(--color-text-tertiary);
     margin-bottom: 3rem;
     line-height: 1.6;
     font-size: 1.1rem;
@@ -146,7 +143,7 @@
 
 .infoBlock h4 {
     font-size: 1.2rem;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
     margin-bottom: 0.8rem;
     font-weight: 700;
 }
@@ -156,20 +153,20 @@
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    color: #555;
+    color: var(--color-text-secondary);
     line-height: 1.5;
 }
 
 /* Right Form Side */
 .formContainer {
-    background: #ffffff;
+    background: var(--color-bg);
     padding: 3.5rem;
 }
 
 .formContainer h3 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
     font-weight: 700;
 }
 
@@ -180,7 +177,7 @@
 .inputGroup label {
     display: block;
     margin-bottom: 0.6rem;
-    color: #374151;
+    color: var(--color-slate-dark);
     font-weight: 600;
     font-size: 0.95rem;
 }
@@ -189,21 +186,21 @@
 .formTextarea {
     width: 100%;
     padding: 1rem 1.2rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--color-border-slate);
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
     transition: all 0.2s;
-    background: #f9fafb;
-    color: #1a1a1a;
+    background: var(--color-bg-slate);
+    color: var(--color-text-dark);
 }
 
 .formInput:focus,
 .formTextarea:focus {
     outline: none;
-    border-color: #991b1b;
-    background: white;
-    box-shadow: 0 0 0 4px rgba(153, 27, 27, 0.05);
+    border-color: var(--color-primary);
+    background: var(--color-bg);
+    box-shadow: 0 0 0 4px var(--color-primary-05);
 }
 
 .formTextarea {
@@ -212,8 +209,8 @@
 }
 
 .submitBtn {
-    background: #991b1b;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-text-light);
     border: none;
     padding: 1.2rem 3rem;
     border-radius: 8px;
@@ -230,9 +227,9 @@
 }
 
 .submitBtn:hover {
-    background: #7f1d1d;
+    background: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(153, 27, 27, 0.15);
+    box-shadow: 0 10px 25px var(--color-primary-15);
 }
 
 @media (max-width: 968px) {
@@ -244,7 +241,7 @@
     .formContainer {
         padding: 2rem;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        border: 1px solid #f0f0f0;
+        border: 1px solid var(--color-border-light);
         border-radius: 16px;
     }
 }
@@ -262,7 +259,7 @@
 
 .sectionHeader h2 {
     font-size: 2.5rem;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
     margin-bottom: 1rem;
     font-weight: 800;
     position: relative;
@@ -274,13 +271,13 @@
     display: block;
     width: 60px;
     height: 4px;
-    background: #991b1b;
+    background: var(--color-primary);
     margin: 0.5rem auto 0;
     border-radius: 2px;
 }
 
 .sectionHeader p {
-    color: #666;
+    color: var(--color-text-tertiary);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -310,12 +307,12 @@
 }
 
 .dairyCard {
-    background: white;
+    background: var(--color-bg);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     display: flex;
-    border: 1px solid #eee;
+    border: 1px solid var(--color-border-light);
     transition: all 0.3s;
 }
 
@@ -325,7 +322,7 @@
 
 .dairyImage {
     width: 40%;
-    background-color: #e5e7eb;
+    background-color: var(--color-bg-slate-medium);
     position: relative;
     overflow: hidden;
 }
@@ -351,8 +348,8 @@
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background-color: #dcfce7;
-    color: #166534;
+    background-color: var(--color-green-light);
+    color: var(--color-green-dark);
     font-size: 0.7rem;
     font-weight: 700;
     padding: 4px 8px;
@@ -362,14 +359,13 @@
 
 .dairyContent h3 {
     font-size: 1.4rem;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
     margin-bottom: 0.5rem;
     padding-right: 40px;
-    /* Make space for badge */
 }
 
 .dairyAddress {
-    color: #666;
+    color: var(--color-text-tertiary);
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
@@ -385,7 +381,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #444;
+    color: var(--color-text-medium);
     font-size: 0.9rem;
     font-weight: 500;
 }
@@ -394,18 +390,18 @@
     width: 100%;
     padding: 10px;
     background: transparent;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border-slate);
     border-radius: 6px;
-    color: #555;
+    color: var(--color-text-secondary);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .viewDetailsBtn:hover {
-    background: #f9fafb;
-    border-color: #ccc;
-    color: #1a1a1a;
+    background: var(--color-bg-slate);
+    border-color: var(--color-border-slate-medium);
+    color: var(--color-text-dark);
 }
 
 /* === ENHANCED STALL LOCATIONS === */
@@ -415,7 +411,6 @@
     padding: 6rem 10%;
     position: relative;
     overflow: hidden;
-    /* decorative bg circle */
 }
 
 .stallLocationsSection::before {
@@ -425,7 +420,7 @@
     left: -100px;
     width: 400px;
     height: 400px;
-    background: rgba(153, 27, 27, 0.03);
+    background: var(--color-primary-03);
     border-radius: 50%;
 }
 
@@ -436,7 +431,7 @@
     right: -100px;
     width: 500px;
     height: 500px;
-    background: rgba(153, 27, 27, 0.03);
+    background: var(--color-primary-03);
     border-radius: 50%;
 }
 
@@ -445,13 +440,13 @@
     max-width: 700px;
     margin: 0 auto 4rem;
     gap: 0.5rem;
-    background: white;
+    background: var(--color-bg);
     padding: 0.5rem;
     border-radius: 50px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 5;
-    border: 1px solid #eee;
+    border: 1px solid var(--color-border-light);
 }
 
 .searchInputWrapper {
@@ -464,7 +459,7 @@
     left: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
-    color: #991b1b;
+    color: var(--color-primary);
 }
 
 .searchInput {
@@ -475,11 +470,12 @@
     font-size: 1.05rem;
     outline: none;
     background: transparent;
+    color: var(--color-text-primary);
 }
 
 .findBtn {
-    background: linear-gradient(135deg, #991b1b, #7f1d1d);
-    color: white;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-text-light);
     border: none;
     padding: 0 2.5rem;
     border-radius: 50px;
@@ -489,12 +485,12 @@
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s;
-    box-shadow: 0 4px 15px rgba(153, 27, 27, 0.3);
+    box-shadow: 0 4px 15px var(--color-primary-30);
 }
 
 .findBtn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(153, 27, 27, 0.4);
+    box-shadow: 0 6px 20px var(--color-primary-40);
 }
 
 /* New Grid Layout */
@@ -508,16 +504,15 @@
 }
 
 .locationCard {
-    background: white;
+    background: var(--color-bg);
     border-radius: 16px;
     padding: 1.2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-    border: 1px solid #f0f0f0;
+    border: 1px solid var(--color-border-light);
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    /* Bouncy effect */
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -526,13 +521,13 @@
 .locationCard:hover {
     transform: translateY(-7px) scale(1.02);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-    border-color: #fca5a5;
+    border-color: var(--color-accent);
 }
 
 .locationIconBox {
     width: 55px;
     height: 55px;
-    background: linear-gradient(135deg, #fff1f2, #ffe4e6);
+    background: linear-gradient(135deg, var(--color-accent-red), #ffe4e6);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -547,15 +542,15 @@
 
 .locationInfo h4 {
     margin: 0 0 0.25rem;
-    color: #1f2937;
+    color: var(--color-text-primary);
     font-size: 1.1rem;
     font-weight: 700;
 }
 
 .locationStatus {
     font-size: 0.75rem;
-    color: #666;
-    background: #f3f4f6;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-slate);
     padding: 6px 12px;
     border-radius: 20px;
     display: inline-flex;
@@ -567,15 +562,15 @@
 }
 
 .locationCard:hover .locationStatus {
-    background: #fee2e2;
-    color: #991b1b;
+    background: var(--color-accent-red);
+    color: var(--color-primary);
 }
 
 .arrowIcon {
     opacity: 0;
     transform: translateX(-10px);
     transition: all 0.3s ease;
-    color: #991b1b;
+    color: var(--color-primary);
 }
 
 .locationCard:hover .arrowIcon {
@@ -591,9 +586,9 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: white;
-    color: #991b1b;
-    border: 2px solid #991b1b;
+    background: var(--color-bg);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
     padding: 12px 30px;
     border-radius: 50px;
     font-weight: 700;
@@ -602,24 +597,24 @@
 }
 
 .seeAllBtn:hover {
-    background: #991b1b;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-text-light);
 }
 
-/* Floating Action Button for Support (from design) */
+/* Floating Action Button for Support */
 .supportFab {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
     width: 60px;
     height: 60px;
-    background: #991b1b;
+    background: var(--color-primary);
     border-radius: 50%;
-    box-shadow: 0 8px 25px rgba(153, 27, 27, 0.4);
+    box-shadow: 0 8px 25px var(--color-primary-40);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--color-text-light);
     cursor: pointer;
     z-index: 100;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -677,7 +672,7 @@
     }
 
     .searchInput {
-        background: white;
+        background: var(--color-bg);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 

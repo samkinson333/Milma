@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--color-black-50);
     backdrop-filter: blur(4px);
     z-index: 1001;
 }
@@ -16,16 +16,16 @@
     width: 100%;
     max-width: 450px;
     height: 100vh;
-    background: white;
+    background: var(--color-bg);
     z-index: 1002;
     display: flex;
     flex-direction: column;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px 0 30px var(--color-black-10);
 }
 
 .header {
     padding: 1.5rem;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--color-border-light);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,15 +50,15 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #666;
+    color: var(--color-text-tertiary);
     transition: color 0.3s;
     padding: 0.5rem;
     border-radius: 50%;
 }
 
 .closeBtn:hover {
-    background: #f5f5f5;
-    color: #000;
+    background: var(--color-bg-slate);
+    color: var(--color-text-dark);
 }
 
 .emptyState {
@@ -69,31 +69,31 @@
     align-items: center;
     text-align: center;
     padding: 2rem;
-    color: #666;
+    color: var(--color-text-tertiary);
 }
 
 .emptyIcon {
     width: 80px;
     height: 80px;
-    background: #f9f9f9;
+    background: var(--color-bg-light);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem;
-    color: #ccc;
+    color: var(--color-text-muted);
 }
 
 .emptyState h3 {
     margin-bottom: 0.5rem;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
 }
 
 .shopBtn {
     margin-top: 1.5rem;
     padding: 1rem 2rem;
     background: var(--color-primary);
-    color: white;
+    color: var(--color-text-light);
     border: none;
     border-radius: 50px;
     font-weight: 600;
@@ -112,7 +112,7 @@
     gap: 1rem;
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid var(--color-bg-slate-medium);
 }
 
 .itemImg {
@@ -120,7 +120,7 @@
     height: 80px;
     border-radius: 12px;
     overflow: hidden;
-    background: #f9f9f9;
+    background: var(--color-bg-light);
 }
 
 .itemImg img {
@@ -139,7 +139,7 @@
 .itemInfo h4 {
     font-size: 1rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
     line-height: 1.3;
 }
 
@@ -160,7 +160,7 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    background: #f9f9f9;
+    background: var(--color-bg-light);
     padding: 0.3rem;
     border-radius: 8px;
 }
@@ -170,12 +170,12 @@
     height: 28px;
     border-radius: 6px;
     border: none;
-    background: white;
+    background: var(--color-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: #666;
+    color: var(--color-text-tertiary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -189,19 +189,19 @@
 .removeBtn {
     background: none;
     border: none;
-    color: #999;
+    color: var(--color-text-muted);
     cursor: pointer;
     padding: 0.5rem;
 }
 
 .removeBtn:hover {
-    color: #dc2626;
+    color: var(--color-primary-crimson);
 }
 
 .footer {
     padding: 2rem 1.5rem;
-    background: white;
-    border-top: 1px solid #f0f0f0;
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border-light);
 }
 
 .totalRow {
@@ -223,7 +223,7 @@
     width: 100%;
     padding: 1.2rem;
     background: var(--color-primary);
-    color: white;
+    color: var(--color-text-light);
     border: none;
     border-radius: 12px;
     font-weight: 700;
@@ -237,7 +237,7 @@
 }
 
 .checkoutBtn:hover {
-    background: #7f1d1d;
+    background: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(153, 27, 27, 0.2);
+    box-shadow: 0 10px 20px var(--color-primary-20);
 }

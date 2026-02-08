@@ -1,19 +1,5 @@
-:root {
-  --color-primary: #991b1b;
-  /* Dark Red */
-  --color-primary-dark: #7f1d1d;
-  --color-secondary: #ffeb3b;
-  /* Milma Gold/Yellow */
-  --color-accent: #fecaca;
-  /* Soft Red Accent */
-  --color-bg: #ffffff;
-  --color-bg-dark: #121212;
-  /* Dark Mode base */
-  --color-text: #991b1b;
-  /* Dark Red text */
-  --color-text-light: #ffffff;
-  --font-body: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
+/* Import centralized color system */
+@import './colors.css';
 
 * {
   box-sizing: border-box;

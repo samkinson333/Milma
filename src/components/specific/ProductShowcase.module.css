@@ -1,6 +1,6 @@
 .section {
     padding: 1rem 2rem;
-    background-color: #fcfcfc;
+    background-color: var(--color-bg-light);
 }
 
 .container {
@@ -28,7 +28,7 @@
 .title {
     font-size: 4rem;
     font-weight: 900;
-    color: #1a1a1a;
+    color: var(--color-text-dark);
     letter-spacing: -0.04em;
 }
 

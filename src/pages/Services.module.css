@@ -1,20 +1,20 @@
 .pageContainer {
     width: 100%;
-    background-color: #f9f9f9;
+    background-color: var(--color-bg-light);
 }
 
 /* Hero Section */
 .hero {
     height: 400px;
     /* Back to original height */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/services/servicesh.jpg');
+    background: linear-gradient(var(--color-black-70), var(--color-black-70)), url('/assets/services/servicesh.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--color-text-light);
     text-align: center;
 }
 
@@ -29,7 +29,7 @@
 
 .breadcrumb {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-white-90);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -54,7 +54,7 @@
     width: 2px;
     height: auto;
     /* Changed from 100% to auto */
-    background: #e0e0e0;
+    background: var(--color-bg-medium-gray);
     top: 6rem;
     /* Start below top padding */
     bottom: 6rem;
@@ -70,7 +70,7 @@
     transform: translateX(-50%);
     width: 4px;
     /* Slightly thicker than base line */
-    background: #008f3d;
+    background: var(--color-service-green);
     /* Green fill */
     top: 0;
     z-index: 1;
@@ -191,7 +191,7 @@
 
 /* Card Styles - Compact Design */
 .serviceCard {
-    background: white;
+    background: var(--color-bg);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -226,14 +226,14 @@
     width: 40px;
     /* Smaller icon box */
     height: 40px;
-    background-color: #008f3d;
+    background-color: var(--color-service-green);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    color: white;
+    color: var(--color-text-light);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid white;
+    border: 2px solid var(--color-bg);
     z-index: 10;
 }
 
@@ -253,14 +253,14 @@
     /* Smaller title */
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--color-text-primary);
     line-height: 1.2;
 }
 
 .cardDesc {
     font-size: 0.9rem;
     /* Smaller text */
-    color: #666;
+    color: var(--color-text-tertiary);
     line-height: 1.5;
     margin-bottom: 1rem;
 }
@@ -269,7 +269,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #008f3d;
+    color: var(--color-service-green);
     font-weight: 700;
     font-size: 0.9rem;
     margin-top: auto;
@@ -286,7 +286,7 @@
 
 /* Sticky Navigation */
 .stickyNav {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--color-white-90);
     /* Glassy background */
     backdrop-filter: blur(10px);
     position: sticky;
@@ -312,7 +312,7 @@
     background: transparent;
     border: none;
     /* Removed border */
-    color: #555;
+    color: var(--color-text-secondary);
     /* Softer text color */
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
@@ -327,23 +327,23 @@
 
 /* Hover Effect - Subtle background */
 .navButton:hover {
-    background: rgba(0, 143, 61, 0.1);
-    color: #008f3d;
+    background: var(--color-service-green-10);
+    color: var(--color-service-green);
 }
 
 /* Active State - Solid Brand Color */
 .activeNavBtn {
-    background: #008f3d !important;
-    color: white !important;
-    box-shadow: 0 4px 12px rgba(0, 143, 61, 0.3);
+    background: var(--color-service-green) !important;
+    color: var(--color-text-light) !important;
+    box-shadow: 0 4px 12px var(--color-service-green-30);
     transform: translateY(-2px);
 }
 
 /* Intro Section */
 .intro {
-    background: white;
+    background: var(--color-bg);
     padding: 6rem 2rem;
-    color: #333;
+    color: var(--color-text-primary);
     text-align: left;
 }
 
@@ -378,7 +378,7 @@
 .introTextWrapper h3 {
     font-size: 1rem;
     font-weight: 700;
-    color: #008f3d;
+    color: var(--color-service-green);
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -388,14 +388,14 @@
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    color: #222;
+    color: var(--color-text-darker);
     line-height: 1.2;
 }
 
 .introTextWrapper p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: var(--color-text-secondary);
     margin-bottom: 1rem;
 }
 
@@ -422,7 +422,7 @@
     transform: translateX(-50%);
     width: 4px;
     height: 100%;
-    background: #e0e0e0;
+    background: var(--color-bg-medium-gray);
     top: 0;
     z-index: 0;
 }
@@ -435,25 +435,25 @@
 .timelineDot {
     width: 24px;
     height: 24px;
-    background: #008f3d;
-    border: 5px solid white;
+    background: var(--color-service-green);
+    border: 5px solid var(--color-bg);
     border-radius: 50%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 0 4px rgba(0, 143, 61, 0.3);
+    box-shadow: 0 0 0 4px var(--color-service-green-30);
     z-index: 2;
     transition: all 0.3s ease;
 }
 
 .activeDot {
-    background: #dcb315;
+    background: var(--color-service-gold);
     /* Gold center for active */
     transform: translateX(-50%) scale(1.8);
     /* Much larger pop effect */
-    box-shadow: 0 0 20px rgba(220, 179, 21, 0.8);
+    box-shadow: 0 0 20px var(--color-service-gold-80);
     /* Stronger glow */
-    border-color: white;
+    border-color: var(--color-bg);
     z-index: 3;
     /* Ensure it pops above everything */
 }
@@ -467,7 +467,7 @@
 
 /* Card Styles Container */
 .serviceCard {
-    background: white;
+    background: var(--color-bg);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -526,7 +526,7 @@
     font-size: 3rem;
     /* Small stat number - Reverted */
     font-weight: 900;
-    color: #dcb315;
+    color: var(--color-service-gold);
     line-height: 1;
     margin-bottom: 0.25rem;
     position: relative;
@@ -536,7 +536,7 @@
 .statLabel {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #555;
+    color: var(--color-text-secondary);
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
@@ -616,10 +616,10 @@
 
     /* Stronger yellow glow for active dot on mobile */
     .activeDot {
-        background: #dcb315;
+        background: var(--color-service-gold);
         transform: translateX(-50%) scale(1.6);
-        box-shadow: 0 0 35px rgba(220, 179, 21, 1), 0 0 60px rgba(220, 179, 21, 0.8);
-        border-color: white;
+        box-shadow: 0 0 35px var(--color-service-gold), 0 0 60px var(--color-service-gold-80);
+        border-color: var(--color-bg);
         z-index: 6;
         left: 20px;
         /* Align active dot too */
@@ -701,7 +701,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        background: var(--gradient-bg-slate);
         padding: 2rem;
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);

@@ -1,19 +1,19 @@
 .page {
     padding-top: 80px;
     min-height: 100vh;
-    background-color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    font-family: var(--font-body);
 }
 
 .hero {
     height: 350px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1543362906-acfc16c623a2?auto=format&fit=crop&q=80&w=2000');
+    background-image: linear-gradient(var(--color-black-70), var(--color-black-70)), url('https://images.unsplash.com/photo-1543362906-acfc16c623a2?auto=format&fit=crop&q=80&w=2000');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--color-text-light);
     text-align: center;
 }
 
@@ -31,14 +31,14 @@
 
 .heroBreadcrumb span {
     font-weight: 700;
-    color: #ef4444;
+    color: var(--color-primary);
 }
 
 .backLink {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: white;
+    color: var(--color-text-light);
     text-decoration: none;
     font-size: 0.9rem;
     margin-bottom: 2rem;
@@ -58,10 +58,10 @@
 
 .searchBox {
     position: relative;
-    background: white;
+    background: var(--color-bg);
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border-slate);
 }
 
 .searchIcon {
@@ -69,7 +69,7 @@
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    color: #94a3b8;
+    color: var(--color-slate-light);
 }
 
 .searchBox input {
@@ -79,6 +79,8 @@
     border-radius: 12px;
     font-size: 1rem;
     outline: none;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
 }
 
 .filterRow {
@@ -92,11 +94,11 @@
 .filterBtn {
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
-    border: 1px solid #e2e8f0;
-    background: white;
+    border: 1px solid var(--color-border-slate);
+    background: var(--color-bg);
     font-weight: 600;
     font-size: 0.9rem;
-    color: #64748b;
+    color: var(--color-slate);
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -104,11 +106,11 @@
 .filterBtnActive {
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
-    border: 1px solid #991b1b;
-    background: #991b1b;
+    border: 1px solid var(--color-primary);
+    background: var(--color-primary);
     font-weight: 700;
     font-size: 0.9rem;
-    color: white;
+    color: var(--color-text-light);
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(153, 27, 27, 0.2);
 }
@@ -121,13 +123,13 @@
 .sectionTitle h2 {
     font-size: 3rem;
     font-weight: 800;
-    color: #1e293b;
+    color: var(--color-slate-dark);
     margin-bottom: 1rem;
 }
 
 .sectionTitle p {
     font-size: 1.1rem;
-    color: #64748b;
+    color: var(--color-slate);
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
@@ -141,10 +143,10 @@
 }
 
 .card {
-    background: white;
+    background: var(--color-bg);
     border-radius: 24px;
     padding: 3rem;
-    border: 1px solid #f1f5f9;
+    border: 1px solid var(--color-border-slate-light);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
     transition: all 0.4s ease;
     display: flex;
@@ -154,7 +156,7 @@
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-    border-color: #e2e8f0;
+    border-color: var(--color-border-slate);
 }
 
 .cardIcon {
@@ -175,13 +177,13 @@
 .cardTitle {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #1e293b;
+    color: var(--color-slate-dark);
     margin-bottom: 1rem;
 }
 
 .cardDesc {
     font-size: 1rem;
-    color: #64748b;
+    color: var(--color-slate);
     line-height: 1.6;
     margin-bottom: 2rem;
     flex-grow: 1;
@@ -192,20 +194,20 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 1.5rem;
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid var(--color-border-slate-light);
 }
 
 .fileInfo {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #94a3b8;
+    color: var(--color-slate-light);
 }
 
 .downloadBtn {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #991b1b;
+    color: var(--color-primary);
     font-weight: 800;
     font-size: 0.95rem;
     background: none;
@@ -229,9 +231,9 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: 1px solid #e2e8f0;
-    background: white;
-    color: #1e293b;
+    border: 1px solid var(--color-border-slate);
+    background: var(--color-bg);
+    color: var(--color-slate-dark);
     font-weight: 700;
     cursor: pointer;
     display: flex;
@@ -241,14 +243,14 @@
 }
 
 .pageBtnActive {
-    background: #991b1b !important;
-    color: white !important;
-    border-color: #991b1b !important;
+    background: var(--color-primary) !important;
+    color: var(--color-text-light) !important;
+    border-color: var(--color-primary) !important;
     box-shadow: 0 5px 15px rgba(153, 27, 27, 0.3);
 }
 
 .pageNavBtn {
-    color: #94a3b8 !important;
+    color: var(--color-slate-light) !important;
 }
 
 @media (max-width: 768px) {

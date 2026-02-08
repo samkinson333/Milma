@@ -1,6 +1,6 @@
 .section {
     padding: 1rem 2rem;
-    background-color: #f9f9f9;
+    background-color: var(--color-bg-light);
 }
 
 .grid {
@@ -12,19 +12,19 @@
 }
 
 .card {
-    background: white;
+    background: var(--color-bg);
     padding: 3rem;
     border-radius: 24px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(153, 27, 27, 0.04);
+    box-shadow: 0 10px 30px var(--color-primary-04);
     transition: all 0.4s ease;
-    border: 1px solid rgba(153, 27, 27, 0.05);
+    border: 1px solid var(--color-primary-05);
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(153, 27, 27, 0.1);
-    border-color: rgba(153, 27, 27, 0.2);
+    box-shadow: 0 20px 40px var(--color-primary-10);
+    border-color: var(--color-primary-20);
 }
 
 .icon {
@@ -35,11 +35,11 @@
 .title {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    color: var(--color-text);
+    color: var(--color-text-dark);
 }
 
 .desc {
-    color: #666;
+    color: var(--color-text-tertiary);
     font-size: 0.95rem;
 }
 
