@@ -12,7 +12,6 @@ const ProductDetails = () => {
     const navigate = useNavigate();
     const { addToCart, toggleCart } = useCart();
     const { t } = useTranslation();
-    const [quantity, setQuantity] = useState(1);
     const [added, setAdded] = useState(false);
 
     const product = products.find(p => p.id === Number(id));
@@ -32,19 +31,14 @@ const ProductDetails = () => {
         category: t(product.categoryKey)
     };
 
-    const increaseQuantity = () => setQuantity(prev => prev + 1);
-    const decreaseQuantity = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
-
     const handleAddToCart = () => {
-        for (let i = 0; i < quantity; i++) {
-            addToCart({
-                id: translatedProduct.id,
-                name: translatedProduct.name,
-                price: translatedProduct.price,
-                image: translatedProduct.image,
-                category: translatedProduct.category
-            });
-        }
+        addToCart({
+            id: translatedProduct.id,
+            name: translatedProduct.name,
+            price: translatedProduct.price,
+            image: translatedProduct.image,
+            category: translatedProduct.category
+        });
         setAdded(true);
         setTimeout(() => setAdded(false), 2000);
     };
@@ -78,11 +72,6 @@ const ProductDetails = () => {
                     <p className={classes.description}>{translatedProduct.description}</p>
 
                     <div className={classes.actions}>
-                        <div className={classes.quantityControl}>
-                            <button onClick={decreaseQuantity}>-</button>
-                            <span>{quantity}</span>
-                            <button onClick={increaseQuantity}>+</button>
-                        </div>
 
                         <div className={classes.buttons}>
                             <button

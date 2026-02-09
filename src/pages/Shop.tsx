@@ -56,24 +56,18 @@ const Shop = () => {
 const ShoppingProductCard = ({ product }: { product: any }) => {
     const { addToCart, toggleCart } = useCart();
     const { t } = useTranslation();
-    const [quantity, setQuantity] = useState(1);
     const [added, setAdded] = useState(false);
     const navigate = useNavigate();
 
-    const increaseQuantity = () => setQuantity(prev => prev + 1);
-    const decreaseQuantity = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
-
     const handleAddToCart = (e: React.MouseEvent) => {
         e.stopPropagation();
-        for (let i = 0; i < quantity; i++) {
-            addToCart({
-                id: product.id,
-                name: product.name,
-                price: product.price,
-                image: product.image,
-                category: product.category
-            });
-        }
+        addToCart({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            category: product.category
+        });
         setAdded(true);
         setTimeout(() => setAdded(false), 2000);
     };
@@ -104,11 +98,6 @@ const ShoppingProductCard = ({ product }: { product: any }) => {
                 <p className={classes.price}>{product.price}</p>
 
                 <div className={classes.actionsRow} onClick={e => e.stopPropagation()}>
-                    <div className={classes.quantityControl}>
-                        <button onClick={decreaseQuantity}>-</button>
-                        <span>{quantity}</span>
-                        <button onClick={increaseQuantity}>+</button>
-                    </div>
 
                     <button
                         className={`${classes.addBtn} ${added ? classes.added : ''}`}

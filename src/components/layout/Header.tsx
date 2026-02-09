@@ -106,15 +106,17 @@ const Header = () => {
                             <Search size={20} />
                         </button>
 
-                        <button
-                            aria-label="Cart"
-                            className={`${classes.iconBtn} ${classes.tooltip} ${classes.cartBtn}`}
-                            data-tooltip={t('cart.title')}
-                            onClick={toggleCart}
-                        >
-                            <ShoppingCart size={20} />
-                            {itemsCount > 0 && <span className={classes.badge}>{itemsCount}</span>}
-                        </button>
+                        {(location.pathname === '/shop' || location.pathname.startsWith('/product/')) && (
+                            <button
+                                aria-label="Cart"
+                                className={`${classes.iconBtn} ${classes.tooltip} ${classes.cartBtn}`}
+                                data-tooltip={t('cart.title')}
+                                onClick={toggleCart}
+                            >
+                                <ShoppingCart size={20} />
+                                {itemsCount > 0 && <span className={classes.badge}>{itemsCount}</span>}
+                            </button>
+                        )}
 
                         <Link to="/admin" aria-label="Admin" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip={t('nav.admin')}>
                             <Shield size={20} />

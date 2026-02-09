@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ShoppingBag } from 'lucide-react';
 import classes from './FloatingShopButton.module.css';
 import { useTranslation } from 'react-i18next';
@@ -6,7 +6,12 @@ import { motion } from 'framer-motion';
 
 const FloatingShopButton = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const { t } = useTranslation();
+
+    if (location.pathname === '/shop' || location.pathname.startsWith('/product/')) {
+        return null;
+    }
 
     return (
         <motion.button
