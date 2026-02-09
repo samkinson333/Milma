@@ -65,7 +65,7 @@
 
 .badgePdf {
     background: #fee2e2;
-    color: #991b1b;
+    color: var(--color-primary);
 }
 
 .badgeDoc {

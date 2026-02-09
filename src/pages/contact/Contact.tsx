@@ -15,9 +15,11 @@ import {
 } from 'lucide-react';
 import classes from './Contact.module.css';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../../context/ThemeContext';
 
 const Contact = () => {
     const { t } = useTranslation();
+    const { colors } = useTheme();
 
     // Updated with real data from https://milmatrcmpu.com/contact
     const contactCards = [
@@ -144,7 +146,7 @@ const Contact = () => {
                         <div className={classes.infoBlock}>
                             <h4>Head Office</h4>
                             <div className={classes.infoItem}>
-                                <Building2 size={20} color="#991b1b" style={{ marginTop: '4px' }} />
+                                <Building2 size={20} color={colors.primary} style={{ marginTop: '4px' }} />
                                 <span style={{ whiteSpace: 'pre-line' }}>{t('contact.cards.office.description')}</span>
                             </div>
                         </div>
@@ -152,7 +154,7 @@ const Contact = () => {
                         <div className={classes.infoBlock}>
                             <h4>Phone</h4>
                             <div className={classes.infoItem}>
-                                <Phone size={20} color="#991b1b" />
+                                <Phone size={20} color={colors.primary} />
                                 <span>0471-2447109, 0471-2446845</span>
                             </div>
                         </div>
@@ -160,7 +162,7 @@ const Contact = () => {
                         <div className={classes.infoBlock}>
                             <h4>Email</h4>
                             <div className={classes.infoItem}>
-                                <Mail size={20} color="#991b1b" />
+                                <Mail size={20} color={colors.primary} />
                                 <span>trcmpu@gmail.com</span>
                             </div>
                         </div>
@@ -218,11 +220,11 @@ const Contact = () => {
 
                                 <div className={classes.dairyContactInfo}>
                                     <div className={classes.infoItem}>
-                                        <Phone size={16} color="#991b1b" />
+                                        <Phone size={16} color={colors.primary} />
                                         <span>{dairy.phone}</span>
                                     </div>
                                     <div className={classes.infoItem}>
-                                        <Mail size={16} color="#991b1b" />
+                                        <Mail size={16} color={colors.primary} />
                                         <span>{dairy.email}</span>
                                     </div>
                                 </div>

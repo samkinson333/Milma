@@ -69,7 +69,9 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    color: var(--color-primary);
 }
+
 
 .bounce {
     animation: bounce 2s infinite;

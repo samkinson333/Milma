@@ -5,7 +5,7 @@
     --admin-sidebar-width: 260px;
     --admin-header-height: 64px;
     --admin-bg-color: #f1f5f9;
-    --admin-accent-color: #3b82f6;
+    --admin-accent-color: var(--color-primary);
     --admin-border-color: #e2e8f0;
 }
 
@@ -89,7 +89,7 @@
 .navItemActive {
     background-color: rgba(59, 130, 246, 0.1);
     color: #60a5fa;
-    border-left-color: #3b82f6;
+    border-left-color: var(--color-primary);
     font-weight: 500;
 }
 
@@ -393,7 +393,7 @@
 
 .statusError {
     background-color: #fee2e2;
-    color: #991b1b;
+    color: var(--color-primary);
 }
 
 .trendWarning {
@@ -492,9 +492,9 @@
 }
 
 .actionButton:hover {
-    background: #3b82f6;
+    background: var(--color-primary);
     color: white;
-    border-color: #3b82f6;
+    border-color: var(--color-primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
 }
@@ -541,7 +541,7 @@
 
 /* View All Link */
 .viewAllLink {
-    color: #3b82f6;
+    color: var(--color-primary);
     font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
@@ -596,7 +596,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: #3b82f6;
+    background: var(--color-primary);
     color: white;
     border: none;
     padding: 0.6rem 1.25rem;
@@ -2236,7 +2236,7 @@
 
 .govBadgeClosed {
     background: #fef2f2;
-    color: #991b1b;
+    color: var(--color-primary);
     border-color: #fecaca;
 }
 

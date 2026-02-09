@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
+import colorsConfig from '../styles/colors';
+
 interface ThemeColors {
     primary: string;
     secondary: string;
@@ -15,11 +17,11 @@ interface ThemeContextType {
 }
 
 const defaultColors: ThemeColors = {
-    primary: '#991b1b',
-    secondary: '#ffeb3b',
-    gold: '#ffd700',
-    bg: '#ffffff',
-    textDark: '#1a1a1a',
+    primary: colorsConfig.primary,
+    secondary: colorsConfig.secondary,
+    gold: colorsConfig.gold,
+    bg: colorsConfig.bg,
+    textDark: colorsConfig.textDark,
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);

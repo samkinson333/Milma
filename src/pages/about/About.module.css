@@ -118,7 +118,7 @@
 .underline {
     width: 45px;
     height: 4px;
-    background-color: var(--color-cyan);
+    background-color: var(--color-primary);
     margin-bottom: 2.5rem;
     border-radius: 2px;
 }
@@ -135,7 +135,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: var(--color-cyan);
+    background-color: var(--color-primary);
     color: var(--color-text-light);
     padding: 12px 24px;
     border-radius: 6px;
@@ -144,15 +144,15 @@
     font-size: 0.8rem;
     transition: all 0.3s;
     margin-top: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.2);
+    box-shadow: 0 4px 12px var(--color-primary-20);
     border: none;
     cursor: pointer;
 }
 
 .downloadBtn:hover {
-    background-color: var(--color-cyan-dark);
+    background-color: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 188, 212, 0.3);
+    box-shadow: 0 6px 16px var(--color-primary-30);
 }
 
 .profileImageContainer {

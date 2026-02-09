@@ -14,9 +14,11 @@ import {
 } from 'lucide-react';
 import classes from './About.module.css';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../../context/ThemeContext';
 
 const About = () => {
     const { t } = useTranslation();
+    const { colors } = useTheme();
     const [activeTab, setActiveTab] = useState(t('about.tabs.profile'));
 
     const tabs = [
@@ -181,7 +183,7 @@ const About = () => {
                                     {member.image ? (
                                         <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     ) : (
-                                        <User size={64} color="#991b1b" style={{ opacity: 0.5 }} />
+                                        <User size={64} color={colors.primary} style={{ opacity: 0.5 }} />
                                     )}
                                 </div>
                                 <h3>{member.name}</h3>
