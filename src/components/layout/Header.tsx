@@ -62,8 +62,8 @@ const Header = () => {
                 <div className={classes.container}>
                     <div className={classes.logoContainer}>
                         <Link to="/" className={classes.logo}>
-                             <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} />
-                            {/*<span className={classes.logoText}>Milma</span>*/}
+                            <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} />
+                            {/* <span className={classes.logoText}>Milma</span> */}
                         </Link>
                     </div>
 
@@ -106,17 +106,15 @@ const Header = () => {
                             <Search size={20} />
                         </button>
 
-                        {(location.pathname === '/shop' || location.pathname.startsWith('/product/')) && (
-                            <button
-                                aria-label="Cart"
-                                className={`${classes.iconBtn} ${classes.tooltip} ${classes.cartBtn}`}
-                                data-tooltip={t('cart.title')}
-                                onClick={toggleCart}
-                            >
-                                <ShoppingCart size={20} />
-                                {itemsCount > 0 && <span className={classes.badge}>{itemsCount}</span>}
-                            </button>
-                        )}
+                        <button
+                            aria-label="Cart"
+                            className={`${classes.iconBtn} ${classes.tooltip} ${classes.cartBtn}`}
+                            data-tooltip={t('cart.title')}
+                            onClick={toggleCart}
+                        >
+                            <ShoppingCart size={20} />
+                            {itemsCount > 0 && <span className={classes.badge}>{itemsCount}</span>}
+                        </button>
 
                         <Link to="/admin" aria-label="Admin" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip={t('nav.admin')}>
                             <Shield size={20} />
