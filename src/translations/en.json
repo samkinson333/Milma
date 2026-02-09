@@ -233,7 +233,13 @@
         },
         "board": {
             "title": "Board of Directors",
-            "subtitle": "The visionary leadership guiding TRCMPU towards excellence."
+            "subtitle": "The visionary leadership guiding TRCMPU towards excellence.",
+            "members": {
+                "mani": {
+                    "name": "Smt. Mani Viswanath",
+                    "role": "Chairperson"
+                }
+            }
         },
         "performance": {
             "title": "Past Performance",
