@@ -1,7 +1,9 @@
 import { ReactNode, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+
 import Header from './Header';
 import Footer from './Footer';
+import FloatingShopButton from '../common/FloatingShopButton';
 import Lenis from 'lenis';
 
 interface LayoutProps {
@@ -58,6 +60,7 @@ const Layout = ({ children }: LayoutProps) => {
             <Header />
             <main>{children}</main>
             <Footer />
+            <FloatingShopButton />
         </div>
     );
 };

@@ -9,8 +9,8 @@ const AboutSnippet = () => {
             <div className={classes.container}>
                 <div className={classes.imageContent}>
                     <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrV3ox0elTfuZ_8pEwmNc4rRTxv9JtvnMO6A&s"
-                        alt="Kerala Farm"
+                        src="https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/afaqs/media/post_attachments/8e80a9877a51e099a91e975d4638127210f2e61a255e8975e3b28af47f9cee71.jpeg"
+                        alt="Milma Historical"
                         className={classes.img}
                     />
                 </div>

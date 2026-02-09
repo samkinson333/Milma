@@ -11,28 +11,28 @@ const ProductShowcase = () => {
             id: 1,
             name: t('products.items.fullCream'),
             price: '₹32',
-            category: t('footer.shop.milk'),
+            category: t('products.categories.milk'),
             image: 'https://milma.com/storage/products//August2023//Ytl05gnqwPEvDN5NTHL9.png'
         },
         {
             id: 2,
             name: t('products.items.homogenized'),
             price: '₹28',
-            category: t('footer.shop.milk'),
+            category: t('products.categories.milk'),
             image: 'https://milma.com/storage/products//July2022//aMnIotru8hY92PbrqWuH.jpg'
         },
         {
             id: 3,
             name: t('products.items.toned'),
             price: '₹26',
-            category: t('footer.shop.milk'),
+            category: t('products.categories.milk'),
             image: 'https://milma.com/storage/products//April2023//qEiwh4qbyuA1jjahbxQ3.png'
         },
         {
             id: 4,
             name: t('products.items.organic'),
             price: '₹45',
-            category: t('footer.shop.milk'),
+            category: t('products.categories.milk'),
             image: 'https://milma.com/storage/products//May2023//5eRXgX6uiHQOLxOrmn2T.png'
         },
     ];
@@ -61,7 +61,7 @@ const ProductShowcase = () => {
                             transition: 'all 0.3s ease',
                             marginTop: '1rem'
                         }}>
-                            Shop Now
+                            {t('common.buyNow')}
                         </a>
                     </motion.div>
                     <a href="/products" className={classes.viewAll}>{t('common.viewAll')}</a>
