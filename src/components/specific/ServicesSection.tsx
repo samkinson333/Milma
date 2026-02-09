@@ -9,21 +9,25 @@ const ServicesSection = () => {
     const services = [
         {
             icon: Users,
+            image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=2074&auto=format&fit=crop",
             title: t('services.list.farmers.title'),
             description: t('services.list.farmers.description')
         },
         {
             icon: Truck,
+            image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop",
             title: t('services.list.dealers.title'),
             description: t('services.list.dealers.description')
         },
         {
             icon: Award,
+            image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=2070&auto=format&fit=crop",
             title: t('services.list.quality.title'),
             description: t('services.list.quality.description')
         },
         {
             icon: Heart,
+            image: "https://images.unsplash.com/photo-1628102491629-778571d893a3?q=80&w=2080&auto=format&fit=crop",
             title: t('services.list.consumers.title'),
             description: t('services.list.consumers.description')
         }
@@ -56,11 +60,17 @@ const ServicesSection = () => {
                             viewport={{ once: true }}
                             className={classes.card}
                         >
-                            <div className={classes.iconWrapper}>
-                                <service.icon size={32} />
+                            <div className={classes.imageContainer}>
+                                <img src={service.image} alt={service.title} className={classes.bgImage} />
+                                <div className={classes.overlay}></div>
                             </div>
-                            <h3>{service.title}</h3>
-                            <p>{service.description}</p>
+                            <div className={classes.content}>
+                                <div className={classes.iconWrapper}>
+                                    <service.icon size={28} />
+                                </div>
+                                <h3>{service.title}</h3>
+                                <p>{service.description}</p>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

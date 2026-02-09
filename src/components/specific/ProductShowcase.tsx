@@ -48,6 +48,21 @@ const ProductShowcase = () => {
                     >
                         <span className={classes.preTitle}>{t('products.preTitle')}</span>
                         <h2 className={classes.title}>{t('products.title')}</h2>
+                        <a href="/shop" style={{
+                            display: 'inline-block',
+                            padding: '0.8rem 2.5rem',
+                            background: 'var(--color-primary)',
+                            color: 'white',
+                            borderRadius: '50px',
+                            fontWeight: '700',
+                            fontSize: '1rem',
+                            textDecoration: 'none',
+                            boxShadow: '0 10px 20px rgba(189, 31, 53, 0.3)',
+                            transition: 'all 0.3s ease',
+                            marginTop: '1rem'
+                        }}>
+                            Shop Now
+                        </a>
                     </motion.div>
                     <a href="/products" className={classes.viewAll}>{t('common.viewAll')}</a>
                 </div>
@@ -60,7 +75,7 @@ const ProductShowcase = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
                         >
-                            <ProductCard {...product} />
+                            <ProductCard {...product} showActions={false} />
                         </motion.div>
                     ))}
                 </div>

@@ -20,9 +20,6 @@ const LanguageSelector = () => {
             title={isMalayalam ? 'Switch to English' : 'Switch to Malayalam'}
         >
             <Globe size={18} />
-            <span className={classes.langText}>
-                {isMalayalam ? 'മലയാളം' : 'English'}
-            </span>
         </button>
     );
 };

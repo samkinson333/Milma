@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import classes from './Header.module.css';
-// { itemsCount, toggleCart } removed because cart is disabled
-import { Search, Menu, X, Shield } from 'lucide-react';
-// import { useCart } from '../../hooks/useCart'; // or context path removed
+import { Search, Menu, X, Shield, ShoppingCart } from 'lucide-react';
+import { useCart } from '../../context/CartContext';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../common/LanguageSelector';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
     const location = useLocation();
+    const { itemsCount, toggleCart } = useCart();
 
     const { t } = useTranslation();
 
@@ -31,10 +32,11 @@ const Header = () => {
 
     useEffect(() => {
         setIsMobileMenuOpen(false);
+        setIsSearchOpen(false);
     }, [location.pathname]);
 
     useEffect(() => {
-        if (isMobileMenuOpen) {
+        if (isMobileMenuOpen || isSearchOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'unset';
@@ -42,51 +44,90 @@ const Header = () => {
         return () => {
             document.body.style.overflow = 'unset';
         };
-    }, [isMobileMenuOpen]);
+    }, [isMobileMenuOpen, isSearchOpen]);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+        setIsSearchOpen(false);
+    };
+
+    const toggleSearch = () => {
+        setIsSearchOpen(!isSearchOpen);
+        setIsMobileMenuOpen(false);
     };
 
     return (
         <>
             <header className={`${classes.header} ${isScrolled ? classes.scrolled : ''}`}>
-                <div className={classes.logoContainer}>
-                    <Link to="/" className={classes.logo}>
-                        {/* <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} /> */}
-                        <span className={classes.logoText}>Milma</span>
-                    </Link>
-                </div>
+                <div className={classes.container}>
+                    <div className={classes.logoContainer}>
+                        <Link to="/" className={classes.logo}>
+                            {/* <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} /> */}
+                            <span className={classes.logoText}>Milma</span>
+                        </Link>
+                    </div>
 
-                {/* Combined Navigation - Choose the links you actually need below */}
-                <nav className={classes.nav}>
-                    <Link to="/" className={classes.navLink}>{t('nav.home')}</Link>
-                    <Link to="/products" className={classes.navLink}>{t('nav.products')}</Link>
-                    <Link to="/about" className={classes.navLink}>{t('nav.about')}</Link>
-                    <Link to="/services" className={classes.navLink}>{t('nav.services')}</Link>
-                    <Link to="/insights" className={classes.navLink}>{t('nav.insights')}</Link>
-                    <Link to="/career" className={classes.navLink}>{t('nav.career')}</Link>
-                    <Link to="/notices" className={classes.navLink}>{t('nav.notices')}</Link>
-                    <Link to="/recruitment" className={classes.navLink}>{t('nav.recruitment')}</Link>
-                    <Link to="/contact" className={classes.navLink}>{t('nav.contact')}</Link>
-                </nav>
+                    {/* Combined Navigation - Choose the links you actually need below */}
+                    <nav className={classes.nav}>
+                        <Link to="/" className={classes.navLink}>{t('nav.home')}</Link>
+                        <Link to="/products" className={classes.navLink}>{t('nav.products')}</Link>
+                        <Link to="/about" className={classes.navLink}>{t('nav.about')}</Link>
+                        <Link to="/services" className={classes.navLink}>{t('nav.services')}</Link>
+                        <Link to="/insights" className={classes.navLink}>{t('nav.insights')}</Link>
+                        <Link to="/career" className={classes.navLink}>{t('nav.career')}</Link>
+                        <Link to="/notices" className={classes.navLink}>{t('nav.notices')}</Link>
+                        <Link to="/recruitment" className={classes.navLink}>{t('nav.recruitment')}</Link>
+                        <Link to="/contact" className={classes.navLink}>{t('nav.contact')}</Link>
+                    </nav>
 
-                <div className={classes.actions}>
-                    <button aria-label="Search" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip={t('common.search')}>
-                        <Search size={20} />
-                    </button>
+                    <div className={classes.actions}>
+                        {/* Search - expands inline in header */}
+                        <div className={`${classes.searchWrapper} ${isSearchOpen ? classes.searchWrapperOpen : ''}`}>
+                            <input
+                                type="text"
+                                placeholder={t('common.search')}
+                                className={classes.searchInputInline}
+                            />
+                            <button
+                                aria-label="Close Search"
+                                className={classes.searchCloseInline}
+                                onClick={toggleSearch}
+                            >
+                                <X size={18} />
+                            </button>
+                        </div>
 
-                    <Link to="/admin" aria-label="Admin" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip={t('nav.admin')}>
-                        <Shield size={20} />
-                    </Link>
-                    <LanguageSelector />
-                    <button
-                        aria-label="Menu"
-                        className={classes.menuBtn}
-                        onClick={toggleMobileMenu}
-                    >
-                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
+                        <button
+                            aria-label="Search"
+                            className={`${classes.iconBtn} ${classes.tooltip} ${isSearchOpen ? classes.hidden : ''}`}
+                            data-tooltip={t('common.search')}
+                            onClick={toggleSearch}
+                        >
+                            <Search size={20} />
+                        </button>
+
+                        <button
+                            aria-label="Cart"
+                            className={`${classes.iconBtn} ${classes.tooltip} ${classes.cartBtn}`}
+                            data-tooltip={t('cart.title')}
+                            onClick={toggleCart}
+                        >
+                            <ShoppingCart size={20} />
+                            {itemsCount > 0 && <span className={classes.badge}>{itemsCount}</span>}
+                        </button>
+
+                        <Link to="/admin" aria-label="Admin" className={`${classes.iconBtn} ${classes.tooltip}`} data-tooltip={t('nav.admin')}>
+                            <Shield size={20} />
+                        </Link>
+                        <LanguageSelector />
+                        <button
+                            aria-label="Menu"
+                            className={classes.menuBtn}
+                            onClick={toggleMobileMenu}
+                        >
+                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    </div>
                 </div>
             </header>
 

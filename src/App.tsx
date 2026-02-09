@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage';
 import Products from './pages/Products';
 
 import About from './pages/about/About';
+import ProductDetails from './pages/ProductDetails';
+import Shop from './pages/Shop';
 import Contact from './pages/contact/Contact';
 import Insights from './pages/insights/Insights';
 import Tenders from './pages/insights/Tenders';
@@ -53,6 +55,8 @@ function App() {
                         <Route element={<Layout><Outlet /></Layout>}>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/products" element={<Products />} />
+                            <Route path="/product/:id" element={<ProductDetails />} />
+                            <Route path="/shop" element={<Shop />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/insights" element={<Insights />} />
                             <Route path="/insights/tenders" element={<Tenders />} />

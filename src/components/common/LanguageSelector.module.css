@@ -1,16 +1,16 @@
 .langBtn {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
     background: rgba(var(--color-primary-rgb), 0.05);
     border: 1.5px solid var(--color-primary);
     color: var(--color-primary);
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
+    padding: 0.5rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-weight: 700;
-    font-size: 0.85rem;
     backdrop-filter: blur(5px);
 }
 

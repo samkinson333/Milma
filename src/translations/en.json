@@ -26,13 +26,18 @@
         "title": "MILMA",
         "subtitle": "Freshness Redefined",
         "description": "Thiruvananthapuram Regional Co-operative Milk Producers Union Ltd. Bringing pure dairy goodness to your doorstep every single day.",
-        "scrollDown": "Scroll Down"
+        "scrollDown": "Scroll Down",
+        "finalTitle": "Experience Pure Freshness",
+        "finalSubtitle": "From our farms to your table",
+        "scroll": "Scroll to Explore"
     },
     "aboutSnippet": {
         "preTitle": "Our Legacy",
+        "whoWeAre": "Who We Are",
         "title": "Nurturing Kerala Since 1980",
         "description": "Milma (TRCMPU) has been the cornerstone of Kerala's dairy industry for over four decades. As a cooperative movement, we empower thousands of local farmers while delivering the purest milk and dairy products to every household.",
-        "learnMore": "Discover Our Story"
+        "learnMore": "Discover Our Story",
+        "readMore": "Read More"
     },
     "features": {
         "freshness": {
@@ -46,6 +51,29 @@
         "network": {
             "title": "Local Network",
             "subtitle": "Empowering 1100+ Co-ops"
+        }
+    },
+    "currentEvents": {
+        "preTitle": "LATEST UPDATES",
+        "title": "Current Events & Announcements",
+        "subtitle": "Stay informed about the latest happenings, initiatives, and opportunities at Milma TRCMPU",
+        "readMore": "Read More",
+        "events": {
+            "organizationProfile": {
+                "date": "",
+                "title": "THE ORGANISATION PROFILE",
+                "description": "With such diverse experience (completed 25 years) in the past and the talent pool it has, it can face any adverse environmental problems successfully. In 1985, Union started operation from the old Thiruvananthapuram Dairy handed over by KLD & MM Board which was selling milk in Thiruvananthapuram and Kollam districts and having a capacity of 40,000 LPD.\n\nThe first Dairy plant under OF II project in TRCMPU area was commissioned at Kollam with a capacity of 60,000 LPD in 1986. Subsequently Chilling Plants with capacity of 10,000 LPD each were set up at Mannar and Pathanamthitta. New Dairy Plant at Alappuzha with a capacity of 60,000 LPD was commissioned in 1989, and new Dairy Plant with one lakh LPD capacity was commissioned at Thiruvananthapuram in 1992. The Dairy plant at Alappuzha was transferred to KCMMF in 1992 in order to facilitate operation of Powder Plant set up at Alappuzha for handling surplus milk in the State."
+            },
+            "recruitment": {
+                "date": "Feb 6, 2026",
+                "title": "Recruitment for TRCMPU Ltd",
+                "description": "We are hiring! Join the Milma family and be part of Kerala's leading dairy cooperative. Download your admit card and prepare for the assessment."
+            },
+            "farmerWorkshop": {
+                "date": "Feb 15, 2026",
+                "title": "Farmer Training Workshop",
+                "description": "Interactive training session for dairy farmers on modern farming techniques, quality improvement, and sustainable practices."
+            }
         }
     },
     "services": {
@@ -120,25 +148,42 @@
         }
     },
     "footer": {
-        "brandDescription": "Thiruvananthapuram Regional Co-operative Milk Producers Union Ltd.",
-        "shop": {
-            "title": "Shop",
-            "milk": "Milk",
-            "ghee": "Ghee",
-            "iceCream": "Ice Cream"
+        "subscribeText": "Subscribe to our newsletter to receive the latest updates.",
+        "emailPlaceholder": "Your Email",
+        "subscribeButton": "Subscribe",
+        "nanmaApp": "Nanma App",
+        "explore": {
+            "title": "Explore",
+            "products": "Products",
+            "bmccLogin": "BMCC Login",
+            "career": "Career",
+            "dairyVisitPublic": "Dairy Visit (Public)",
+            "dairyVisitStudents": "Dairy Visit (Students)"
         },
-        "company": {
-            "title": "Company",
-            "about": "About Us",
-            "leadership": "Leadership",
-            "careers": "Careers"
+        "quickLinks": {
+            "title": "Quick Links",
+            "tenders": "Tenders",
+            "salesReport": "Sales Report",
+            "agencyEnquiry": "Agency Enquiry",
+            "reportComplaint": "Report a Complaint",
+            "recipes": "Recipes"
         },
-        "support": {
-            "title": "Support",
-            "contact": "Contact",
-            "faq": "FAQ"
+        "contactInfo": {
+            "title": "Organization Profile",
+            "addressLabel": "ADDRESS:",
+            "address": "TRCMPU Ltd, Ksheera Bhavan Pattom.P.O, Thiruvananthapuram - 04",
+            "emailLabel": "EMAIL:",
+            "email": "trcmpu@gmail.com",
+            "phoneLabel": "PHONE:",
+            "phone": "0471-2447109, 0471-2446845",
+            "openHoursLabel": "OPENING HOURS:",
+            "openHours": "Mon - Sat: 9:00 AM - 5:30 PM",
+            "closed": "Sunday: Closed"
         },
-        "copyright": "© 2026 Milma TRCMPU. All rights reserved."
+        "developedBy": "Developed by MSGR",
+        "terms": "Terms & Conditions",
+        "privacy": "Privacy Policy",
+        "support": "Support"
     },
     "cart": {
         "title": "Your Basket",

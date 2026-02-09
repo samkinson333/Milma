@@ -135,10 +135,16 @@ const HeroSection = () => {
                     >
                         <h1 className={classes.title}>{t('hero.title')}</h1>
                         <p className={classes.subtitle}>{t('hero.subtitle')}</p>
-                        <div className={classes.scrollHint}>
-                            <span>{t('hero.scroll')}</span>
-                            <ArrowDown size={20} className={classes.bounce} />
-                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        className={classes.scrollHint}
+                        style={{
+                            opacity: useTransform(scrollYProgress, [0, 0.2], [1, 0])
+                        }}
+                    >
+                        <span>{t('hero.scroll')}</span>
+                        <ArrowDown size={20} className={classes.bounce} />
                     </motion.div>
 
                     <motion.div

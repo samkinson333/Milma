@@ -15,8 +15,8 @@ const AboutSnippet = () => {
                     />
                 </div>
                 <div className={classes.textContent}>
-                    <h3 className={classes.subtitle}>{t('aboutSnippet.whoWeAre')}</h3>
-                    <h2 className={classes.title}>{t('aboutSnippet.title')}</h2>
+                    <h3 className={classes.title}>{t('aboutSnippet.whoWeAre')}</h3>
+                    <h2 className={classes.subtitle}>{t('aboutSnippet.title')}</h2>
                     <p className={classes.description}>
                         {t('aboutSnippet.description')}
                     </p>

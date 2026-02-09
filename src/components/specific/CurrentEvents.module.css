@@ -1,0 +1,162 @@
+.section {
+    padding: 6rem 2rem;
+    background: var(--color-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.eventsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.eventRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--color-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.eventRow:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Image on left, content on right (default) */
+.eventRow .imageWrapper {
+    order: 1;
+}
+
+.eventRow .content {
+    order: 2;
+    padding: 2rem 3rem 2rem 0;
+}
+
+/* Image on right, content on left (reverse) */
+.eventRow.reverse .imageWrapper {
+    order: 2;
+}
+
+.eventRow.reverse .content {
+    order: 1;
+    padding: 2rem 0 2rem 3rem;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.eventRow:hover .image {
+    transform: scale(1.1);
+}
+
+.datebadge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.eventTitle {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--color-text-dark);
+    line-height: 1.3;
+}
+
+.description {
+    color: var(--color-text-tertiary);
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    white-space: pre-line;
+}
+
+.readMore {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+    width: fit-content;
+}
+
+.readMore:hover {
+    gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .eventsWrapper {
+        gap: 2.5rem;
+    }
+
+    .eventRow {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* Reset order for mobile - always image first */
+    .eventRow .imageWrapper,
+    .eventRow.reverse .imageWrapper {
+        order: 1;
+    }
+
+    .eventRow .content,
+    .eventRow.reverse .content {
+        order: 2;
+        padding: 2rem 1.5rem;
+    }
+
+    .imageWrapper {
+        height: 250px;
+    }
+
+    .eventTitle {
+        font-size: 1.4rem;
+    }
+}
