@@ -46,6 +46,8 @@
     height: 50px;
     width: auto;
     object-fit: contain;
+    /* Convert image to #3611ee */
+    filter: brightness(0) saturate(100%) invert(11%) sepia(97%) saturate(6011%) hue-rotate(246deg) brightness(91%) contrast(150%);
 }
 
 .logoText {
