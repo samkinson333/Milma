@@ -62,7 +62,7 @@
 .nav {
     display: none;
     align-items: center;
-    gap: 1.2rem;
+    gap: 2.2rem;
 }
 
 .navLink {
@@ -75,6 +75,7 @@
     color: var(--color-text-primary);
     white-space: nowrap;
     opacity: 0.85;
+    gap: 2rem;
 }
 
 .navLink:hover {
