@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import classes from './UnifiedLogin.module.css';
-import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, ArrowRight, AlertCircle, Loader2, User, ShieldCheck } from 'lucide-react';
 
 const UnifiedLogin = () => {
-    const { t } = useTranslation();
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
