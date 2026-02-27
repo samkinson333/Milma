@@ -10,15 +10,6 @@ const ProductBannerSlider = () => {
 
     const bannerData = useMemo(() => [
         {
-            id: 1,
-            image: '/ice_cream_banner.png',
-            title: t('banner.arrival.title'),
-            subtitle: t('banner.arrival.subtitle'),
-            cta: t('banner.arrival.cta'),
-            link: '#',
-            align: 'left'
-        },
-        {
             id: 2,
             image: 'https://media.licdn.com/dms/image/v2/C561BAQEkwJh6zN-3Ew/company-background_10000/company-background_10000/0/1632191301164/milma_cover?e=2147483647&v=beta&t=JSRmhQxSHrcG72mudMvrYt7BUZKrPV-_bYWwT5H9KR4',
             title: t('banner.farm.title'),

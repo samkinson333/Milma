@@ -9,7 +9,8 @@
         "recruitment": "Recruitment",
         "contact": "Contact",
         "admin": "Admin",
-        "notices": "Notice Board"
+        "notices": "Notice Board",
+        "login": "Login"
     },
     "common": {
         "search": "Search",
@@ -157,16 +158,21 @@
             "products": "Products",
             "bmccLogin": "BMCC Login",
             "career": "Career",
+            "units": "Our Dairy Units",
+            "farmers": "Farmers Portal",
             "dairyVisitPublic": "Dairy Visit (Public)",
             "dairyVisitStudents": "Dairy Visit (Students)"
         },
         "quickLinks": {
             "title": "Quick Links",
             "tenders": "Tenders",
+            "products": "Product List",
             "salesReport": "Sales Report",
             "agencyEnquiry": "Agency Enquiry",
             "reportComplaint": "Report a Complaint",
-            "recipes": "Recipes"
+            "recipes": "Recipes",
+            "faq": "FAQ",
+            "feedback": "Feedback"
         },
         "contactInfo": {
             "title": "Organization Profile",
@@ -179,6 +185,13 @@
             "openHoursLabel": "OPENING HOURS:",
             "openHours": "Mon - Sat: 9:00 AM - 5:30 PM",
             "closed": "Sunday: Closed"
+        },
+        "login": {
+            "title": "Login",
+            "agency": "Agency Portal",
+            "internship": "Internship Portal",
+            "hr": "HR Portal",
+            "dairyVisit": "Dairy Visit Portal"
         },
         "developedBy": "Developed by MSGR",
         "terms": "Terms & Conditions",
@@ -451,9 +464,32 @@
             "announcement": "Announcements"
         },
         "fileTypes": {
-            "pdf": "PDF",
-            "doc": "DOC",
             "image": "IMAGE"
+        }
+    },
+    "unifiedLogin": {
+        "title": "Portal Login",
+        "subtitle": "Enter your portal password to continue",
+        "placeholder": "Enter Access Password",
+        "submit": "Access Portal",
+        "error": "Invalid password. Please try again or contact support."
+    },
+    "portals": {
+        "agency": {
+            "title": "Agency Management Portal",
+            "welcome": "Welcome, Partner"
+        },
+        "internship": {
+            "title": "Internship Management",
+            "welcome": "Welcome, Intern"
+        },
+        "hr": {
+            "title": "HR Administration",
+            "welcome": "Welcome, HR Admin"
+        },
+        "dairyVisit": {
+            "title": "Dairy Visit Scheduler",
+            "welcome": "Welcome, Coordinator"
         }
     }
 }

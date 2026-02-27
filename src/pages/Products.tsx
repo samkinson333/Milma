@@ -48,22 +48,7 @@ const Products = () => {
                 </AnimatePresence>
             </motion.div>
 
-            <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '4rem 0', paddingRight: '2rem' }}>
-                <a href="/shop" style={{
-                    display: 'inline-block',
-                    padding: '0.8rem 2.5rem',
-                    background: 'var(--color-primary)',
-                    color: 'white',
-                    borderRadius: '50px',
-                    fontWeight: '700',
-                    fontSize: '1.2rem',
-                    textDecoration: 'none',
-                    boxShadow: '0 10px 20px rgba(189, 31, 53, 0.3)',
-                    transition: 'transform 0.3s ease'
-                }}>
-                    Shop Now
-                </a>
-            </div>
+
         </div>
     );
 };

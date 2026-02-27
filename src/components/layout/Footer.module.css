@@ -46,7 +46,7 @@
 .logo {
     width: 40px;
     height: auto;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) saturate(100%) invert(11%) sepia(97%) saturate(6011%) hue-rotate(246deg) brightness(91%) contrast(150%);
 }
 
 .logoText {
@@ -216,7 +216,7 @@
     position: relative;
     z-index: 1;
     border-top: 1px solid var(--color-border-dark);
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding-top: 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -245,8 +245,8 @@
 /* Responsive */
 @media (min-width: 1024px) {
     .content {
-        grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
-        gap: 4rem;
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr 1.2fr;
+        gap: 3rem;
     }
 }
 

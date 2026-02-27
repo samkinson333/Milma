@@ -35,6 +35,13 @@ import SocietyLevel from './pages/services/SocietyLevel';
 import DealersLevel from './pages/services/DealersLevel';
 import ConsumerLevel from './pages/services/ConsumerLevel';
 
+// Import New Portals
+import UnifiedLogin from './pages/UnifiedLogin';
+import AgencyPortal from './pages/portals/AgencyPortal';
+import InternshipPortal from './pages/portals/InternshipPortal';
+import HRPortal from './pages/portals/HRPortal';
+import DairyVisitPortal from './pages/portals/DairyVisitPortal';
+
 import { CartProvider } from './context/CartContext';
 import { ThemeProvider } from './context/ThemeContext';
 import CartDrawer from './components/specific/CartDrawer';
@@ -81,7 +88,16 @@ function App() {
                             <Route path="/services/society-level" element={<SocietyLevel />} />
                             <Route path="/services/dealers-level" element={<DealersLevel />} />
                             <Route path="/services/consumer-level" element={<ConsumerLevel />} />
+
+                            {/* Portal Login */}
+                            <Route path="/portal-login" element={<UnifiedLogin />} />
                         </Route>
+
+                        {/* Portal Dashboard Routes (No Header/Footer Layout) */}
+                        <Route path="/portals/agency" element={<AgencyPortal />} />
+                        <Route path="/portals/internship" element={<InternshipPortal />} />
+                        <Route path="/portals/hr" element={<HRPortal />} />
+                        <Route path="/portals/dairy-visit" element={<DairyVisitPortal />} />
 
                         {/* Admin Routes with Admin Layout */}
                         <Route path="/admin" element={
