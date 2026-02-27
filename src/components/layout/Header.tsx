@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import classes from './Header.module.css';
-import { Search, Menu, X, Shield, ShoppingCart } from 'lucide-react';
+import { Search, Menu, X, Shield, ShoppingCart, LogIn } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../common/LanguageSelector';
@@ -63,7 +63,10 @@ const Header = () => {
                     <div className={classes.logoContainer}>
                         <Link to="/" className={classes.logo}>
                             <img src="/logo.png" alt="Milma Logo" className={classes.logoImage} />
+
+                            {/*<span className={classes.logoText}>Milma</span>*/}
                             {/* <span className={classes.logoText}>Milma</span> */}
+
                         </Link>
                     </div>
 
@@ -120,6 +123,13 @@ const Header = () => {
                             <Shield size={20} />
                         </Link>
                         <LanguageSelector />
+                        <Link
+                            to="/portal-login"
+                            className={`${classes.iconBtn} ${classes.tooltip} ${classes.loginBtn}`}
+                            data-tooltip={t('nav.login')}
+                        >
+                            <LogIn size={20} />
+                        </Link>
                         <button
                             aria-label="Menu"
                             className={classes.menuBtn}

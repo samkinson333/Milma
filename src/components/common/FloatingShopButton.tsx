@@ -9,7 +9,7 @@ const FloatingShopButton = () => {
     const location = useLocation();
     const { t } = useTranslation();
 
-    if (location.pathname === '/shop' || location.pathname.startsWith('/product/')) {
+    if (location.pathname !== '/') {
         return null;
     }
 

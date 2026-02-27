@@ -43,8 +43,9 @@ const Footer = () => {
                         <Link to="/products" className={classes.link}>{t('footer.explore.products')}</Link>
                         <a href="http://202.88.241.224:8080/milmaTrc/index.jsp?p1=39" target="_blank" rel="noopener noreferrer" className={classes.link}>{t('footer.explore.bmccLogin')}</a>
                         <Link to="/career" className={classes.link}>{t('footer.explore.career')}</Link>
+                        <Link to="/about" className={classes.link}>{t('footer.explore.units')}</Link>
+                        <a href="#" className={classes.link}>{t('footer.explore.farmers')}</a>
                         <a href="#" className={classes.link}>{t('footer.explore.dairyVisitPublic')}</a>
-                        <a href="#" className={classes.link}>{t('footer.explore.dairyVisitStudents')}</a>
                     </div>
                 </div>
 
@@ -53,14 +54,28 @@ const Footer = () => {
                     <h3 className={classes.colTitle}>{t('footer.quickLinks.title')}</h3>
                     <div className={classes.linkList}>
                         <Link to="/notices" className={classes.link}>{t('footer.quickLinks.tenders')}</Link>
+                        <Link to="/products" className={classes.link}>{t('footer.quickLinks.products')}</Link>
                         <a href="#" className={classes.link}>{t('footer.quickLinks.salesReport')}</a>
                         <a href="#" className={classes.link}>{t('footer.quickLinks.agencyEnquiry')}</a>
                         <a href="#" className={classes.link}>{t('footer.quickLinks.reportComplaint')}</a>
                         <a href="#" className={classes.link}>{t('footer.quickLinks.recipes')}</a>
+                        <a href="#" className={classes.link}>{t('footer.quickLinks.faq')}</a>
+                        <a href="#" className={classes.link}>{t('footer.quickLinks.feedback')}</a>
                     </div>
                 </div>
 
-                {/* Column 4: Contact Info */}
+                {/* Column 4: Login */}
+                <div className={classes.column}>
+                    <h3 className={classes.colTitle}>{t('footer.login.title')}</h3>
+                    <div className={classes.linkList}>
+                        <Link to="/portal-login" className={classes.link}>{t('footer.login.agency')}</Link>
+                        <Link to="/portal-login" className={classes.link}>{t('footer.login.internship')}</Link>
+                        <Link to="/portal-login" className={classes.link}>{t('footer.login.hr')}</Link>
+                        <Link to="/portal-login" className={classes.link}>{t('footer.login.dairyVisit')}</Link>
+                    </div>
+                </div>
+
+                {/* Column 5: Contact Info */}
                 <div className={classes.column}>
                     <h3 className={classes.colTitle}>{t('footer.contactInfo.title')}</h3>
                     <div className={classes.contactDetails}>
